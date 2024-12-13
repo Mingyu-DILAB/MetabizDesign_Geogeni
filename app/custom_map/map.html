@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Map and Chat Example</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .main-container {
+            display: flex;
+            flex: 1;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .map-container .chat-container{
+            display: flex;
+            flex-direction: column;
+            flex: 2;
+        }
+        .top-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            background-color: #f8f9fa;
+        }
+        .group-buttons {
+            display: flex;
+        }
+        .group-buttons button {
+            margin-right: 10px;
+        }
+        .top-buttons button {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #28496d;
+            color: white;
+            cursor: pointer;
+        }
+        .top-buttons .active {
+            background: #28a745; /* Green background for active button */
+        }
+        .map {
+            flex: 2; /* 지도 영역 */
+            background: #eaeaea;
+            padding: 20px;
+        }
+        .chat {
+            flex: 0.5; /* 채팅 영역 */
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid #ccc;
+        }
+        .messages {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            border-bottom: 1px solid #ccc;
+        }
+        .input-box {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+        .input-box input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .input-box button {
+            padding: 10px;
+            margin-left: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #28496d;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            padding-top: 60px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 70%; 
+            height: 70%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <!-- <div class="map-container"> -->
+            <div class="top-buttons">
+                <div class="group-buttons">
+                    <button id="reset">초기화</button>
+                </div>
+            </div>
+            <div class="map" id="map">
+                <!-- 지도 영역 -->
+            </div>
+            <!-- </div> -->
+        </div>
+    </div>
+    <form id="coordinatesForm">
+        <p id="Coord"> 
+            lat: <input type="text" id="latinput" name="latinput" readonly>
+            lng: <input type="text" id="lnginput" name="lnginput" readonly>
+            <br>
+            <br>
+            <span style="display: inline-block; border: 1px solid #ccc; padding: 5px;">
+                ※ 위 박스는 표시용입니다. 아래 박스에 입력해주세요.
+            </span>
+        </p>
+        <!-- <button onclick="processCoordinates()">Submit Coordinates</button> -->
+        <script src="./customComponent.js"></script>
+    </form>
+
+    <script src="component-template/template/my_component/main.js"></script>
+    
+    <!-- leaflet js -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- leaflet draw plugin -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // 전역변수
+        var allMarkers = [];
+        var coordinates;
+        
+        var map = L.map('map').setView([37.41349, 127.1255], 15);   // 장미로 42(위도-lat, 경도-lon), 초기 줌 레벨
+
+        var tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        maxZoom: 19,
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    }).addTo(map);
+
+        // 무게 중심
+        function calculateCentroid(coordinates) {
+            let areaSum = 0;
+            let Cx = 0;
+            let Cy = 0;
+            
+            // 좌표 개수
+            const n = coordinates.length;
+            
+            // 좌표 1차원화
+            if (Array.isArray(coordinates[0])) {
+                coordinates = coordinates[0];
+            }
+
+
+            // 면적과 무게중심 계산
+            for (let i = 0; i < n; i++) {
+                const x1 = coordinates[i].lat;  // lat 값
+                const y1 = coordinates[i].lng;  // lng 값
+                const x2 = coordinates[(i + 1) % n].lat;
+                const y2 = coordinates[(i + 1) % n].lng;
+        
+                const crossProduct = x1 * y2 - x2 * y1;
+                areaSum += crossProduct;
+                Cx += (x1 + x2) * crossProduct;
+                Cy += (y1 + y2) * crossProduct;
+            }
+            
+            areaSum *= 0.5;
+            Cx /= (6 * areaSum);
+            Cy /= (6 * areaSum);
+
+            // return { Cx, Cy, area: Math.abs(areaSum) };
+            return L.latLng(Cx, Cy)
+        }
+        
+        function createInputs(data) {
+            var form = document.getElementById('coordinatesForm');
+            var submitButton = form.querySelector('button[type="submit"]');
+            form.querySelectorAll('p').forEach(p => p.remove());
+
+            data.forEach((item, index) => {
+                var p = document.createElement('p');
+                p.innerHTML = `lat${index + 1}: <input type="text" name="lat${index + 1}" value="${item.lat}">
+                               lng${index + 1}: <input type="text" name="lng${index + 1}" value="${item.lng}">`;
+                form.insertBefore(p, submitButton); // p를 submitbutton 앞에 삽입
+            });
+        }
+
+        function sendCoordinatesToParent(lat, lng) {
+            window.parent.postMessage({
+                type: 'coordinates',
+                lat: lat,
+                lng: lng
+            }, "*");
+        }
+
+        // Streamlit에 무게중심 좌표 전달
+        map.on('draw:created', function (e) {
+            var type = e.layerType;
+            var layer = e.layer;
+            drawnFeatures.addLayer(layer);
+    
+            if (layer instanceof L.Polygon || layer instanceof L.Rectangle) {
+                var coordinates = layer.getLatLngs()[0];
+                var centroid = calculateCentroid(coordinates);
+    
+                sendCoordinatesToParent(centroid.lat, centroid.lng);
+    
+                console.log("Sending coordinates to parent frame:", centroid.lat, centroid.lng);
+            }
+        });
+
+
+
+        // =================== leaflet draw =================== //
+        var drawnFeatures = new L.FeatureGroup();
+        map.addLayer(drawnFeatures);
+
+        var drawControl = new L.Control.Draw({
+            edit: {
+                featureGroup: drawnFeatures,
+                remove: false
+            },
+            draw: {
+                polygon: {
+                    shapeOptions: {
+                        color: "#ff0000"
+                    }
+                },
+                polyline: {
+                    shapeOptions: {
+                        color: "#ff0000"
+                    }
+                },
+                rectangle: {
+                    shapeOptions: {
+                        color: "#ff0000"
+                    }
+                },
+                circle: {
+                    shapeOptions: {
+                        color: "#ff0000"
+                    }
+                }
+            }
+        });
+        map.addControl(drawControl);
+
+        // Submit Coordinates -> marker and circle
+        function submitCoord(inputLat, inputLng) {
+            // $('form').submit(function(event) { -> one(): 이벤트가 발생한 후에 이벤트 리스너를 자동으로 제거
+            $('form').one('submit', function(event) {
+                event.preventDefault(); // 폼의 기본 제출 동작을 방지
+                $.get('/submit_coordinates', {lat: inputLat, lng: inputLng}, function(data) {
+                    $('#reportContent').html('Input 좌표 정보: ' + data);
+                });
+            });
+        }
+
+
+        // Created Mode
+        map.on('draw:created', function (e) {
+            var type = e.layerType;
+            var layer = e.layer;
+
+            drawnFeatures.addLayer(layer);
+
+            // 좌표 표출
+            if (layer instanceof L.Polygon || layer instanceof L.Rectangle) {
+                coordinates = layer.getLatLngs()[0];
+                var uniqueCoordinates = Array.from(new Set(coordinates.map(coord => JSON.stringify(coord))))
+                                        .map(coord => JSON.parse(coord));
+                createInputs(uniqueCoordinates);
+
+                $('form').one('submit', function(event) {
+                    event.preventDefault(); // 폼의 기본 제출 동작을 방지
+
+                    $.get('/submit_coordinates', JSON.stringify(uniqueCoordinates), function(data) {
+                        $('#reportContent').html('Input 좌표 정보: ' + data);
+                    });
+                });
+
+            } else if (layer instanceof L.Circle) {
+                coordinates = layer.getLatLng();
+                document.getElementById('latinput').value = coordinates['lat'];
+                document.getElementById('lnginput').value = coordinates['lng'];
+
+                var inLatVal = document.getElementById('latinput').value;
+                var inLngVal = document.getElementById('lnginput').value;
+                submitCoord(inLatVal, inLngVal);    // From Server To Report
+
+            } else if (layer instanceof L.Marker) {
+                coordinates = layer.getLatLng();
+                document.getElementById('latinput').value = coordinates['lat'];
+                document.getElementById('lnginput').value = coordinates['lng'];
+
+                var inLatVal = document.getElementById('latinput').value;
+                var inLngVal = document.getElementById('lnginput').value;
+                submitCoord(inLatVal, inLngVal);    // From Server To Report
+            }
+        });
+        
+        // Edited Mode
+        map.on('draw:edited', function (e) {
+            var layers = e.layers;
+            var type = e.layerType;
+
+            layers.eachLayer(function (layer) {
+                // 좌표 표출
+                var coordinates;
+                if (layer instanceof L.Polygon || layer instanceof L.Rectangle) {
+                    coordinates = layer.getLatLngs();
+                    var uniqueCoordinates = Array.from(new Set(coordinates.map(coord => JSON.stringify(coord))))
+                                        .map(coord => JSON.parse(coord));
+                    createInputs(uniqueCoordinates);
+
+                } else if (layer instanceof L.Circle) {
+                    coordinates = layer.getLatLng();
+                    document.getElementById('latinput').value = coordinates['lat'];
+                    document.getElementById('lnginput').value = coordinates['lng'];
+
+                    var inLatVal = document.getElementById('latinput').value;
+                    var inLngVal = document.getElementById('lnginput').value;
+                    submitCoord(inLatVal, inLngVal);    // From Server To Report
+
+                } else if (layer instanceof L.Marker) {
+                    coordinates = layer.getLatLng();
+                    document.getElementById('latinput').value = coordinates['lat'];
+                    document.getElementById('lnginput').value = coordinates['lng'];
+
+                    var inLatVal = document.getElementById('latinput').value;
+                    var inLngVal = document.getElementById('lnginput').value;
+                    submitCoord(inLatVal, inLngVal);    // From Server To Report
+                }
+                // console.log('Coordinates:', coordinates);
+            })
+        });
+
+        // =================== 초기화 =================== //
+        document.getElementById('reset').addEventListener('click', reset);
+
+        function reset() {
+            drawnFeatures.clearLayers();
+            allMarkers.forEach(function(marker) {
+                map.removeLayer(marker);
+            });
+            
+            var form = document.getElementById('coordinatesForm');
+            var submitButton = form.querySelector('button[type="submit"]');
+            form.querySelectorAll('p').forEach(p => p.remove());
+
+            var p = document.createElement('p');
+            p.innerHTML = `lat: <input type="text" id="latinput" name="lat" value="">
+                            lng: <input type="text" id="lnginput" name="lng" value="">`;
+            form.insertBefore(p, submitButton);
+            
+            allMarkers = [];
+            coordinates = null;
+        }
+
+        // =================== chat =================== //
+        function sendMessage() {
+            const messageInput = document.getElementById('messageInput');
+            const messages = document.getElementById('messages');
+            
+            const newMessage = document.createElement('div');
+            newMessage.textContent = messageInput.value;
+            messages.appendChild(newMessage);
+
+            messageInput.value = '';
+        }
+
+        // =================== chat 보고서 =================== //
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("report");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // =================== 좌표 입력 =================== //
+        function processCoordinates() {
+            const lat = document.getElementById('latinput').value;
+            const lng = document.getElementById('lnginput').value;
+
+            Streamlit.setComponentValue(lat);
+
+            const result = `Latitude: ${lat}, Longitude: ${lng}`;
+            console.log(result)
+
+            document.getElementById('Coord').innerText = result;
+        }
+    </script>

@@ -1,0 +1,894 @@
+[
+    {
+        "type": "text",
+        "text": "흙의 다짐 ",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "동적 또는 정적 하중을 가하여 흙의 밀도를 높인다",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "흙의 강도증가 및 침하량 감소",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "고속도로, 흙댐, 제방, 철도, 택지조성 등…성토사면 안정성 증대",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "강륜(smooth-wheel), 양족(sheepsfoot )로울러",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "공기고무타이어 로울러, 진동 로울러",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "바이브로플로테이션(vibroflotation)",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1. General Principles of Compaction ",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "다짐의 원리",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "흙 속의 간극(공기) 제거에 의한 체적압축 ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "중량은 불변",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "흙의 다짐 정도는 건조단위중량으로 평가",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "다짐 시 물을 흙에 첨가 $\\longrightarrow$ 물은 윤활유 역할 $\\longrightarrow$ 흙입자들은 서로 미끄러져서 조밀해짐  \n함수비가 증가함에 따라 다져진 흙의 건조단위중량증가",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "1 General Principles of Compaction ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\omega{=}0~\\mathrm{;}~\\gamma{=}\\gamma_{\\mathrm{d}}{=}\\gamma_{\\mathrm{l}}\n$$",
+        "text_format": "latex",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "함수비가 증가되는 상태에서 동일한 다짐에너지 $\\rightarrow$ 단위 부피당 흙무게증가",
+        "page_idx": 2
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{r l}{\\omega{=}\\omega_{1}\\ ;\\gamma{=}\\gamma_{_2}\\;\\;}&{{}\\;\\gamma_{_\\mathrm{d(\\omega=\\omega_{1})}}{=}\\gamma_{_\\mathrm{d(\\omega=0)}}{+}\\Delta\\gamma_{_\\mathrm{d}}}\\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "임의 함수비 초과하면 함수비가 증가함에 따라 건조단위중량 감소",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "고체입자들로 채워져있던 공간 $\\rightarrow$ 물이 차지최대건조단위중량 $\\upgamma_{\\mathrm{d(max)}}$(Maximum dry unit weight)최적함수비 (OMC Optimummoisture content)",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/22f85e044e03ea0e14d8459ee799e3e9539b2f60231d4346ee1c3f5f52562e3e.jpg",
+        "img_caption": [
+            "함수비w "
+        ],
+        "img_footnote": [],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "2. Standard Proctor Test ",
+        "text_level": 1,
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "표준다짐시험 (ASTM D-698; A방법)",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "몰드부피(V) 943. 3cm3, 몰드직경(D) 101. 6mm ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "다짐 층수(L) 3층, 각 층당 다짐횟수(#) 25회",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "햄머무게(W): 5.5 lb (2.5kg)",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "햄머의 낙하높이(H): 12″(304.8mm) ",
+        "page_idx": 3
+    },
+    {
+        "type": "image",
+        "img_path": "images/de1a8587e39f209f9aad3b7485fd68c821dc30792c8d4d4d5288885afc167365.jpg",
+        "img_caption": [
+            "몰드"
+        ],
+        "img_footnote": [],
+        "page_idx": 3
+    },
+    {
+        "type": "image",
+        "img_path": "images/113c881001a3ed9428590f7fa98aa99d5575606e367a53bf2f6bf78b8288ffc8.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Geotechnical Engineering ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "2. 표준다짐시험 ",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/e21929e5cae99e103fbb03eee551cd4a6a62e65ebd38cadc4cd231b54b70e090.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "ASTM (D-698)  \n1999년  \n습윤단위중량$\\gamma=\\frac{\\mathsf{W}}{\\mathsf{V}_{(\\mathrm{m})}}$",
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/7ba4d817262119ca91a1e9f4db363f290a3cbffaed008e945f4c0b69747ec2ec.jpg",
+        "img_caption": [
+            "Figure 52 Standard Proctor test equipment: Ca mold; 6 hammer; 9 photograph of laboratory equipment used for test "
+        ],
+        "img_footnote": [],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "2. Standard Proctor test ",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "이론적 최대건조단위중량",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "간극사이에 공기가 존재하지않을 경우 $\\longrightarrow$ 포화도 $100\\%$영공기 간극(zero air void)",
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\gamma_{\\mathrm{d}}\\!=\\!\\frac{\\gamma}{1\\!+\\!\\frac{\\wp(\\%)}{100}}\n$$",
+        "text_format": "latex",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Maximum Dry Unit Weight γ d(max) ",
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/22132453eb9378fabf345e136ffb7d85fa6dcf446c9cc9b018b77db0196a2b06.jpg",
+        "img_caption": [
+            "Figure 53 Standard Proctor compaction test results for a silty clay "
+        ],
+        "img_footnote": [],
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/b09d968dfaccb7898d9b7309bbc85c8fdc5812cf70cb59453a85f94f2dfa9ed4.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Chapter ",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "3. Factors affecting Compaction ",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "다짐에 영향을 주는 요소들 ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "함수비흙의 종류다짐에너지기타..흙의 종류에 따른 영향입도분포",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "입도눈포   \n입자모양   \n흙고체의 비중   \n흙입자의 형태   \n점토성분의 종류및양 ",
+        "page_idx": 6
+    },
+    {
+        "type": "image",
+        "img_path": "images/33bedcddf3737739c01dca4f31d3ad1a7f58ac5eff08b8cbf7c54482212d4707.jpg",
+        "img_caption": [],
+        "img_footnote": [
+            "Moisture content $w\\,(\\%)$ "
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Chapter ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "3. Factors affecting Compaction ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "흙의 종류에 따른 영향   \nASTM(D-698)   \nLee & Suedkamp(1972)   \n35개 흙시료 ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "일반적인 경우– (a) 액성한계 $30\\%\\ 01$ 하– (b), (c) 액성한계 $70\\%\\ 01$ 상– (c), (d) ",
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/de09190642198ca216034b6609fa8c1fee4b35b91fce03e0b220c39768c123af.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "3. Factors affecting Compaction ",
+        "text_level": 1,
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "다짐 에너지에 의한 영향",
+        "page_idx": 8
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm{{E}=\\frac{W_{h}\\cdot H_{h}\\cdot N_{l}\\cdot N_{c}}{V_{m}}=594{\\sim}600\\,\\mathrm{kN\\cdotm/m}}\n$$",
+        "text_format": "latex",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Weight of hammer( $[\\mathbf{W_{h}})$ Height of drop of hammer(Hh) Number of layer $\\mathbf{\\Omega}^{\\left(\\mathbf{N}_{\\mathbf{l}}\\right)}$ Number of blows per layer(Nc) ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Volume of mold $\\left(\\mathbf{V}_{\\mathrm{m}}\\right)$ ",
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/5a74eaae692d42757d0938df7ad0453ed75f0f16eed54d7f000db07be8eccebb.jpg",
+        "img_caption": [
+            "Moisture Content w[% "
+        ],
+        "img_footnote": [],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "4. Modified Proctor Test ",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "수정 다짐시험(Modified Proctor Test)",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "다짐기계의 대형화 및 다짐상태의 개선 $\\longrightarrow$ 현장조건에 근접한실내 다짐시험 모색",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "ASTM 시험(D-1557): 4.54kg hammer, 5 layer, 25 blows ",
+        "page_idx": 9
+    },
+    {
+        "type": "table",
+        "img_path": "images/9180ea2a481c9c1c8b62a64ed3c7a5a9bf4dfd5fe285302d8418a84bd03a0e7c.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Omar et al.(2003)-311개",
+        "text_level": 1,
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "자갈 45개사질토 264개점토 2개ASTM 1557 C방법rd(max)w(opt)",
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/3075cca6947c32f632be0515d37bcb5d4e32708f54ff8178339fc5d54bc1b6f2.jpg",
+        "img_caption": [
+            "Sieve No "
+        ],
+        "img_footnote": [
+            "Figure 57 Range of grain-size distribution of all Soils tested by Omar 'et al 2003 "
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "4. Modified Proctor Test ",
+        "text_level": 1,
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Pamax = [4804574G -- 195551L? | 156971R#4405 - 9527830]05",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Omar et al.(2003)-311개",
+        "text_level": 1,
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "자갈 45개  \n사질토 264개  \n점토 2개  \nASTM 1557 C방법",
+        "page_idx": 11
+    },
+    {
+        "type": "image",
+        "img_path": "images/0977c7551218fde337af8f352a1ee23ef9c85aaa90258b0c453312eeb4e6cd67.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "4. Modified Proctor Test ",
+        "text_level": 1,
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "In wop $\\mathrm{\\Lambda_{\\mathrm{t}})=1.195\\times10^{-4}L L^{2}-1.964G_{s}-6.617\\times10^{5}(R\\#4)+7.6}$ 51 ",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Omar et al.(2003)",
+        "page_idx": 12
+    },
+    {
+        "type": "image",
+        "img_path": "images/110b8db834c43483ce6ebc6473413ce0df58dd73f922a3e7c7d29a18f5791634.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Chapter ",
+        "text_level": 1,
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "5. Structure of Compacted Cohesive Soil ",
+        "text_level": 1,
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "다짐을 받은 점성토의 구조",
+        "text_level": 1,
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "A, E : 낮은 함수비상태  \n점토입자를 둘러싸고 있는  \n확산이중층 발달 부진 $\\rightarrow\\,\\Xi$ 자간  \n인력부진  \nB : 함수비 증가: 입자 주위에  \n확산이중층 발달 $\\rightarrow\\,\\Xi$ 자간 인력  \n증가 $\\longrightarrow$ 면모화 발달 $\\longrightarrow$ 높은  \n건조단위중량  \nC : 높은 함수비로 부피 팽창 $\\longrightarrow$  \n배열성 크게함 $\\longrightarrow$ 분산구조화 $\\longrightarrow$  \n단위중량 감소  \nD : 일정 함수비 상태에서 높은  \n다짐에너지 $\\longrightarrow$ 점토입자 배열이  \n평행한 상태로되려는 경향 $\\longrightarrow$  \n구조교란 $\\longrightarrow$ 분산구조",
+        "page_idx": 13
+    },
+    {
+        "type": "image",
+        "img_path": "images/02071eb1cbba686b91a7250724c2fdffe7898797b10c495b1f5680352334fef9.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "5. Structure of Compacted Cohesive Soil ",
+        "text_level": 1,
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Chapter ",
+        "text_level": 1,
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Lambe(1958) ",
+        "text_level": 1,
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Boston blue clay 함수비에 따른 입자배열 ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Seed & Chan(1959) ",
+        "page_idx": 14
+    },
+    {
+        "type": "image",
+        "img_path": "images/01e1e8ef46c08a604719f968b6c5aa96bc497c8b5ae531d3752d095559df7f80.jpg",
+        "img_caption": [],
+        "img_footnote": [
+            "Higher Compaction energy $\\bullet$ Lower compaction energy "
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Chapter ",
+        "text_level": 1,
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "6. Effect of Compaction on Cohesive Soil Properties ",
+        "text_level": 1,
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "투수계수에 미치는 영향-점토 & 압축강도에 미치는 영향-점토",
+        "page_idx": 15
+    },
+    {
+        "type": "image",
+        "img_path": "images/40193fc292442b8c9478d21800eed76a3740a542d476c0c60f095b1764a70653.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 15
+    },
+    {
+        "type": "image",
+        "img_path": "images/0425c137c91160eeefcbfe10d3860c70db7d211a255b23a66404019fbfd611bc.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "7. Characteristics of Compaction Curves ",
+        "text_level": 1,
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "다짐곡선의 성질",
+        "text_level": 1,
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "γd(max) 가 클수록 ωopt은 작음 ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "사질토는 $\\upgamma_{\\mathrm{d(max)}}$ 가 크고, 다짐곡선의 기울기가 급함",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "점성토는 $\\ Y_{\\mathrm{d(max)}}\\supsetneq$ 작고, 다짐곡선의 기울기가 완만",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "다짐에너지가 클수록 γd(max) 가 크고 $\\omega_{\\mathrm{opt}}\\Lt=$ 작아짐",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "자갈 및 모래 함유량이 많을수록 γd(max)가 크고 ωopt 는 작아짐",
+        "page_idx": 16
+    },
+    {
+        "type": "image",
+        "img_path": "images/5141bcfefa3ed7b227fe201ff9cec3ba47c7f53b0732f41de2f3b36c1525b806.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "8. Field Compaction ",
+        "text_level": 1,
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "현장다짐",
+        "text_level": 1,
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "실험실 $\\longrightarrow$ 표준다짐, 수정다짐시험, Hammer에 의한 다짐현장 $\\longrightarrow$ 실내 다짐시험에 근거 $\\longrightarrow$ 건설기계, Roller에 의한 다짐토질종류, 상태에 따라 다짐기계 선택",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "강륜롤러(Smooth wheel roller, Drum roller) ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "사질토, 점성토로 구성된 성토의 마무리 작업, 두꺼운 성토에 부적합 ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "공기 타이어 롤러(Pneumatic rubber tired roller)",
+        "text_level": 1,
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "사질토, 점성토 지반 다지기, 압축작용과 반죽작용",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "양족롤러(Sheepsfoot roller)",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "드럼 표면에 돌기를 부착, 점성토 다짐에 효과",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "진동롤러(Vibration roller) ",
+        "text_level": 1,
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "드럼에 진동기 부착, 사질토 다짐에 효과",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "강륜롤러(Smooth wheel roller, Drum roller) ",
+        "text_level": 1,
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "사질토/점성토 성토의 마무리 작업, 두꺼운 성토에 부적합(31\\~38Mg/m2)",
+        "page_idx": 18
+    },
+    {
+        "type": "image",
+        "img_path": "images/44e2315dce4168a23158b6c922bdfc0eadb7ca024727b688aad5c3e5bee46169.jpg",
+        "img_caption": [
+            "Figure 519 Smooth-wheel roller Courtesy of David A Carroll Austin Texas "
+        ],
+        "img_footnote": [],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "공기 타이어 롤러(Pneumatic rubber tired roller)",
+        "text_level": 1,
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "사질토, 점성토 지반 다지기, 압축작용과 반죽작용 (58.5\\~69Mg/m2)",
+        "page_idx": 19
+    },
+    {
+        "type": "image",
+        "img_path": "images/89b452729321c92142c94b1292590d42d387297c025ecbe9400432e80204177a.jpg",
+        "img_caption": [
+            "Figure 520 Pneumatic rubber-tired roller Courtesy of David A Carroll Austin Texas "
+        ],
+        "img_footnote": [],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "8. Compaction Equipment ",
+        "text_level": 1,
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "양족롤러(Sheepsfoot roller)",
+        "text_level": 1,
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "드럼 표면에 돌기를 부착, 점성토 다짐에 효과 (138\\~690Mg/m2)",
+        "page_idx": 20
+    },
+    {
+        "type": "image",
+        "img_path": "images/d85ff1d2a65b8bb3959a75b0597f15b3f21632b16641fe2de86d9b57e18e8547.jpg",
+        "img_caption": [
+            "Figure 521 Sheepsfoot roller Courtesy of David A Carroll Austin Texas "
+        ],
+        "img_footnote": [],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "진동롤러(Vibration roller) ",
+        "text_level": 1,
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "드럼에 진동기 부착, 사질토에 가장 다짐에 효과가 크다",
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "Vibrator Off-center rotating weight ",
+        "page_idx": 21
+    },
+    {
+        "type": "image",
+        "img_path": "images/0d1c0dc4f591e01cb53260537dc06dcacb5a4f76b149c648297142dfc23aa1ca.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "Vibrator Off-center rotating weight ",
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "Figure 522 Principles of Vibratory rollers ",
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "8. Field Compaction ",
+        "text_level": 1,
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "롤러 통과 횟수에 의한 다짐의 영향 (10\\~15회)",
+        "page_idx": 22
+    },
+    {
+        "type": "image",
+        "img_path": "images/015ec18e3c3da0de88b14a90073cc17752982c15fb80e8f7222fff3c1a41839a.jpg",
+        "img_caption": [
+            "로울러 통과횟수"
+        ],
+        "img_footnote": [],
+        "page_idx": 22
+    },
+    {
+        "type": "image",
+        "img_path": "images/100d6577ae291e6050d93dbb591a1a4d2a0fffabe2d9a4b79cf27283bcf1157d.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "9. Specification for Field Compaction ",
+        "text_level": 1,
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "현장 다짐에 관한 규정",
+        "text_level": 1,
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "현장에서의 다짐도 $\\longrightarrow$ 실내 다짐시험시 최대 건조단위중량의 90\\~95%",
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "상대다짐도(RC Relative Compaction) $\\mathrm{R}(^{0}/\\mathrm{{o}){=}\\frac{\\gamma_{\\mathrm{d(field)}}}{\\gamma_{\\mathrm{d(lab)}}}{\\times}100}$ ",
+        "page_idx": 23
+    },
+    {
+        "type": "image",
+        "img_path": "images/a5851338926f2e8ac3e7cc8637727474afc5b015f5dccd6ba0f5cff2b409179b.jpg",
+        "img_caption": [
+            "함수비 $\\%$ "
+        ],
+        "img_footnote": [],
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "현장에서 단위중량 결정",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "현장에서 다짐작업시 규정된 단위중량에 도달했는지 확인 필요모래 치환법(Sand cone method), 고무 풍선법(Rubber balloonmethod), 핵 밀도기 사용법(Use of a nuclear density meter)",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "모래 치환법",
+        "text_level": 1,
+        "page_idx": 24
+    },
+    {
+        "type": "image",
+        "img_path": "images/8eb99f24cc93c4a95cf97c9b7bba0fcc579535abc11353377efffcc763d039b2.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 24
+    },
+    {
+        "type": "image",
+        "img_path": "images/7aa909e721c1b8ba199609612cdfad1d32a7b308e237743e858ba153b095b0a2.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "11. Special Compaction Techniques ",
+        "text_level": 1,
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "특수한 다짐 기술",
+        "text_level": 1,
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "바이브로 플로테이션(Vibroflotation)",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "지반 심층부 다짐 (현장에서 널리 사용되는 기술)",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "느슨하고 두꺼운 조립토층의 다짐, 바이브로 플로트를 분사현상(quickcondition)을 이용 지반에 관입하여 사질토를 주입하고 진동시키면서상승",
+        "page_idx": 25
+    },
+    {
+        "type": "image",
+        "img_path": "images/15e0d918fda179732c9e9aaa5be7226c28bc71398a1a064e8c38ff2b0303444f.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "11. Special Compaction Techniques ",
+        "text_level": 1,
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "특수한 다짐 기술",
+        "text_level": 1,
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "동적 다짐(Dynamic Compaction) ",
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "느슨한 사질 지반의 다짐, 무거운 추를 반복적으로 지반에 낙하 →사질토 채움발파공법 $\\longrightarrow$ 조립토의 밀도증대, 토층두께의 2/3 지점에 폭약 설치",
+        "page_idx": 26
+    },
+    {
+        "type": "image",
+        "img_path": "images/dc75127119cc80a6b5a8c2f4cad840bf8030717627f3f9aba612e836878f8e76.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 26
+    }
+]
