@@ -569,7 +569,7 @@ def find_sichs_within_radius(retrieval_distance: int = 500, max_retrieval: int =
     
     # retrieval_distance 내에 있는 시추공 데이터 검색
     retrieved_sichs = dict()
-    with open(os.path.join(os.path.dirname(__file__), "..", "dataset", "pjCoord2.json"), 'r') as f:
+    with open(os.path.join(os.path.dirname(__file__), "..", "dataset", "pjCoord2.json"), 'r', encoding="utf-8") as f:
         pjCoord = json.load(f)
         
         if retrieval_option == "Primary":
@@ -842,8 +842,8 @@ def preprocess_3(retrieved_sich_paths):
 def get_response_1_2(text_1_2):    
     base_model_name = "Qwen/Qwen2.5-7B-Instruct"
     
-    lora_adapter_path = "/home/user/MetabizDesign/hajun/llm/outputs/lora_adapter/Qwen2.5-7B-Instruct_1epoch_1batch_53963"
-    merged_model_path = "/home/user/MetabizDesign/eunsu/test_streamlit/test_app_llm/merged_model_2"
+    lora_adapter_path = os.path.join(os.path.dirname(__file__), "..", "report_llm", "llm", "report_1_2", "Qwen2.5-7B-Instruct_1epoch_1batch_53963")
+    merged_model_path = os.path.join(os.path.dirname(__file__), "..", "report_llm", "llm", "report_1_2", "merged_model_2")
 
     prompt = """
     ### Instruction:
@@ -1067,7 +1067,7 @@ def get_response_3(all_test):
                 user_input += f"'{sich_code}': {sich_code_values}\n"
 
         base_model_name = "Qwen/Qwen2.5-7B-Instruct"
-        lora_adapter_path = "/home/user/MetabizDesign/hajun/part3_llm/outputs/qwen_merged_part3"
+        lora_adapter_path = os.path.join(os.path.dirname(__file__), "..", "report_llm", "llm", "report_3", "qwen_merged_part3")
 
         prompt = """### 제공된 예시와 같은 출력을 생성하기 위해 다음 공통 지침과 시험 별 지침을 따르세요.
 

@@ -6,6 +6,7 @@ hajun/
 qa_llm/dataset
 
 report_llm/output/
+report_llm/llm
 **/md/
 
 #######################################
