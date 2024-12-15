@@ -1,0 +1,2476 @@
+[
+    {
+        "type": "text",
+        "text": "1흙의 압밀 ",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "71 개설 ",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "흙은 구조물하중이나 성토하중을 받으면 체적이 감소하면서 압축이 발생 흙 입자와 물은하중에 대한 체적의 감소가극히 작아 비압축성으로 볼수있어 압축은 간극을 차지하고 있는 공기의 압축이나 간국수pore water가 빠져나가면서 발생 ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "지표면에 하중을 받아 발생하는 수직변형을 침하settlement침하는 세 가지 성분",
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\nS_{t}=S_{i}+S_{c}+S_{s}\n$$",
+        "text_format": "latex",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "71 ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "$S_{t}$ :전체 침하total Settlement $S_{i}$ :즉시 침하 $S_{c}$ :1차압밀침하 $S_{s}$ :2차압밀침하 ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "즉시침하immediate Settlement 하중을 받은 즉시 발생하는 침하   \n투수계수가 큰 사질토 등 조립토에서 발생   \n즉시침하는 탄성침하elastic settlement라고도 하며 탄성론으로 부터 유도한   \n공식을 이용하여 침하량 계산   \n1차압밀침하primary consolidation Settlement 포화된 흙에서 간국수가 흘러   \n나오면서 오랜 시간에 걸쳐 흙이 압축되며 나타나는 침하   \n투수계수가 작은 점성토에서 발생하며 시간 의존적인 침하   \n2차압밀침하secondary consolidation settlement 과잉간극수압 소산 이후   \n지속작용 하중에 의하여 발생하는 침하   \n경년효과aging 등으로 인한 흙 구조의 소성변화에 의하여 발생   \n해안가에 대단위의 면적을 조성하기 위하여 사용하는 준설토dredged Soi나   \n유기질 흙organic Soi1]에서 많이 발생 ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "점토의 경우 즉시침하량은 수mm\\~수cm 압밀침하량은 수m 이상으로 발생 ",
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/3514393a41c5a22f55030f33ed48317d1d7b7b545129d601ce9ff8b43feb091c.jpg",
+        "img_caption": [
+            "그림 71 즉시침하와 압밀침하의 비교"
+        ],
+        "img_footnote": [],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "72 압밀 개념모델 ",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "과잉간국수압excessive pore water pressure : 포화되어 있는 흙에 하중이 가해 져 그 하중에 의해 발생한 간극수압 흙의 내부에 과잉간극수압이 발생하면 이를 해소 하기 위하여 간극수압이 높은 지점으로부터 낮은 지점으로 물이 빠져나가게 되는데 점 토의 경우 투수계수가 낮아 오랜 시간이 소요 ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "압밀consolidation 포화된 간극으로부터 오랜 시간 동안'물이 흘러나오면서 흙이천천히 압축되는 현상",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Terzaghi의 스프링 용기 모델 ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Terzaghi는 얇은 판에 작은 구멍을 뚫고 스프링을 달아 상부에서 하중을가함얇은 판 하부의 스프링이 있는 공간은 물로 포화되어 있으며 스프링은 흙을물은 간국수를 모사",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "판과 판 사이에는 마노메터를 달아 각 판 사이의 과잉간국수압 측정",
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/c072db5dd2d62812d6abf187cb2376fbf610afa690bfb7fe0b3bb67af32012ac.jpg",
+        "img_caption": [
+            "그림 72 Terzaghi의 스프링 용기 모델"
+        ],
+        "img_footnote": [],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "초기에 판자의 구멍을 모두 막은 상태에서 용기 상단에 하중 $(\\varDelta\\sigma)$ 을 가하면 스프링은압축되지 않고 물이 모든 하중을 받아 초기과잉간극수압 $\\left(u_{o}\\right)$ 은 다음과 같다",
+        "page_idx": 2
+    },
+    {
+        "type": "equation",
+        "text": "$$\nu_{o}=\\Delta\\sigma=\\gamma_{w}h\n$$",
+        "text_format": "latex",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "72 ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "$h$ :초기 마노메터에 나타난 압력수두 높이 $\\gamma_{w}$ 물의 단위중량 ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Kelvin 모델 ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "포화된 점토의 시간의존적인 변형은 탄성 스프링과 완충기dashpot를 병렬로 연결한 Kelvin모형으로도 설명할수 있다 여기서 완충기는 포화된흙속의 물을 스프링은 흙입자를 나타낸다",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "스프링과 완충기의 응력-변형률 관계 -",
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/b98717a2a62e2be96842560e08f20815b69434b6d1f9a5c89f6eedce5c4b88a0.jpg",
+        "img_caption": [
+            "그림 7-3 Kelvin 모델"
+        ],
+        "img_footnote": [],
+        "page_idx": 2
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\underset{\\smile}{\\gplus}\\tilde{\\Xi}\\pi|\\,:\\,\\sigma\\,=\\,\\eta\\,\\frac{d\\epsilon}{d t}\n$$",
+        "text_format": "latex",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "이 모델에 가해진 응력 $\\sigma_{o}{\\circ}1\\big|$ 대한 점탄성 거동은 다음 식과 같다",
+        "page_idx": 2
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\sigma_{o}\\,=\\,k\\,\\epsilon+\\eta\\,{\\frac{d\\epsilon}{d t}}\n$$",
+        "text_format": "latex",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "$t\\,=\\,0$ 일 때 $\\sigma_{o}$ 가 작용하고 임의의 시간 t에서 미분방정식은",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "$\\epsilon\\;=\\;\\frac{\\sigma_{o}}{k}\\,\\left(1-e^{-\\,(k/\\eta)t}\\,\\right)$ 75 ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "임의 시간 $t^{\\circ\\parallel}$ 서 스프링과 완충기가 분담하는 응력",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "스프링: $\\sigma_{s}\\,=\\,k\\,\\epsilon\\,=\\,\\sigma_{o}\\bigl(1-e^{-\\,(k/\\eta)t}\\,\\bigr)$ 76  \n완충기 $\\sigma_{d}\\,=\\,\\eta{\\frac{d\\epsilon}{d t}}\\,=\\,\\sigma_{o}\\,e^{-\\,(k/\\eta)t}$ 77",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "응력 $\\sigma_{o}$ 의 시간에 따른 스프링과 완충기가 분담변화",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "$t\\,=\\,0\\,\\infty\\mathbb{1}$ 서 전응력은 완충기가 모두 부담하지만  \n시간 $\\boldsymbol{\\cdot}\\circ]$ 지나면서 완충기가 부담하는 하중은 감소하고 스프링이 부담하는 하중이 증가하여  \n궁극적으로는 모든 하중을 스프링이 부담하게 된다",
+        "page_idx": 3
+    },
+    {
+        "type": "image",
+        "img_path": "images/ad7b1855254b14f15fd0aba55bb2b63738c7775f90da5eb6539666584f98145e.jpg",
+        "img_caption": [
+            "그림 7-4 Keivin 모델의 응력-시간 관계"
+        ],
+        "img_footnote": [],
+        "page_idx": 3
+    },
+    {
+        "type": "image",
+        "img_path": "images/d084fcb4ef0cf3372718dfaee8a4597f0d87ff7ae24b4cfa536ef22b12a11712.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "73 Terzaghi의 1차원압밀 ",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "731 1차원압밀방정식의 유도",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Terzaghi1943의 압밀이론 가정 ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "1 흙은 균질homogeneous하고 완전히 포화saturated되어 있다 ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "2 흙입자와 물의 압축성은 무시할 만하다",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "3 흙입자 사이의 물의 이동은 Darcy 법칙을 만족하며 압밀기간 동안 투수계수는일정하다",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "4 간극수의 흐름은 1차원의 연직방향으로만 발생한다",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "5 간극비e는 유효응력 $({\\boldsymbol{\\sigma}}^{\\prime}$ 에 반비례한다 즉 압밀토층의 유효응력이 증가하면 간극비는 감소한다 ",
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/28450454cb4d6ad1638740e6aa4c4cdf7e5844ecacf7b2147deb34f87a527743.jpg",
+        "img_caption": [
+            "그림 73 압밀방정식의 유도를 위한 흙의 미소요소"
+        ],
+        "img_footnote": [],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "이 요소에서 물의 유출입은 오직 깊이 $z$ 방향으로만 $\\circ]$ 루어진다 $z$ 방향으로 물의유출량에서 유입량을 빼면 이는 미소점토 부피 내에서 부피변화",
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "$$\n(v_{z}+{\\frac{\\partial v_{z}}{\\partial z}}d z)d x d y-v_{z}d x d y={\\frac{\\partial V}{\\partial t}}\n$$",
+        "text_format": "latex",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "식의 $v_{z}d x d y$ 항을 제거하고 정리하면 ",
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac{\\partial v_{z}}{\\partial z}d z d x d y=\\frac{\\partial V}{\\partial t}\n$$",
+        "text_format": "latex",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "깊이방향으로의 흐름에 대한 Darcy 법칙은 다음과 같이 표현된다",
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv_{z}=k i=k\\frac{\\partial h}{\\partial z}\\!\\!=\\frac{k}{\\gamma_{w}}\\frac{\\partial u}{\\partial z}\n$$",
+        "text_format": "latex",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "식 75를 식 74에 대입하여 정리하면 ",
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{\\frac{k}{\\gamma_{w}}}{\\frac{\\partial^{\\,2}u}{\\partial z^{2}}}\\!\\!={\\frac{1}{d x d y d z}}{\\frac{\\partial\\,V}{\\partial t}}\n$$",
+        "text_format": "latex",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "흙입자는 비압축성이므로 흙의 부피변화율은 간극부피변화율과 같다 따라서",
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l}{\\displaystyle\\frac{\\partial\\,{\\cal V}}{\\partial t}\\!=\\!\\frac{\\partial\\,{\\cal V}_{V}}{\\partial t}\\!=\\!\\ V_{s}\\frac{\\partial e}{\\partial t}}\\\\ {\\displaystyle=\\frac{\\cal V}{1+e}\\frac{\\partial e}{\\partial t}=\\frac{d x d y d z}{1+e}\\frac{\\partial e}{\\partial t}}\\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "식 77을 식 $7.6\\dot{9}]$ 대입하면 식 78과 같다",
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{\\frac{k}{\\gamma_{w}}}{\\frac{\\partial^{2}u}{\\partial z^{2}}}\\!\\!=\\!{\\frac{1}{1+e}}{\\frac{\\partial e}{\\partial t}}\n$$",
+        "text_format": "latex",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "가정 5로부터 $\\partial e=-\\,a_{v}\\partial\\sigma^{'}\\,\\diamond$ 며 _ $a_{v}$ 는 압축계수coefficient of compressibility이다그림 $7.9\\mathrm{a}$ _ 참조 $\\circ7$ 를 식 $7.8\\dot{9}\\dot{1}$ 적용하면",
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{\\frac{k}{\\gamma_{w}}}{\\frac{\\partial^{2}u}{\\partial z^{2}}}\\!\\!={\\frac{-\\,a_{v}}{1+e}}{\\frac{\\partial\\sigma^{'}}{\\partial t}}\n$$",
+        "text_format": "latex",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "$\\sigma^{'}=\\sigma-u$ 유효응력법칙을 이용하면",
+        "page_idx": 6
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac{k}{\\gamma_{w}}\\frac{\\partial^{2}u}{\\partial z^{2}}\\equiv\\ \\frac{-\\,a_{v}}{1+e}\\frac{\\partial(\\sigma-u)}{\\partial t}\n$$",
+        "text_format": "latex",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "여기서 전응력 $\\sigma$ 은 시간변화의 함수가 $\\sigma_{\\mathrm{\\Delta}Y}$ 므로 제거하면 ",
+        "page_idx": 6
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac{k}{\\gamma_{w}}\\frac{\\partial^{2}u}{\\partial z^{2}}\\mathrm{=}\\frac{a_{v}}{1+e}\\frac{\\partial u}{\\partial t}\\mathrm{=}m_{v}\\frac{\\partial u}{\\partial t}\n$$",
+        "text_format": "latex",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "상수 $k,m_{v},\\gamma_{w}$ 를 $C_{v}(=\\,\\frac{k}{m_{v}\\gamma_{w}}\\,)$ 묶어 재정리하면 1차압밀의 기본 미분방정식",
+        "page_idx": 6
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{\\frac{\\partial u}{\\partial t}}={\\frac{k}{m_{v}\\gamma_{w}}}{\\frac{{\\partial}^{2}u}{\\partial z^{2}}}\n$$",
+        "text_format": "latex",
+        "page_idx": 6
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac{\\partial u}{\\partial t}=C_{v}\\frac{\\partial^{2}u}{\\partial z^{2}}\n$$",
+        "text_format": "latex",
+        "page_idx": 6
+    },
+    {
+        "type": "image",
+        "img_path": "images/7b2080e19f24cc8c286e363e369d8460efa59f96822391d7e6b2b1946ac40ad0.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "그림 2-7 흙입자의 부피 $V_{s}=1$ 일 때 흙요소의 3가지 성분 간극비-압력곡선",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "732 1차원압밀방정식의 해 ",
+        "page_idx": 6
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac{\\partial u}{\\partial t}=C_{v}\\frac{\\partial^{2}u}{{\\partial z}^{2}}\\,\\mathrm{~:~}\n$$",
+        "text_format": "latex",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "간극수압 $u:\\,\\lambda]$ 간 $t$ 의 1차도함수 깊이 $z$ 의 2차도함수 두께가 2H인 얇은 점토층이 모래층 사이에 끼어 있고 간극수압의 분포는 깊이에 대하여 일정한 경우그림 74a의 해: ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "H는 점토층의 두께가 아닌 배수거리",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "점토층 상하 양면에 모래층이 있어서 물이 양쪽으로 배수되는 양면배수의 경우그림 7-17a>]에는 점토층 두께 $H_{o}$ 의 1/2이 배수거리이고즉 $H\\!=\\!\\frac{H_{o}}{2})$",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "점토층 한쪽에만 모래층이 있어서 물이 한쪽으로만 배수되는 일면배수의 경우그림 7-176]]에는 점토층 두께가 배수거리가 된다즉 ${\\cal H}\\!={\\cal H}_{o}.$ :",
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/7a43a6d53cd5d9501b0fd0c28029f949d4e8e726bf169ddeaca6fb7cbccdef77.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "그림 74 압밀되는 점토의 경계조건과 배수거리",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "$u=\\sum_{m=0}^{\\infty}\\frac{2\\,u_{\\,i}}{M}s i n(\\frac{M z}{H})\\,\\,\\,e^{-\\,M^{2}T}$  \n$M{=}\\,\\frac{(2m+1)\\pi}{2}\\,\\diamond\\vert$ 며 $m$ 은 정수 T는 시간계수time factor  \n$H\\,=$ 배수거리distance of drainage이며  \n$z=$ 점토층 상부면으로부터의 거리  \n시간계수 $T^{\\underline{{\\tau}}}$ 무차원dimensionless 계수",
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "text": "$$\nT\\!=\\!\\frac{C_{v}t}{H^{2}}\n$$",
+        "text_format": "latex",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "718 ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "$t$ :압밀소요시간",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "압밀소요시간 t는 압밀층 두께의 제곱에 비례 ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "733 압밀도",
+        "text_level": 1,
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "$u=\\sum_{m\\,=\\,0}^{\\infty}\\frac{2\\,u_{i}}{M}s i n(\\frac{M z}{H})\\,\\,e^{-\\,M^{2}T}\\,:\\,\\stackrel{\\mathrm{ol}}{\\mathrm{~\\ldots~}}\\!\\!\\!\\mid z\\!\\!\\mid\\,\\,\\hat{x}\\!\\!\\mid\\!\\!\\left[\\hat{\\mathrm{\\boldmath~\\c~}}\\!\\!\\!\\circ\\!\\!\\!\\parallel\\,\\stackrel{\\mathrm{ol}}{\\mathrm{~\\ldots~}}\\!\\!\\!\\!\\mid z\\!\\!\\!\\mid\\,\\hat{z}\\!\\!\\!\\mid\\,\\hat{\\mathrm{\\boldmath~\\z~}}\\!\\!\\!\\right]\\,\\,\\stackrel{\\mathrm{zl}}{\\mathrm{~\\ldots~}}\\!\\!\\!\\mid z\\!\\!\\mid\\,\\hat{x}\\!\\!\\mid\\,\\hat{\\mathrm{\\boldmath~\\z~}}\\!\\!\\!\\mid\\,\\hat{\\mathrm{\\boldmath~\\z~}}\\!\\!\\!\\mid\\,\\hat{\\mathrm{\\boldmath~\\z~}}\\!\\!\\!\\mid\\,\\hat{\\mathrm{\\boldmath~\\z~}}\\!\\!\\!\\mid\\,\\hat{\\mathrm{\\boldmath~\\z~}}\\!\\!\\!\\mid\\,\\hat{\\mathrm{\\boldmath~\\z~}}\\!\\!\\!\\mid\\,\\hat{\\mathrm{\\boldmath~\\z~}}\\!\\!\\!\\mid\\,\\hat{\\mathrm{\\boldmath~\\z~}}\\!\\!\\!\\mid\\,\\hat{\\mathrm{\\boldmath~\\z~}}\\!\\!\\!\\mid\\,\\hat{\\mathrm{\\boldmath~\\z~}}\\!\\!\\!\\mid\\,\\hat{\\mathrm{\\boldmath~\\z~}}\\!\\!\\!\\mid\\,\\hat{\\mathrm{\\boldmath~\\z~}}\\!\\!\\!\\mid\\,$ 수압의 크기압밀도 degree of consolidation 과잉간극수압이 감소한 비율또는 그 결과 압밀침하가 일어난 비율 임의 시간에 임의 깊이에서의 압밀도 $U_{z}$",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "$U_{z}=\\frac{\\lnot\\Xi\\stackrel{\\perp}{\\rightleftarrows}\\stackrel{\\perp}{\\rightleftarrows}}{\\lnot\\Xi^{\\top}}\\stackrel{\\exists\\P\\sim\\q\\exists\\,\\zeta\\stackrel{\\qartriangle}{\\rightleftarrows}\\stackrel{\\supset}{\\neg s}\\stackrel{\\partial\\Rsh}{\\longrightarrow}}{\\lnot\\Xi^{\\top}\\stackrel{\\cap}{\\sim}\\stackrel{\\sim}{\\Gamma}\\stackrel{\\partial\\ R~}{\\longrightarrow}}=\\frac{u_{i}-u}{u_{i}}=1-\\frac{u}{u_{i}}$ 여기서 $u_{i}=$ 초기 과잉간국수압 $u=$ 남아 있는 과잉간극수압 ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "식 717을 식 719]에 대입하면 압밀도 $U_{z}$ 는 다음 식과 같이 된다",
+        "page_idx": 8
+    },
+    {
+        "type": "equation",
+        "text": "$$\nU_{z}=1-\\sum_{m=0}^{m=\\infty}\\frac{2}{M}\\quad\\sin\\frac{M z}{H}\\,e^{-\\,M^{2}\\,T}\n$$",
+        "text_format": "latex",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "양면배수 조건의 점토층에서의 압밀도 $U_{z}$ 를 구하기 위하여 식 720을 직접사용하는 것은 매우 복잡하므로 이 식을 도표화한 그림 75 사용",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "그림에서 2는 점토층 상부로부터의 거리",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "점토층 상부에만 모래층이 있는 일면배수의 경우에는 그림 75의 상반부 사용점토층 하부에만 모래층이 있는 일면배수의 경우에는 그림 75의 하반부 사용",
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/434702631703322dd73b8e49dad1ff8f4efc00bf1c199f4b75f550949332386f.jpg",
+        "img_caption": [
+            "그림 75 깊이에 따른 압밀도 $U_{z}$ 와 시간계수 $T$ 사이의 관계"
+        ],
+        "img_footnote": [],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "예제71",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "다음그림에 보인바와 같은 지표면에 $50\\mathrm{kN}/\\mathrm{m}^{2}\\dot{\\Omega}$ 등분포하중을받는지반이 있다지표면으로부터 4m 하부에두께 4m의 점토층이 존재한다고 할 때 다음에 답하시오",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "1 하중작용 1년후 시간계수와 깊이 --5m --6m $-7\\mathrm{m}\\hat{\\circ}\\|$ 서의 압밀도를 계산하여라",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "2 1번과 같은 조건에서 과잉간극수압을 계산하여라",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "3 1 2번과 같은 조건에서 유효연직응력을 계산하고 그 분포를 깊이에 대하여 도시하여라",
+        "page_idx": 9
+    },
+    {
+        "type": "image",
+        "img_path": "images/784d9757261d8900d72391fa6b206968e9b1e0ba267a5d993825d4cc5518fb49.jpg",
+        "img_caption": [
+            "그림76예제71"
+        ],
+        "img_footnote": [],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "1그림의 점토층의 압밀배수조건은 양면배수이므로 점토층의 배수거리 $\\mathrm{H{=}}4/\\mathrm{2{=}}2\\mathrm{m}\\diamond$ 다 하중재하1년후의시간계수는 식 718로부터",
+        "page_idx": 9
+    },
+    {
+        "type": "equation",
+        "text": "$$\nT\\!\\!=\\!\\frac{C_{v}t}{H^{2}}\\!\\!=\\!\\frac{5\\!\\times\\!10^{-4}\\!\\times\\!3600\\!\\times\\!24\\!\\times\\!365}{200^{2}}\\!\\!=\\!0.39\n$$",
+        "text_format": "latex",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "각 깊이에 대응하는 $\\scriptstyle{T=0.39^{\\circ}}1$ 대한 압밀도를 그림 $7.5\\infty$ 서 찾으면",
+        "page_idx": 9
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{r l r l}{z\\!=\\!4\\mathrm{m}}&{}&{z/H\\!=\\!0.0}&{}&{U_{z}\\!=\\!100\\%}\\\\ {z\\!=\\!5\\mathrm{m}}&{}&{z/H\\!=\\!0.5}&{}&{U_{z}\\!=\\!64\\%}\\\\ {z\\!=\\!6\\mathrm{m}}&{}&{z/H\\!=\\!1.0}&{}&{U_{z}\\!=\\!51\\%}\\\\ {z\\!=\\!7\\mathrm{m}}&{}&{z/H\\!=\\!1.5}&{}&{U_{z}\\!=\\!64\\%\\mathrm{\\%}}\\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "2 과잉간극수압을 계산하기 위한 초기과잉간극수압은 $u_{o}\\,{=}\\,50\\,\\mathrm{kN}/\\mathrm{m}^{2}\\diamondsuit$ 다 식 716으로부터 ",
+        "page_idx": 10
+    },
+    {
+        "type": "equation",
+        "text": "$$\nU_{z}=1-\\frac{u}{u_{i}}\\,,\\ \\frac{u}{u_{i}}=1-\\,U_{z}\\,,\\ u=u_{i}\\,(1-\\,U_{z})\n$$",
+        "text_format": "latex",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "$u_{z}=u_{o}(1-U_{z})$ 로 수정하여 각 깊이별 과잉간극수압을 계산한다",
+        "page_idx": 10
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{r l r l}{z=\\!4\\mathrm{m},}&{{}}&{z/H\\!=\\!0.0\\,}&{}&{u_{z=4m}=u_{o}(1-U_{z=4m})=\\!50\\times\\!(1\\!-\\!1.0)\\!=\\!0\\mathrm{kN/m^{2}}}\\\\ {z=\\!5\\mathrm{m},}&{{}}&{z/H\\!=\\!0.5\\qquad u_{z=5m}=u_{o}(1-U_{z=5m})=\\!50\\times\\!(1\\!-\\!0.64)\\!=\\!18\\mathrm{kN/m^{2}}}\\\\ {z=\\!6\\mathrm{m},}&{{}}&{z/H\\!=\\!1.0\\,}&{}&{u_{z=6m}=u_{o}(1-U_{z=6m})=\\!50\\times\\!(1\\!-\\!0.51)\\!=\\!24.5\\mathrm{kN/m^{2}}}\\\\ {z=\\!7\\mathrm{m},}&{{}}&{z/H\\!=\\!1.5\\qquad u_{z=7m}=u_{o}(1-U_{z=7m})=\\!50\\times\\!(1\\!-\\!0.64)\\!=\\!18\\mathrm{kN/m^{2}}}\\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "3 유효응력은 초기유효응력을 계산한후 간극수압이 소산되어 추가되는 유효응력을 계산한다경계면 $z\\!=\\!-4\\mathrm{m},$ _ $-8\\mathrm{m}\\hat{\\circ}\\|$ 서의 초기유효응력은",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "$z\\mathrm{=-4m,}\\qquad{\\sigma^{'}}_{z\\,=\\,4m}={\\gamma^{'}}_{s a n d}z\\,\\mathrm{=8{\\times}4\\mathrm{=32kNm^{2}}}$ $z\\mathrm{=-8m,}\\qquad{\\sigma^{'}}_{z\\,=\\,8m}\\,{=\\,\\sigma^{'}}_{z\\,=\\,4m}\\,{+\\,\\gamma^{'}}_{d a y}\\,z\\,{=}\\,32\\,{+}\\,7\\times4\\mathrm{=60kN/m^{2}}$ ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "하중재하 1년 후의 유효응력 $=$ 초기유효응력 $+$ 추가유효응력이므로",
+        "page_idx": 10
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{r l r l}{z\\!=\\!5\\!\\!\\operatorname*{m}\\quad}&{z/H\\!=\\!0.5\\quad}&{\\sigma_{\\,\\,z=5m}^{\\prime}\\!=\\!\\!(\\underline{{32+7(=7*1)}})\\!+\\!(50\\!-\\!18)\\!=\\!39\\!+\\!32\\!=\\!61\\mathrm{kN}\\!\\!\\operatorname{m}^{2}}\\\\ {z\\!=\\!6\\!\\operatorname*{m}\\quad}&{z/H\\!=\\!1.0\\quad}&{\\sigma_{\\,\\,z=6m}^{\\prime}\\!=\\!\\!(\\underline{{32+14(=7*2)}})\\!+\\!(50\\!-\\!24.5)\\!=\\!4.6\\!+\\!2.55\\!=\\!71.51}\\\\ {z\\!=\\!7\\!\\operatorname*{m}\\quad}&{z/H\\!=\\!1.5\\quad}&{\\sigma_{\\,\\,z=7m}^{\\prime}\\!=\\!(32+21(=7*3))\\!+\\!(50\\!-\\!18)\\!=\\!53\\!+\\!32\\!=\\!85\\!\\mathrm{kN}\\!\\!\\operatorname{m}^{2}}\\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "경계면인 $z\\!=\\!-4\\mathrm{m},$ _ $-8\\mathrm{m}\\hat{\\circ}\\|$ 서의 유효응력은",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "초기유효응력 1 2에 추가유효응력이 된 상재하중 $50\\mathrm{kN}/\\mathrm{m}^{2}\\frac{\\diamond}{\\Xi}$ 더하면각각 $(32\\mathrm{{+}}50)\\,=\\,82\\mathrm{{kN/m}^{2}}$ $(60\\substack{+50})\\,=\\,110\\mathrm{kN/m^{2}}.$",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "734 평균압밀도",
+        "text_level": 1,
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "그림 75는 어느 시간 $t^{\\circ1]}$ 서 임의 지층 깊이 $z$ 에서 과잉간극수압을 나타냄점토층 전체에 대한 평균압밀도average degree of consolidation $\\overline{{U}}$ :",
+        "page_idx": 10
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\overline{{U}}\\!\\!=\\!\\frac{U_{i}-U}{U_{i}}=\\ 1-\\frac{U}{U_{i}}=\\ 1-\\frac{\\displaystyle\\int_{0}^{2H}\\!\\!u d z}{\\displaystyle\\int_{0}^{2H}\\!\\!u_{o}d z}\n$$",
+        "text_format": "latex",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "$U$ :: 점토층 전체 소실된 과잉간극수압의 합 $U_{i}$ 점토층 전체 초기과잉간극수압의 합 ",
+        "page_idx": 10
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\overline{{U}}\\!\\!=\\!1-\\sum_{m=0}^{\\infty}\\!\\frac{2}{M}e^{-\\,M^{2}T}\n$$",
+        "text_format": "latex",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "시간계수와 평균압밀도와의 관계",
+        "page_idx": 11
+    },
+    {
+        "type": "image",
+        "img_path": "images/13c9f5e16a83ac0b51d9c6a11fb60ee5cdda702973dc8a2454597eb67be4104b.jpg",
+        "img_caption": [
+            "그림 77 평균압밀도 $\\overline{{U}}$ 와 시간계수 T와의 관계"
+        ],
+        "img_footnote": [],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "압밀도 $\\!\\!\\!\\!U\\!\\!=\\!53\\%$ 에 해당하는 시간계수는 $0.2\\dot{}\\dot{}$ 므로",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "$\\circ7$ 를 기준으로 두 식의 사용 여부를 결정할 수도 있다",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "$\\begin{array}{r l l}{0\\;<\\;}&{\\overline{{U}}\\;\\leq\\;}&{54\\,\\%\\,\\,:\\,\\;\\,T=\\left.\\frac{\\pi}{4}\\bigg[\\frac{\\overline{{U}}\\,(\\mathfrak{V}_{0})}{100}\\right]^{2}}\\\\ &{54\\%\\;<\\;}&{\\overline{{U}}\\;<\\;\\,100\\,\\%\\,\\,:\\,\\,T=1.781-0.933\\big\\{\\log\\big[100-\\overline{{U}}\\,(\\mathfrak{V}_{0})\\big]\\big\\}}\\end{array}$ 723a   \n7236 ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "평균압밀도는 최종침하량을 기준으로 하여 다음 식과 같이 구할 수도 있다",
+        "page_idx": 11
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\overline{{U}}=\\ \\frac{S_{t}}{S_{c}}\n$$",
+        "text_format": "latex",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "724 ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "$S_{t}$ :임의 시간에서의 점토층 압밀침하량 $S_{c}$ :최종시간 $(t\\mathrm{=}\\infty)\\infty\\rvert$ 서 점토층 압밀침하량전압밀침하량 ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "예제72",
+        "text_level": 1,
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "$T^{=0.6\\circ\\parallel}$ 서의 $z/H{=}0.1$ $0.5\\dot{9}$ 서의 압밀도 $U$ 와 점토층 전체 평균압밀도 $\\overline{{U}}$ 를 구하여라 ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "풀 이",
+        "text_level": 1,
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "$T^{=0.6\\circ\\mathbb{I}}$ 서의 $z/H{=}0.1$ $0.5\\dot{}\\dot{}\\dot{}\\rvert$ 서의 압밀도는 그림 75로부터 구하면 다음과 같다",
+        "page_idx": 11
+    },
+    {
+        "type": "equation",
+        "text": "$$\nz/H{=}0.1\\qquad U_{z=0.1H}{=}0.9\\ ;\\ z/H{=}\\ 0.5\\qquad U_{z=0.5H}{=}0.8\n$$",
+        "text_format": "latex",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "$T^{=0.6\\circ\\parallel}$ 서의 점토층 전체 평균압밀도는 그림 77로 부터 구하면 $\\!\\!\\!\\!\\!\\!U\\!\\!=\\!\\!0.82^{\\circ}]$ 다",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "예제73",
+        "text_level": 1,
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "두께 $4\\mathrm{m}^{\\circ}|$ 고 압밀계수 $C_{v}{=}0.002\\mathrm{cm}^{2}/\\mathrm{sec}\\Omega$ 점토층의 평균압밀도 $50\\%$ $90\\%$ 에 해당하는 압밀소요시간을",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "다음의 배수조건에 대하여 계산하여라  \n1 양면배수 시  \n2 일면배수 시",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "풀 이",
+        "text_level": 1,
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "압밀도 $50\\%$ $90\\%$ 에 해당하는 시간계수는 그림 $7.7\\ddot{^{\\,}}$ 도표에 의하면 각각 $T{=}0.197$ $0.84801$ 다",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "1 양면배수 시: 압밀도 $50\\%\\ t={\\frac{T_{50}H^{2}}{C_{v}}}={\\frac{0.197\\times200^{2}}{0.002}}=3.940,000\\sec=45.6{\\stackrel{\\circ}{\\rightleftharpoons}}$압밀도 $\\doteq90\\%\\ t=\\frac{T_{90}H^{2}}{C_{v}}{=}\\frac{0.848\\times200^{2}}{0.002}{=}16,960,000\\mathrm{sec}\\!=\\!196\\frac{\\circ]}{\\circ}$  \n2 일면배수 시: 압밀도 $50\\%\\ t={\\frac{T_{50}H^{2}}{C_{v}}}\\!=\\!{\\frac{0.197\\times400^{2}}{0.002}}\\!=\\!15,\\!760,\\!000\\,\\mathrm{sec}\\!=\\!182.4{\\overset{\\circ}{\\rightleftharpoons}}$압' $\\stackrel{\\triangledown}{\\equiv}\\stackrel{\\triangledown}{\\Sigma}\\,90\\%\\ t=\\frac{T_{90}H^{2}}{C_{v}}=\\frac{0.848\\times400^{2}}{0.002}=67,840,000\\sec=784\\overset{\\triangledown}{\\=}$ _  \n위의 관계로부터 압밀소요시간은 배수거리의 제곱에 비례함을 알수 있다",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "예제74",
+        "text_level": 1,
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "예제 71의 점토층에 대하여 1년 후 평균압밀도를 다음과 같이 계산하여라",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "1 평균압밀도 도표 $7.6\\ \\circ]$ 용   \n2 평균압밀도 계산 식721a 721b 이용 ",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "",
+        "text_level": 1,
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "1 하중재하1년 후의 시간계수 $_{T=0.39\\circ}$ 었으므로 $\\circ707]$ 상응한 평균압밀도는 그림 77로부터 $\\!\\!\\!\\!\\!U\\!\\!=\\!\\!0.68\\circ\\!\\!\\!$ _다",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "2 시간계수 $\\mathrm{T}\\mathrm{=}0.39\\mathrm{\\-}1\\mathrm{\\-}$ 대해서는 식 7236를 사용",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "$T\\!\\!=\\!1.781\\,{-}\\,0.933\\mathrm{log}\\big(100-\\overline{{U}}\\big)=0.39$ $100-\\overline{{{U}}}{=}\\,30.96\\%\\,\\rightarrow\\,\\overline{{{U}}}{=}\\,69\\%\\,{\\diamond}\\,\\rbrack\\,\\Gamma{\\downarrow}$ ",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "74 압밀시험 ",
+        "text_level": 1,
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "741 시험장치",
+        "text_level": 1,
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "압밀시험은 압밀시험기consolidometer 또는 oedometer를 이용 압밀시험장치는 직경 6cm 높이 2cm의 Oedometer와 하중재하장치 변위측정장치 표준압밀시험의 순서 ",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "1 초기하중 $0.05\\mathrm{kg/cm^{2}}$ 을24시간 재하하고 시료의 압축량을 다이얼게이지로 측정2 이후 처음 가한 하중의 2배 $(0.1\\mathrm{kg/cm^{2}})$ 를 가하여 시간간격 15 30초 1 2 4 815 30분 1 2 4 8 24시간 간격으로 압축량을 기록",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "3 하중을 02 04 08 16 32 $6.4\\mathrm{{kg}/\\mathrm{{cm}^{2}}}$ 로 2배씩 늘려가며 각 단계마다 24시",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "간씩 2 항의 방법으로 재하하고 압축량을 기록4 최종단계의 하중에 의한 압밀이 끝나면 64 32 16 08 O05kglcm로 제하unloading하면서각변형량을 측정한다 이후하중을다시 재재하reloading하면서 압축량을측정5시험후시료의 건조단위중량을 측정",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "압밀시험 결과에 의한 가해지는 하중에 대한 점성토의 침하량 각 하중별 압밀시간자료로부터 간극비와 하중의 관계 압밀계수와 하중의 관계 압축지수 등을 알수있다",
+        "page_idx": 13
+    },
+    {
+        "type": "image",
+        "img_path": "images/0d3dda9d844feb2332e69fc021ceb3125943fd7697d63183a78fede7cccde99f.jpg",
+        "img_caption": [
+            "그림 78 압밀시험장치"
+        ],
+        "img_footnote": [],
+        "page_idx": 13
+    },
+    {
+        "type": "image",
+        "img_path": "images/d9bf8be6cea1554a5f40b9b4117fb80f67f4980d74f7e0ed784830028b8b4adc.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "742 간극비-압력곡선",
+        "text_level": 1,
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "간극비-압력 $(e-\\log{\\sigma^{'}})$ 곡선을 정규그래프regular graph와 반대수지semi--log graph로 작성 | bc의 직선적으로 변하는 부분 : 과거 받았던 적이 없었던 압력을 처음으로 받을 때 의 $e-\\log\\sigma^{\\prime}$ 곡선으로 처녀압축곡선virgin compression curve 직선부분의 기울기를 압축지수 $\\overline{{C_{c}}})$ 라고 한다 ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "이후 cd- de압력제하-재재하 부분은 과거에 받았던 압력을 다시 받을 때까지의완만한 경사의 곡선으로 재압축곡선re-compression curve",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "재압축곡선의 기울기 $\\left(\\,C_{r}\\,\\right)$ 는 압밀시험 초기에 가한 압력에 대한 간극비 곡선Cab의기울기와 매우 유사 함",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "재압축곡선에 의하면 압밀곡선은 과거에 받았던 압력을 다시 받을 때까지는 곡선의경사가 완만하게 유지되나 어떤 압력을 넘으면 그 경사가 급격히 변하는 것을알수있는데그림 79의 d e f 점 이 경사변화의 경계가 되는 점 e의 압력을 선행압밀압력pre-consolidation pressure $\\sigma_{c}^{'})\\diamondsuit]$ 라고 한다",
+        "page_idx": 14
+    },
+    {
+        "type": "image",
+        "img_path": "images/0526d33963a79c278d3b8b8198a064b295afb07021763ff2971fde9351ab1ab7.jpg",
+        "img_caption": [
+            "그림 79 간극비-압력곡선"
+        ],
+        "img_footnote": [],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "예제75",
+        "text_level": 1,
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "불교란 점토의 압밀시험 결과다음과 같은 값을 얻었다 시험 전의 공시체두께 $\\scriptstyle\\mathrm{H=}2\\mathrm{cm}.$ 공시체의 노건조중량 $\\mathrm{W_{s}}\\mathrm{=}37.7\\mathrm{g},$ 공시체의 단면적 $\\mathrm{A}{=}19.62\\mathrm{cm}^{2}$ - 흙입자의 비중 $\\mathrm{G_{s}}\\mathrm{=}2.65\\infty1$ 었다",
+        "page_idx": 15
+    },
+    {
+        "type": "table",
+        "img_path": "images/31253f1021b3ec88d71ab72016f47ae4692302ac32c47112a181e0acf98c2de3.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "1 $e-\\log\\sigma$ 곡선을 그리고 압축지수 $\\left(C_{\\mathrm{c}}\\right)$ 와 재압축지수 $\\left(C_{\\mathrm{r}}\\right)$ 를 계산하여라",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "2 $\\sigma\\!=\\!5.0\\mathrm{{kg/cm^{2}}}\\mathrm{{o}\\!]}$ 서 $6.0\\mathrm{kg/cm^{2}}\\Omega$ 로 유효응력증가를 받을 때 압밀계수 $a_{v}$ 체적압축계수 $m_{v}$ 를 구하여라",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "해",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "1 $G_{s}=\\frac{\\gamma_{s}}{\\gamma_{w}}=\\frac{W_{s}}{V_{s}\\gamma_{w}}$ 로부터 $V_{s}={\\frac{W_{s}}{G_{s}\\gamma_{w}}}={\\frac{37.7}{2.65\\times1}}\\,=14.23\\,\\mathrm{cm}^{3}$ $V\\!=\\!A\\!\\times\\!H=19.62\\!\\times\\!2\\ =39.24\\,\\mathrm{cm}^{3}$ $V_{v}=\\,V-\\,V_{s}=39.24-14.23\\,=\\,25.01\\,\\mathrm{cm}^{3}$ 초기간극비e- $e_{0}=\\frac{V_{v}}{V_{s}}{=}\\,\\frac{25.01}{14.23}\\,\\,=\\,1.76$ 침하량 $d=\\frac{(e_{o}-e_{1})H}{1+e_{0}}\\,\\,\\circ\\,]$ 므로 $d(1\\!+\\!e_{o})=(e_{o}-e_{1})H=e_{o}H\\,-e_{1}H$ $e_{1}H\\!=e_{o}H\\!-d\\big(1\\!+\\!e_{o}\\big)$ : 간극비 $e_{1}=e_{0}-\\frac{d(1\\!+\\!e_{0})}{H}$ 문제의 표에 침하량d를 넣어가며 작성한 표와 그래프는 다음과 같다 재하응력 $1.6~\\,k g/c m^{2}\\,\\sim3.2~\\,k g/c m^{2}$ 구간에서 압축지수 $\\left(C_{\\mathrm{c}}\\right)$ 를 계산하면 ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 15
+    },
+    {
+        "type": "table",
+        "img_path": "images/896e97c25c6abbce54cb1317a795ecfd83941ecae9efe53a7307636460c4271c.jpg",
+        "table_caption": [
+            "e--log o곡선"
+        ],
+        "table_footnote": [],
+        "page_idx": 16
+    },
+    {
+        "type": "image",
+        "img_path": "images/395048b1673b136aa7c9c181a5f2f6155c6d6515c7dd9d25c6a13cf9355f5a62.jpg",
+        "img_caption": [
+            "그림 710 예제 75 간극비-압력곡선",
+            "logo kg/cm?> "
+        ],
+        "img_footnote": [],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 16
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm{Cc}\\,=\\,-\\frac{e_{1-}e_{2}}{\\log(\\frac{\\sigma_{1}^{'}}{\\sigma_{\\,2}^{'}})}\\,=\\,-\\,\\frac{1.58-1.42}{\\log(\\frac{1.8}{3.2})}{=-0.16/(-0.30)}\\,=0.53\\\n$$",
+        "text_format": "latex",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "제하응력 $3.2\\,\\,\\,k g/c m^{2}\\,\\sim0.8k g/c m^{2}$ 구간에서 재압축지수 $\\left(C_{\\mathrm{r}}\\right)$ 를 계산하면",
+        "page_idx": 16
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm{Cr}\\,=\\,-\\frac{e_{1-}e_{2}}{\\log(\\frac{\\sigma_{1}^{'}}{\\sigma_{\\,2}^{'}})}\\,=\\,-\\frac{1.21-1.24}{\\log(\\frac{3.2}{0.8})}{=0.03/0.602}\\,{=0.05}\n$$",
+        "text_format": "latex",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "2 $\\begin{array}{r l}{\\phantom{\\frac{1}{1}}0=5.0\\mathrm{kg}/\\mathrm{cm}^{2}\\phantom{\\frac{\\partial}{\\partial g}}|\\mathcal{A}|}&{\\in=1.3\\phantom{0}0|\\exists\\Psi,\\phantom{\\frac{1}{1}}0=6.0\\mathrm{kg}/\\mathrm{cm}^{2}\\phantom{\\frac{\\partial}{\\partial g}}|\\mathcal{A}|\\mathrm{~e~=~1.22\\circ}|\\Upsilon|}\\end{array}$ +++:식78과 식 711을 참조하여 압축계수와 체적 압축계수를 계산하면",
+        "page_idx": 16
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l}{\\displaystyle a_{v}=\\,-\\,\\frac{\\partial e}{\\partial\\sigma^{\\prime}}\\,=\\,-\\,(1.22\\,{-}\\,1.3)/1=0.08\\,c m^{2}/k g}\\\\ {\\displaystyle m_{v}=\\frac{a_{v}}{1\\,+\\,e_{0}}\\,=\\,0.08/\\bigl(1\\,{+}\\,1.76\\bigr)=0.03\\,c m^{2}/k g}\\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "743 정규압밀점토와 과압밀점토",
+        "text_level": 1,
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "1 과압밀비와 선행압밀압력의 결정 정규압밀점토normally consolidated clay NC clay ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "점토가 퇴적된후 지층이나 지하수위의 변화가 없었다면 임의 깊이 흙 요소에서의유효연직응력 $(\\sigma_{o}^{'}$ 은 그 깊이에서 채취된 시료의 압밀곡선으로부터 얻어진 선행압밀압력$(\\sigma_{c}^{'})$ 과 동일하게 되며 이와같은 응력상태 즉 $\\sigma_{c}^{'}$ $\\sigma_{o}^{'}$ 에 있는흙",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "과압밀점토overconsolidated clay OC Clay ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "지표층의 토층이 일부 제거되었거나 또는 지하수위가 저하되었다가 회복된 경우에는임의 깊이 흙요소는 원래 퇴적된 당시의 압력이나 지하수가 최대로 저하될 당시의 유효응력이 선행압밀압력이 된다 이때는 선행압밀압력 $(\\sigma_{c}^{'})$ 이 압밀시험이 수행된 현재의 유효연직응$(\\sigma_{o}^{'}$ 보다크게 되는데 $\\sigma_{c}^{'}>\\sigma_{o}^{'}$ 인 경우 점토를 말함",
+        "page_idx": 17
+    },
+    {
+        "type": "image",
+        "img_path": "images/eddbf5d6ba02fe62852ef8a3d826b4942088f0631620c58cbe3e5cb545a59ba5.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "$\\textcircled{3}$ 과압밀비OCR $:$ Over Consolidation Ratio여기서 $\\boldsymbol{P_{c}}$ :선행압밀하중$P_{o}$ :유효상재하중유효연직응력$\\textcircled{>}$ OCR $<1$ 압밀이 진행 중인 점토그림에서 A점$\\textcircled{4}$ $\\mathrm{OCR}=1$ 정규압밀점토그림에서 B점$\\textcircled{\\scriptsize{\\tau}}$ OCR ${>}1$ 과압밀점토그림에서 점",
+        "page_idx": 17
+    },
+    {
+        "type": "image",
+        "img_path": "images/12e035e549ffac2383031d1f8836850906fbf647ddadd0a81383cf527b2519f0.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "과압밀비over consolidation ratio OCR 유효연직압력 $(\\sigma_{o}^{'})\\circ\\parallel$ 대한 선행압밀압력$(\\sigma_{c}^{'})$ 의 비 토층의 응력이력stress history을 나타내는 토질정수이다",
+        "page_idx": 17
+    },
+    {
+        "type": "equation",
+        "text": "$$\nO C R=\\ \\frac{{\\sigma_{c}}^{'}}{{\\sigma_{o}}^{'}}\n$$",
+        "text_format": "latex",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "725 ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "$\\mathrm{~OCR}\\approx\\ 10\\rceil$ 면 정규압밀점토 $\\mathrm{OCR}\\!>\\!1\\circ\\big|$ 면 과압밀점토",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "$\\mathrm{OCR}\\!<\\!1\\,^{\\circ}\\!|$ 면 미압밀점토underconsolidated clay로 분류",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "과압밀점토:현재 유효상재압보다 큰 압력으로 과거에 이미 압밀이 일어난 점토 미압밀점토underconsolidated clay : 지층의 형성된 연대가 오래되지 않거나 인공 적으로 최근에 조성되어 현재 압밀이 진행 중인 점토 ",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "그림 79의 ab cd de는 과압밀점토 bc는 정규압밀점토 상태대부분의 흙은 정규압밀이나 과압밀상태의 특성을 가짐",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "과압밀이 발생하는 원인",
+        "text_level": 1,
+        "page_idx": 18
+    },
+    {
+        "type": "table",
+        "img_path": "images/eff4aa530178c166221cdc1ee8ac0afa8538fadfae9d4a34d8a684697bed5ab7.jpg",
+        "table_caption": [
+            "표71 과압밀의 원인"
+        ],
+        "table_footnote": [],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Casagrande는 $e-\\log p$ 곡선으로부터 선행압밀압력을 구하는 작도법 제안 ",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "1 육안으로 곡률이 가장큰점를 찾는다  \n2 수평선 PQ를 그린다  \n3 P점에서 접선 PR을 그린다  \n4 <QPR을 이등분하는 선 PS를 그린다  \n5 $e-10g p$ 곡선의 직선부를 연장하여 PS선과 만나는 점 1를 그린다  \n6 점 T에 해당하는 유효압력이 선행압밀압력 _ $p_{c}{\\circ}7$ 다",
+        "page_idx": 18
+    },
+    {
+        "type": "image",
+        "img_path": "images/035b6d453d388e46e26af8164e86a19e64210ce694b8d7c0c2c5ab9b1c2aa84f.jpg",
+        "img_caption": [
+            "그림 7-10 선행압밀압력 작도법"
+        ],
+        "img_footnote": [],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "2 압축지수",
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "그림 79b와 같은 압밀곡선에서 선행압밀압력을 초과한 직선부의 기울기인 압축지수compressionindex는 식 726과 같이 표시한다",
+        "page_idx": 19
+    },
+    {
+        "type": "equation",
+        "text": "$$\nC_{c}=\\frac{e_{1}-e_{2}}{\\log{\\sigma_{\\mathrm{~2~}}^{'}}-\\log{\\sigma_{\\mathrm{~1~}}^{'}}}=\\,-\\,\\frac{\\varDelta e}{\\log{\\frac{\\sigma_{\\mathrm{~2~}}^{'}}{\\sigma_{\\mathrm{~1~}}^{'}}}}\n$$",
+        "text_format": "latex",
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "여기서 $\\Delta e=e_{2}-e_{1}\\diamondsuit]$ 다",
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "일반 점토의 압축지수 $0.2{\\sim}0.9\\$예민점토:1을 초과하며 유기질 점토나 이탄peat Pt은 4 이상",
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "선행압밀 이전의 압밀곡선에 대한 기울기도 결정가능",
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "흙이 하중을 받은 후 제거되었다 다시 재하된 경우의 기울기cd de와 유사하며 재압축지수recompression index $C_{r}$ : 재압축지수 $C_{r}\\ =\\ (0.1{\\sim}0.2)$ $C_{c}$ ",
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "표 72 자연토의 압축지수와 재압축지수Das 2006",
+        "page_idx": 19
+    },
+    {
+        "type": "table",
+        "img_path": "images/19937b0d09e317568a1c8a90ebe08ece3d933c5bacff990a76d1db7e4061f056.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "압밀시험:하중재하loading시험에 1주일 이상소요 하중제하unloading 및재재하reloading를 포함하면 최소 2주일 이상 시험기간필요간단한 흙의 기본물성시험만으로 압축지수를 추정할수있는경험식",
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "표 73 압축지수 $C_{c}^{\\circ\\!\\!\\!/}{}^{\\!\\!\\!/}$ 대한 상관식Rendon--Herrero 1980",
+        "page_idx": 19
+    },
+    {
+        "type": "table",
+        "img_path": "images/fc3aee2f1b22f976be2f15488ed87cc8e219754f5854888f172759f71daf7855.jpg",
+        "table_caption": [],
+        "table_footnote": [
+            "$e_{0}\\!=$ 현장간극비 $w_{N}{=}$ 현장함수비 LL :액성한계"
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "액성한계LL를 기준으로 Terzaghi & Peck1967이 제안한 압축지수 식",
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "교란 시료 disturbed Sample $C_{c}=0.007\\left(L L-10\\right)$불교란 시료undisturbed Sample - 0009 LL-10",
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "727 ",
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "728 ",
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "744 시료교란의 영향",
+        "text_level": 1,
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "압밀시험은 현장특성을 잘 반영할 수있는 흐트러지지 않은 불교란시료undisturbedSample를 사용하는 것이 정확한 시험결과 산출에 좋다",
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "실제시료는 현장에서 채취하는 과정과 운반 시험을 위해 트리밍trimming하는 과정등여러 경로에서 교란발생",
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "교란시료는 불교란 시료에 비하여 그래프의 경사가 완만한 곡선을 나타내고 이 때얻은 압축지수의 값은 작아진다 즉 시료가 교란되면 교란될수록 그 기울기는 완만하고 불교란 시료에 가까울수록 그 기울기는 직선에 가까운 꺾임형태를 나타낸다",
+        "page_idx": 20
+    },
+    {
+        "type": "image",
+        "img_path": "images/9cb8cad6aae0c4a2519c87a8818c50d22bfe406d0afa2dfa889912bce43a3328.jpg",
+        "img_caption": [
+            "그림 712 불교란시료와 교란시료의 압밀곡선의 비교"
+        ],
+        "img_footnote": [],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "정규압밀점토의 압밀시험 결과는 그림 7-13의 곡선 $\\textcircled{1}$ 과 같다 이것을 수정압밀곡선원시압축곡선 또는 처녀압축곡선virgin compression Curve이라고 한다",
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "실험실에서 정규압밀점토의 교란시료에 대하여 압밀시험을 하면 곡선 $\\textcircled{2}$ 와 같다시료를 재성형하여 압밀시험을 하면 하중제거압축곡선하중제거시의 팽창곡선 곡선3과 같은 형태를 보인다",
+        "page_idx": 20
+    },
+    {
+        "type": "image",
+        "img_path": "images/e057fbf193cbf557079c61720c871e1243cc66e5571867f0b5f27c979558ef03.jpg",
+        "img_caption": [
+            "2정규압밀점토의 수정압밀곡선 6 과압밀점토의 수정압밀곡선그림 713 현장압밀곡선의 추정Schmertmann 1953"
+        ],
+        "img_footnote": [],
+        "page_idx": 21
+    },
+    {
+        "type": "image",
+        "img_path": "images/1500548cded312ff3f9b9c5633726d91815120d68bd74d2b722b3e7298d49ee1.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 21
+    },
+    {
+        "type": "image",
+        "img_path": "images/10a72a334fcac439621fe3bd0934d93abc16ecd136b01a206b8e29fe710ddcfe.jpg",
+        "img_caption": [
+            "그림 7-11 정규압밀점토의 압밀특성"
+        ],
+        "img_footnote": [],
+        "page_idx": 21
+    },
+    {
+        "type": "image",
+        "img_path": "images/c6188fc1962d3edfbc87c0f7484ca647c7728d5ea70e7428dcdecb7c65e36ace.jpg",
+        "img_caption": [
+            "그림 7-12 과압밀점토의 압밀특성"
+        ],
+        "img_footnote": [],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "Terzaghi와 Peck ",
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "정규압밀점토의 원시압축곡선과 실내시험 곡선은 $0.4e_{o}(e_{o}=\\lambda]$ 료의 현장 간극비]에서 만나며 그 점을 점 A라고 한다",
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "현재의 유효연직압력 $p_{o}$ 와 $e_{o}$ 를 나타내는 점을 B라고 하면점A와점B를 연결한 선이 수정압밀곡선원시압축곡선이 된다",
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "과압밀점토에 대하여 현장상태에서 압밀시험을 하면 그림 7-12의 곡선 1과 같다실험실에서 과압밀점토의 교란시료에 대하여 압밀시험을 하면 곡선 2와 같이 된다이 경우에는 점 B에서 팽창곡선 AC와 평행하게 직선을 그어",
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "선행압밀압력 $p_{c}$ 선과 만나는 점 D점과 A점을 연결한 선 $\\overline{{a b c d}}$ $\\overline{{e_{0}\\,B D A}})\\circ]$ 실제압밀곡선원시압축곡선이 된다",
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "745 압밀계수의 산출 ",
+        "text_level": 1,
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "점토층의 압밀도나 압밀소요시간 구득 압밀계수 $C_{v}$ 압밀계수를 구하는 방법 1ogt법과 $\\sqrt{t}$ 법 ",
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "1 1ogt법 ",
+        "text_level": 1,
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "평균압밀도와 시간계수의 $\\circ]$ 론곡선 $(\\overline{{U}}~-~\\log T)$ 의 직선부분과",
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "그 곡선의 점근선과의 교점이 압밀도 $100\\%$ _:",
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "실측곡선 중간부분의 직선과 마지막부분의 직선을 연결하여 교차하는 점 1차압밀 $100\\%$ - d100: ",
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Casagrande and Fadum 1940은 1ogt법의 압밀계수를 결정법 ",
+        "page_idx": 22
+    },
+    {
+        "type": "image",
+        "img_path": "images/9c184995eda050b1d69b34f1d71e6df78edb1f863195bdf0807bf04ba7c109e9.jpg",
+        "img_caption": [
+            "그림 714 logt법에 의한 시간압축량곡선의 작도"
+        ],
+        "img_footnote": [],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "1 압력 대 시료 변형량다이얼게이지 변형량을 반대수지에 작도",
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "2 $t_{2}=4t_{1}$ 되는두점AB의 변형량의 차이 $(\\triangle)$ 를 A의 연직상부로 올려C점구함C점에 대응하는 다이얼 게이지 량이 압축량 $()\\hat{\\mathbf{\\Omega}}_{\\mathbf{L}}^{\\partial}$ 점",
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "3 D점은 상하직선부의 교점 1차압밀이 $100\\%$ 완료되었을 때 변형량은 8100: ",
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "4 $d_{50}=\\frac{d_{s}+d_{100}}{2}$ 에 해당하는 압밀곡선상의 점을 E라 하면대응시간 $t_{50}$ 는 압밀이 $50\\%$ 완료된 시간",
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "5 $\\overline{{U}}{=}50\\%$ 일 때 시간계수는 $T{=}0.197\\circ]$ 며 압밀계수는 다음과 같다",
+        "page_idx": 22
+    },
+    {
+        "type": "equation",
+        "text": "$$\nC_{v}=\\frac{T H^{2}}{t}=\\frac{0.197H^{2}}{t_{50}}\n$$",
+        "text_format": "latex",
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "727 ",
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "압밀도가 $()\\hat{\\textmd v}_{\\textmd v}$ 점 $\\mathrm{a}_{\\mathrm{s}}$ 는 초기 다이알 게이지 눈금을 나타내는 점 $\\mathrm{a}_{\\mathrm{0}}$ 와 일치하지 않음이와 같은 차이는 흙속의 간극이 $100\\%$ 포화되어 있지 않기 때문",
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "이러한 압축을 초기압축이라고 하며",
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "$\\mathrm{a}_{\\mathrm{s}}$ 와 $\\mathsf{a}_{100}$ 사이의 압축을 1차압밀 그 후의 압축을 2차압밀이라 함",
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "2 $\\sqrt{t}$ 법 ",
+        "text_level": 1,
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "$\\overline{{U}}-\\sqrt{T}$ 곡선의 $\\overline{{U}}{=}60\\%$ 까지 직선부 기울기의 $1/1.15\\textcircled{>}$ 기울기 그은 직선이 이론곡선과 만나는 점의 압밀도가 $90\\%$ ",
+        "page_idx": 23
+    },
+    {
+        "type": "image",
+        "img_path": "images/f4d0d885890b383656e4043d18a2dc15d1d0504c577f56c0836e19b5facefb6b.jpg",
+        "img_caption": [
+            "그림 715 $\\sqrt{t}$ 법에 의한 시간-압축량곡선의 작도"
+        ],
+        "img_footnote": [],
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "1 초기 직선부 AB로부터 기울기 $=\\mathrm{{AB/1.15}}$ 가 되게 AC를 작도",
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "AC와 곡선부 교점 D는 $d_{90}\\,^{\\circ}]$ 이에 상응한 $x$ 축은 $\\sqrt{t_{90}}$",
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "2 평균압밀도 $\\overline{{U}}{=90\\%\\,\\partial\\|}$ 대한 시간계수 $\\scriptstyle{T=0.848}$ 이 때 압밀계수는 다음과 같다",
+        "page_idx": 23
+    },
+    {
+        "type": "equation",
+        "text": "$$\nC_{v}\\,=\\,\\frac{0.848H^{2}}{t_{90}}\n$$",
+        "text_format": "latex",
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "728 ",
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "3 Ad의 $y$ 축 투영값/09으로 d100 결정",
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "_ $C_{v}$ 는 1ogt법에 의한 값이 $\\sqrt{t}$ 에 의해 구한 값보다 정규압밀범위에서 더 작아1ogt법에 의하여 구한 $C_{v}$ 값이 실제와 더 부합한다",
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "3 압밀비 ",
+        "text_level": 1,
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "전체 침하량은 초기압축량 1차압밀침하량 2차압밀침하량을 합한값 ",
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "전체 침하량에 대한 초기압축량 1차압밀침하량 2차압밀침하량의 비를 ",
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "각각 초기압축비 1차압밀비 2차압밀비라고 하며 다음 식과 같다",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "731 ",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "1차압밀비 $(\\log t$ 방법 $\\eta_{p}=\\frac{\\mathrm{d_{s}}-\\mathrm{d_{100}}}{\\mathrm{d_{0}}-\\mathrm{d_{f}}}$ ",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "732 ",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "733 ",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "734 ",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "예제76",
+        "text_level": 1,
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "양면배수 압밀시험을 실시하여 하중증가 $2{\\sim}4\\mathrm{kg/cm^{2}}$ 구간에서 다음과 같은 데이터를 얻었다",
+        "page_idx": 24
+    },
+    {
+        "type": "table",
+        "img_path": "images/1e028fcda5bbb2cc6eecf502e809ef3b7eddd44e5bd06dbe8f78437009102772.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "$2.0\\mathrm{kg/cm^{2}}\\hat{\\it{\\Omega}}^{\\mathrm{{o}}}$ 하중으로 압밀완료 시 간극비는 $1.43\\diamond]$ 고 $4.0\\mathrm{{kg}/\\mathrm{{cm}^{2}}}$ 하중으로 압밀완료 시 간극비는 $1.08\\0]$며 이때의 시료의 두께는 $1.41\\mathrm{cm}\\dot{\\circ}$ 었다",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "1 1ogt법과 $\\sqrt{\\mathfrak{t}}$ 법으로 시간-압죽량곡선을 구하고 압밀계수를 구하라  \n2 압밀시험하중 $2{\\sim}4\\mathrm{kg/cm}^{2}$ 구간에서 압축지수 $C_{c})$ 압축계수 $\\left[a_{v}\\,\\right]$ _ 체적압축계수 $\\check{\\mathbf{\\nabla}}\\cdot\\mathbf{\\nabla}m_{v}\\,,$ 투수계수 $(k)$ 의 값을구하시오",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "3 압밀시험 결과로부터 1ogt법과 /t법으로 각각 초기압축비 1차압밀비 2차압밀비를 구하시오",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "풀川이",
+        "text_level": 1,
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "1 압력증가구간에서 시료두께의 평균값은 $1.41+\\frac{0.238}{2}\\!=\\!1.53$",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "시료의 배수거리는 $H\\!\\!=\\!\\frac{1.53}{2}\\!=\\!0.76\\mathrm{{cm}}$",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "1ogt법에 의한 시간압축량곡선은 그림 $7.14\\%$ 도시하였다",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "여기에서 $d_{50}=\\frac{1}{2}(d_{100}-d_{s})+d_{s}=\\frac{1}{2}\\,(2.02\\!-\\!0.23)\\!+\\!0.23\\!=\\!1.13\\mathrm{mm},$$d_{50}={\\frac{d_{s}+d_{100}}{2}}\\,={\\frac{0.23+2.02}{2}}=1.125m m$",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "$\\circ707]$ 상응한 $t_{50}{=}12\\mathrm{min}^{\\circ}]$ 다 식 727로부터",
+        "page_idx": 24
+    },
+    {
+        "type": "equation",
+        "text": "$$\nc_{v}={\\frac{T H^{2}}{t_{50}}}\\!={\\frac{0.197\\!\\times\\!0.76^{2}}{12\\!\\times\\!60}}\\!=\\!1.58\\!\\times\\!10^{-4}\\!{\\mathrm{cm}}^{2}/{\\mathrm{sec}}\n$$",
+        "text_format": "latex",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "$\\sqrt{\\mathfrak{t}}$ 법에 의한 시간-압축량곡선은 그림 $7.15\\mathrm{b}\\mathrm{o}\\|$ 도시하였다 그림으로부터 $\\sqrt{t_{90}}\\,{=}7.2$ $t_{90}{=}51.84\\mathrm{min}^{\\circ}]$다 식 728로부터",
+        "page_idx": 24
+    },
+    {
+        "type": "equation",
+        "text": "$$\nc_{v}={\\frac{T H^{2}}{t_{90}}}\\!\\!=\\!{\\frac{0.848\\!\\times\\!0.76^{2}}{51.84\\!\\times\\!60}}\\!=\\!1.57{\\times}\\!10^{-4}\\!{\\mathrm{cm}}^{2}/{\\mathrm{sec}}\n$$",
+        "text_format": "latex",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "2 압축지수 식 726으로부터$C_{c}\\ =\\frac{e_{2}\\!-\\!e_{1}}{\\log\\!\\sigma_{2}/\\log\\!\\sigma_{1}}\\!=\\ \\frac{1.43\\!-\\!1.08}{\\log_{10}(4/2)}\\!=\\!\\frac{0.35}{0.30}\\!=\\!1.17$압축계수: $a_{v}=-\\,\\frac{\\partial e}{\\partial\\sigma^{'}}\\,{=}\\,-\\,\\frac{1.08-1.43}{4\\,-2}\\,{=}\\,0.175\\mathrm{cm}^{2}/\\mathrm{kg}$체적압축계수:식711로부터$m_{v}=\\frac{a_{v}}{1+e_{o}}{=}\\,\\frac{0.175}{1+1.43}\\,{=}0.072\\mathrm{cm}^{2}/\\mathrm{kg}$투수계수 식 714로부터$k\\!=\\!C_{v}m_{v}\\gamma_{w}\\!=\\!1.58\\!\\times\\!10^{-4}\\!\\times\\!0.072\\!\\times\\!\\frac{1}{1000}\\!\\times\\!1\\!=\\!1.14\\!\\times\\!10^{-8}\\!\\mathrm{cm/sec}\\!\\circ\\!|\\mathrm{c}|\\!.$",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "3 1ogt법과 $\\sqrt{\\mathfrak{t}}$ 법으로 각각에 대해 계산하면",
+        "text_level": 1,
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "$\\textcircled{1}$ 10gt법 ",
+        "text_level": 1,
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "초기압축비 $\\eta_{0}=\\frac{\\mathrm{d}_{0}-\\mathrm{d}_{\\mathrm{s}}}{\\mathrm{d}_{0}-\\mathrm{d}_{\\mathrm{f}}}=\\frac{0-0.223}{0-2.4}=0.096$ 1차압밀비10gt방법 $\\eta_{p}=\\frac{\\mathrm{d_{s}-d_{100}}}{\\mathrm{d_{0}-d_{f}}}=\\,\\frac{0.23-2.02}{0-2.4}=0.746$ 2차압밀비 $\\eta_{s}=1-\\left(\\eta_{0}+\\eta_{p}\\right)=1-\\left(0.096+0.746\\right)=0.158\\;\\;\\circ|\\boldsymbol{\\uptau}|.$ ",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "$\\textcircled{2}$ $\\sqrt{t}$ 법 ",
+        "text_level": 1,
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "초기압축비 $\\eta_{0}=\\frac{\\mathrm{d}_{0}-\\mathrm{d}_{\\mathrm{s}}}{\\mathrm{d}_{0}-\\mathrm{d}_{\\mathrm{f}}}=\\frac{0-0.2}{0-2.38}=0.084$ ",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "1차압밀비 $\\sqrt{t}$ 방법 $\\eta_{p}={\\frac{10}{9}}{\\frac{\\mathrm{{d}_{s}-{d}_{90}}}{{\\mathrm{{d}_{0}-{d}_{\\mathrm{{f}}}}}}}={\\frac{10}{9}}\\,{\\frac{0.2-1.84}{0-2.38}}=0.69$   \n9위ol미1 ",
+        "page_idx": 25
+    },
+    {
+        "type": "equation",
+        "text": "$\\eta_{s}=1-(\\eta_{0}+\\eta_{p})=1\\,-\\,(0.084+0.69)=0.226$ ",
+        "text_format": "latex",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "예제77",
+        "text_level": 1,
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "어떤현장의 점토에 대하여 양면배수조건에서 압밀시험을 실시한 결과 $19\\mathrm{mm}$ 두께의 시료에 $\\!\\!\\!\\!\\!\\!\\overline{{U}}\\!\\!=\\!\\!30\\%$ 의1차압밀에5분이소요되었다 현장에 점토의 두께가 15m라고 할때 동일한 압밀이 발생하는 데 걸리는 시간을다음 조건에 대하여 계산하여라",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "1 양면배수  \n2 일면배수",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "풀 이",
+        "text_level": 1,
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "압밀시험에서 배수거리는 $H_{t e s t}=\\frac{19}{2}\\,{=}9.5\\mathrm{mm}$",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "1 양면배수조건에서 현장토의 배수거리는 $\\mathrm{{H_{f}}=\\frac{15}{2}\\mathrm{{=}7.5m:\\Omega(211p)}}$ 식 $7.18\\%$ 의하여 실험실시료와 현장시료의 시간계수는 동일하므로",
+        "page_idx": 25
+    },
+    {
+        "type": "equation",
+        "text": "$$\nT\\!=\\!\\frac{c_{v}t_{t e s t}}{H_{t e s t}^{2}}\\!=\\!\\frac{c_{v}t_{f}}{H_{f}^{2}}\n$$",
+        "text_format": "latex",
+        "page_idx": 26
+    },
+    {
+        "type": "equation",
+        "text": "$$\nt_{f}=\\frac{H_{f}^{2}t_{t e s t}}{H_{t e s t}^{2}}{=\\frac{(750)^{2}\\times5}{(0.95)^{2}\\times60\\times24\\times365}}\\!=\\!5.93\\%\n$$",
+        "text_format": "latex",
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "2 일면배수조건에서 현장토의 배수거리는 $H_{f}{=}15\\mathrm{m}$",
+        "page_idx": 26
+    },
+    {
+        "type": "equation",
+        "text": "$$\nt_{f}=\\frac{(1500)^{2}\\times5}{(0.95)^{2}\\times60\\times24\\times365}\\!=\\!23.72\\div\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\!\\\n$$",
+        "text_format": "latex",
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "따라서 일면배수조건의 압밀소요시간은 양면배수조건에 비해 4배의 소요시간이 더 필요하다",
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "75 2차압밀 ",
+        "text_level": 1,
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "- 2차압밀 secondary compression secondary consolidation 과잉간극수압이 소산되면서 발생하는1차 압밀의 완료후경년효과aging와점토입자 재배열rearrangement 등의 요인에 의하여 장기간에 걸쳐일 어나는 압축현상 2차압축계수 $C_{\\alpha}$ ",
+        "page_idx": 26
+    },
+    {
+        "type": "equation",
+        "text": "$$\nC_{\\alpha}=\\frac{\\Delta e}{\\Delta\\log t}{=}\\frac{\\Delta e}{\\log t_{2}-\\log t_{1}}{=}\\frac{\\Delta e}{\\log\\frac{t_{2}}{t_{1}}}\n$$",
+        "text_format": "latex",
+        "page_idx": 26
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta e=e_{2}-e_{1}\n$$",
+        "text_format": "latex",
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "2차압축침하량 $S_{s}$",
+        "page_idx": 26
+    },
+    {
+        "type": "equation",
+        "text": "$$\nS_{s}=\\frac{\\triangle e}{1+e_{p}}\\,H=\\frac{C_{\\alpha}}{1+e_{p}}\\,H\\ \\mathrm{log}\\frac{t_{2}}{t_{1}}\n$$",
+        "text_format": "latex",
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "여기서 $e_{p}:1$ 차압밀 종료 후의 간극비 _ $t_{1}:1$ 차압밀 또는 시공 종료시간 $t_{2}$ :: 구조물의 수명 $H$ :: 압밀층의 두께 ",
+        "page_idx": 26
+    },
+    {
+        "type": "image",
+        "img_path": "images/f98a197cc0461bf71cbc24a544ffa50da0aadbecfecba86b45ee805d0d427a3e.jpg",
+        "img_caption": [
+            "그림 716 2차압밀과 2차압밀계수의 결정"
+        ],
+        "img_footnote": [],
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "2차압밀의 산정은 어렵다",
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "지반침하계측 분석 후 최종침하량을 추정하는 기법사용 예측방법 $\\Rightarrow$ 비교적 신뢰",
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "2차압축량의 크기 현장함수비 압축지수 소성지수 유기질 함유량등에변화Mesri1973는 자연함수비와 2차압축계수의 관계도시",
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "유기질 점토와 압축성이 큰 점토예 준설점토",
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "2차압축침하가 커 구조물 설계및시공시 지반개량 말뚝 등 깊은기초 사용",
+        "page_idx": 27
+    },
+    {
+        "type": "image",
+        "img_path": "images/ff11b67a1be9a05ecd48631558e298438719a9d14567defb3d08e5e9a04ec746.jpg",
+        "img_caption": [
+            "그림 717 2차압밀침하와 자연함수비의 관계Mesri 1973"
+        ],
+        "img_footnote": [],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "76 1차압밀침하량 계산 ",
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "<압밀침하량 계산의 기본원리>",
+        "text_level": 1,
+        "page_idx": 28
+    },
+    {
+        "type": "image",
+        "img_path": "images/13ec462beae29320adb5ff5dab95e456b8ca466fb7037e7e76cb8c24270353f1.jpg",
+        "img_caption": [
+            "Ae Ae 1휴i+e S- 1+H A "
+        ],
+        "img_footnote": [],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "2 압축계수",
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "$a_{v}=-\\,\\frac{\\varDelta e}{\\varDelta\\sigma^{'}},\\quad\\varDelta e\\,{=}{-\\,a_{v}}\\varDelta\\sigma^{'}$   \n$\\circ]$ 를식 $(1)\\circ\\!\\!1\\!\\!\\!\\mid$ 대입하면   \n$S\\!=\\!\\frac{a_{v}}{1+e}H\\varDelta\\sigma^{\\prime}$ ++++++++ B ",
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "3 체적변화계수",
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "$m_{v}={\\frac{a_{v}}{1+e}}\\circ]$ 므로 : ${\\cal S}\\!=\\!M_{v}H\\!\\varDelta\\sigma^{\\prime}$ C ",
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "4 압축지수",
+        "page_idx": 28
+    },
+    {
+        "type": "equation",
+        "text": "$$\nC_{c}=\\frac{\\varDelta e}{\\varDelta\\log\\sigma^{'}}{\\diamond}\\Vert\\,\\mathcal{M}\\varDelta e=C_{c}\\varDelta\\log\\sigma^{'}\n$$",
+        "text_format": "latex",
+        "page_idx": 28
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\left\\{\\begin{array}{l l}{\\displaystyle C_{c}\\!=\\!\\frac{e_{1}\\!-\\!e_{2}}{\\log\\!\\sigma_{2}^{\\prime}-\\log\\!\\sigma_{1}^{\\prime}}\\!=\\!\\frac{e_{1}\\!-\\!e_{2}}{\\log\\!(\\frac{\\sigma_{2}^{\\prime}}{\\sigma_{1}^{\\prime}})}}\\\\ {\\displaystyle\\rtimes\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\left(\\right)\\!\\left(\\right)\\!\\left(\\right)\\left(\\right)\\!\\left(\\right)\\left(\\right)\\left(\\right)\\left(\\left(\\right)\\left(\\right)\\left(\\right)\\left(\\right\n$$",
+        "text_format": "latex",
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "이를 식 $(\\mathrm{A})\\circ\\mathbb{1}]$ 대입",
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "\\$--+Hlog\"'",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "흙이 수직방향으로만 침하한다고 할 때1차압밀",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "두께 $H^{\\circ}\\!\\!\\!\\perp$ 점토층의 침하량 $\\triangle H$ 와의 관계는 그림 718로부터식 737와 같이 부피와 간극비의 관계로 유도",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "1차압밀비 $\\sqrt{t}$ 방법 $r_{p}={\\frac{10}{9}}{\\frac{\\mathrm{d_{s}}-\\mathrm{d_{90}}}{\\mathrm{d_{0}}-\\mathrm{d_{f}}}}$ ",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "750 ",
+        "page_idx": 29
+    },
+    {
+        "type": "image",
+        "img_path": "images/4e881604429c13f620c7282637de5629b2a94e981acd6781dd3be469dd66489b.jpg",
+        "img_caption": [
+            "그림 718 점토층의 침하량과 간극비 관계의 유도"
+        ],
+        "img_footnote": [],
+        "page_idx": 29
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{\\frac{\\triangle H}{H}}~=~{\\frac{\\varDelta V}{V}}~=~-\\,{\\frac{\\varDelta e}{1+e}}\n$$",
+        "text_format": "latex",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "737 ",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "식 737의 첫 항과 셋째 항을 이용하여 정리하면",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "1차압밀침하량 $(S_{c})\\frac{\\circ}{\\mathsf{L}}$ 다음과 같다 이 침하량 계산법 $\\Rightarrow$ 초기간극비 $(e_{0})$ 법 ",
+        "page_idx": 29
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{S_{c}}=\\triangle H\\mathrm{=-\\}\\frac{\\triangle e}{1+e_{o}}H\n$$",
+        "text_format": "latex",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "738 ",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "식 726의 $\\triangle e=-\\angles{C_{c}\\log}{\\frac{\\sigma_{\\mathrm{~2~}}^{'}}{\\sigma_{\\mathrm{~1~}}^{'}}}$ 를식 $7.38\\%$ 대입 $\\Rightarrow$ ",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "$\\sigma_{c}^{~'}<\\sigma_{o}^{~'}+\\varDelta\\,\\sigma_{~`}^{'\\,\\hat{\\bigcirc}}$ 그 정규압밀점토에 대한 1차압밀침하량은 식 739와 같다",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "$\\circ7$ 침하량 계산법 $\\Rightarrow$ 압축지수 $(\\mathit{C_{c}})$ 법그림 719a 참조",
+        "page_idx": 29
+    },
+    {
+        "type": "equation",
+        "text": "$$\nS_{c}={\\frac{C_{c}}{1+e_{o}}}H\\mathrm{~log}{\\frac{\\sigma_{~2}^{'}}{\\sigma_{~1}^{'}}}\\mathrm{=}{\\frac{C_{c}}{1+e_{o}}}H\\mathrm{~log}{\\frac{\\sigma_{~o}^{'}+\\Delta\\sigma^{'}}{\\sigma_{~o}^{'}}}\n$$",
+        "text_format": "latex",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "739 ",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "여기서 $C_{c}$ :압축지수 $e_{o}$ :초기간극비 $\\sigma_{o}^{'}$ :점토층 중앙부 초기유효수직응력$\\triangle{\\sigma^{\\prime}}$ 점토층 중앙부 유효수직응력증가분",
+        "page_idx": 29
+    },
+    {
+        "type": "image",
+        "img_path": "images/aea81b961f0ccf7f607da9f4f6f64a88c321a66c508abde4189b85e03dfe6046.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "2 정규압밀점토 $\\left(\\boldsymbol{\\sigma}_{\\textit{c}}^{'}\\leq\\textit{\\boldsymbol{\\sigma}}_{o}^{'}\\sim\\textit{\\boldsymbol{\\sigma}}_{o}^{'}+\\Delta\\boldsymbol{\\sigma}^{'}\\right)$",
+        "page_idx": 30
+    },
+    {
+        "type": "image",
+        "img_path": "images/a8f42d0b41114a7e90f8e0db6eef6ad5b132263df58304a1798213678477653d.jpg",
+        "img_caption": [
+            "6 과압밀점토 $\\left(\\sigma_{\\,\\,o}^{'}+\\Delta\\sigma^{'}<\\sigma_{\\,\\,c}^{'}\\right)$"
+        ],
+        "img_footnote": [],
+        "page_idx": 30
+    },
+    {
+        "type": "image",
+        "img_path": "images/daebf2534d34578dffc2d109fb2d94f7f67a93ffa7f1cbd7d6a8b56edda4055b.jpg",
+        "img_caption": [
+            "C 과입밀점토 $({\\sigma}_{\\,\\,o}^{\\prime}<{\\sigma}_{\\,\\,c}^{\\prime}<{\\sigma}_{\\,\\,o}^{\\prime}+\\Delta{\\sigma}^{\\prime})$"
+        ],
+        "img_footnote": [],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "그림 719 정규압밀점토와 과압밀점토의 하중침하량곡선 개요$\\left.\\sigma^{'}\\right.$ :현장유효응력; $\\boldsymbol{\\sigma^{\\prime}}_{c}$ :선행압밀압력",
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "$\\varDelta e=-\\,a_{v}\\varDelta\\sigma^{\\prime}$ 의 관계식 78 참조를 식 $7.39\\partial1]$ 대입 $\\Rightarrow$",
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "1차압밀침하량의 식은 식 740 ",
+        "page_idx": 30
+    },
+    {
+        "type": "equation",
+        "text": "$$\nS_{c}=\\triangle H\\!=\\!\\frac{a_{v}}{1+e_{o}}H\\ \\Delta\\sigma^{'}\n$$",
+        "text_format": "latex",
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "식 740에 체적압축계수 $m_{v}={\\frac{a_{v}}{1+e_{o}}}$ 관계 이용 $\\Rightarrow$",
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "1차압밀침하량은 식 741과 같다  \n이 침하량 계산법 $\\Rightarrow$ 체적압축계수 $(m_{v})$ 법  \n과압밀 영역에서는 $m_{v}$ 의 분산 정도가 높아 오차가 많으나  \n정규압밀 영역에서는 비교적 정도가 좋다",
+        "page_idx": 30
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{\\cal S}_{c}=\\triangle{\\cal H}\\!=m_{v}\\,\\ H\\,\\varDelta\\sigma^{\\prime}\n$$",
+        "text_format": "latex",
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "$\\sigma_{o}^{\\,\\,^{\\prime}}+\\varDelta\\,\\sigma^{\\prime}<\\,\\sigma_{c}^{\\,\\,^{\\prime}\\,\\diamond}\\stackrel{}{\\mathbb{U}}$ 과압밀점토에 대한 1차압밀침하 $\\Rightarrow$",
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "압축지수 $C_{c}$ _ 대신 재압축지수 $C_{r}$ 을 이용하여 다음 식으로 계산그림 719b",
+        "page_idx": 30
+    },
+    {
+        "type": "equation",
+        "text": "$$\nS_{c}=\\frac{C_{r}}{1+e_{0}}\\,H\\,\\,\\mathrm{log}\\frac{\\sigma_{o}+\\varDelta\\,\\sigma^{'}}{\\sigma_{o}^{'}}\n$$",
+        "text_format": "latex",
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "8<&<o+ao'로 과압밀점토와 정규압밀점토 범위 모두 포함그림 $7.18\\mathrm{c})~~\\Rightarrow$현장토 유효수직압력 $(\\sigma_{o}^{'})\\diamondsuit]$ 선행압밀압력 $(\\sigma_{c}^{'})$ 보다 작은범위 $\\Rightarrow$ 재압축지수 $C_{r}$ 사용유효수직압력 $(\\sigma_{o}^{'})\\diamondsuit]$ 선행압밀압력 $(\\sigma_{c}^{'})$ 보다 큰범위 $\\Rightarrow$ 압축지수 $C_{c}$ 사용",
+        "page_idx": 31
+    },
+    {
+        "type": "equation",
+        "text": "$$\nS_{c}={\\frac{C_{r}}{1+e_{o}}}H\\mathrm{~log}{\\frac{\\sigma_{~c}^{'}}{\\sigma_{~o}^{'}}}+{\\frac{C_{c}}{1+e_{o}}}H\\mathrm{~log}{\\frac{\\sigma_{~o}^{'}+\\triangle\\sigma^{'}}{\\sigma_{~c}^{'}}}\n$$",
+        "text_format": "latex",
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "수직압력증가량 $\\triangle{\\sigma^{\\prime}}$ 의 계산",
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "점토층의 상부 중앙 하부에서 유효응력증가분을 Boussinesq 공식이나도표535 537절 참조 활용으로 구한 식 744 적용계산",
+        "page_idx": 31
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{\\varDelta}\\sigma^{'}\\;=\\;\\frac{1}{6}({\\varDelta}{\\sigma_{u}}^{\\prime}+4{\\varDelta}{\\sigma_{m}}^{\\prime}+{\\varDelta}{\\sigma_{l}}^{\\prime})\n$$",
+        "text_format": "latex",
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "여기서 $\\varDelta{\\sigma_{u}}^{\\prime}$ Ao' $\\varDelta{\\sigma_{l}}^{\\prime}$ 은 상중하부의 유효응력증가분",
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "압밀층을 수개 층 $\\scriptstyle4\\sim6$ 층 정도으로 나눈후각 토층의 중간점mid-point에서 $e_{o}$ $\\sigma_{o}$ $\\sigma_{c}$ $\\triangle{\\sigma}^{\\prime}$ $C_{c}$ $C_{r}$ 을 구하여 각각의 침하량계산후 더하는 방법사용 ",
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "예제78",
+        "text_level": 1,
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "다음 그림과 같이상하모래층사이에 5m 두께의 점토층이 있는 지반이 있다 지표에 상재하중 $50\\mathrm{kN}/\\mathrm{m}^{2}\\diamondsuit]$ _작용한다고 할 때 다음에 답하여라 단 점토층의 간극비 $e\\!=\\!1.6$ - 압축계수 $C_{c}{=}0.6$ 압밀계수 $C_{v}$$\\scriptstyle=4\\times10^{-3}\\mathrm{cm^{2}/s e c o/t}.$ __",
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "1 최종침하랑을 계산하여라   \n2 $90\\%$ 압밀에 소요되는 시간은 얼마인가? ",
+        "page_idx": 31
+    },
+    {
+        "type": "image",
+        "img_path": "images/b50e58629062fa9c863865897b6bfb16f7bc4a797c04588edbe0a2ae7a7939cc.jpg",
+        "img_caption": [
+            "그림 720 예제 77"
+        ],
+        "img_footnote": [],
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "",
+        "text_level": 1,
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "1 점토층 중심부에서 연직응력 $\\sigma^{'}{}_{0}\\mathrm{=}9\\mathrm{\\times}2\\mathrm{+}5\\mathrm{\\times}2.5\\mathrm{=}30.5\\mathrm{kN/m^{2}}$",
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "최종침하량은 식 733으로 부터$S{=}\\,\\frac{C_{C}}{1{+}e}\\,H\\,\\,\\mathrm{log}_{\\mathrm{10}}\\frac{\\sigma^{\\prime}{+}\\varDelta\\sigma^{\\prime}}{\\sigma^{'}}{=}\\,\\frac{0.6}{1+1.6}(5)\\mathrm{log}_{\\mathrm{10}}\\frac{30.5{+}50}{30.5}{=}\\,0.48\\mathrm{m}$2 식 728을 변환하면 $t_{90}=\\frac{T_{v}H^{2}}{C_{v}}=\\frac{0.848\\times250^{2}}{4.0\\times10^{-3}}{=13,250,000}\\mathrm{sec}=153.4\\mathrm{days}$",
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "예제79",
+        "text_level": 1,
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "다음그림과 같이모래층 사이에 $10\\mathrm{m}^{\\textregistered}$ 점토층이 있는지반이 있다 지하수면은 원래 지표면에 위치하다가4m 저하하였다 점토층의 압축지수는05 간극비는075 압밀계수는 $c_{v}{=}4.0{\\times}10^{-4}\\mathrm{cm^{2}/s e c^{\\circ}}$ |라고할때다음에 답하시오",
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "1 지하수 저하로인한최종침하량을 계산하여라  \n2 지하수 저하후 1년이 경과하였을 때의 침하량을 계산하여라",
+        "page_idx": 32
+    },
+    {
+        "type": "image",
+        "img_path": "images/ca7c9a1d36d5c94a7eb8ea8babeb47f7323518c1bbf5a85bd52998d09ba9d548.jpg",
+        "img_caption": [
+            "그림 721 예제 78"
+        ],
+        "img_footnote": [],
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "",
+        "text_level": 1,
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "1 점토층 중심부에서 연직응력 ${\\sigma^{\\prime}}_{0}{=}19{\\times}5{+}15{\\times}5{-}9.81{\\times}10{=}71.9\\mathrm{kN/m^{2}}$",
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "지하수 $4\\mathrm{m}$ 저하시 증가하는 유효연직응력은 $\\Delta\\sigma^{\\prime}\\,{=}\\,-\\Delta u\\,{=}\\,-(-\\gamma_{w}h_{w})\\,{=}9.81{\\times}4\\mathrm{{=}}39.2\\mathrm{{kN/m}^{2}}$",
+        "page_idx": 32
+    },
+    {
+        "type": "equation",
+        "text": "$$\nS_{c}\\!=\\!\\frac{C_{C}}{1\\!+\\!e}{H\\log_{10}}\\!\\frac{{\\sigma_{o}}^{'}\\!+\\!\\Delta\\sigma^{\\prime}}{\\sigma_{o}'}\\!\\!=\\!\\frac{0.5}{1\\!+\\!0.75}\\!\\times\\!10\\!\\times\\!\\log_{10}\\!\\frac{71.9\\!+\\!39.2}{71.9}\\!\\!=\\!0.54\\mathrm{m}\n$$",
+        "text_format": "latex",
+        "page_idx": 32
+    },
+    {
+        "type": "equation",
+        "text": "$$\nT_{v}\\!=\\!\\frac{c_{v}t}{H^{2}}\\!\\!=\\!\\frac{4\\!\\times\\!10^{-4}\\!\\times\\!365\\!\\times\\!24\\!\\times\\!60\\!\\times\\!60}{500^{2}}\\!=\\!0.05\n$$",
+        "text_format": "latex",
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "그림 $7.7\\dot{9}\\dot{1}$ 서 시간계수 $0.05\\dot{9}]$ 대한 평균압밀도는 $24.5\\%\\$ I다$S_{\\overline{{{U}}}=25\\%}=S\\times0.25=0.56\\times0.25=0.14\\,\\mathrm{m}=14\\,\\mathrm{cm}^{\\circ}|\\tau|.$",
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "예제 710",
+        "text_level": 1,
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "아래그림에 나타난바와같이폭 $\\scriptstyle B=10\\mathrm{m}^{\\circ}$ 줄기초에50톤의 하중이 작용하고 있는 경우와 무한등분포하중$q{=}5\\mathrm{t/m}^{2}$ 이 작용하는경우의 최종침하량을계산하여라 지하수는지표에 위치한다기초가 있는경우의지중응력분포는 $2:1$ _ 분포법식 $5.27\\mathrm{a}$ 응용",
+        "page_idx": 32
+    },
+    {
+        "type": "image",
+        "img_path": "images/a5dbd6fdbbd5f1cf90843a237a64695b80e5d7826bd618c86454c2a0aad6ceef.jpg",
+        "img_caption": [
+            "그림 722 예제 79"
+        ],
+        "img_footnote": [],
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "0 ",
+        "text_level": 1,
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "점토층 중심에서의 유효연직응력: $\\sigma_{\\mathrm{~0~}}^{'}\\,{=}\\,8\\times2\\,{+}\\,4\\times2.5\\,{=}\\,26\\,\\mathrm{kN/m^{2}}$1 기초에 작용하는 하중으로 인한 점토층 중심에서의 추가응력",
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "$\\triangle{\\sigma^{\\prime}}_{z}=\\frac{q B}{(B\\!+\\!z)}\\!=\\!\\frac{50\\!\\times\\!10}{(10\\!+\\!4.5)}\\!=\\!34.5\\mathrm{kN/m}^{2}$ $S_{c}=\\frac{C_{C}}{1+e}\\,H\\,\\log_{10}^{\\frac{\\sigma_{o}^{\\prime}+\\Delta\\sigma^{\\prime}}{\\sigma_{o}^{\\prime}}}=\\frac{0.8}{1+1.5}\\times5\\times\\log_{10}^{\\frac{26+34.5}{26}}=0.586\\,\\mathrm{m}=58.6\\,\\mathrm{cm}$ ",
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "2 무한등분포하중 $q{=}50\\mathrm{kN}/\\mathrm{m}^{2}\\diamondsuit$ 작용하는 경우 점토층 표면에 $\\mathrm{B}{=}\\infty$ 로 작용하는 경우로 점토 중앙부에 작용하는 유효응력은 $\\triangle\\sigma^{\\prime}\\,{=}50\\mathrm{kN/m^{2}}$ ",
+        "page_idx": 33
+    },
+    {
+        "type": "equation",
+        "text": "$$\nS_{c}\\!=\\!\\frac{C_{C}}{1+e}\\,H\\,\\mathrm{log}_{10}\\frac{{\\sigma_{o}}^{'}\\!+\\!\\varDelta\\sigma^{'}}{\\sigma_{o}^{'}}\\!=\\!\\frac{0.8}{1+1.5}\\!\\times\\!5\\!\\times\\!\\mathrm{log}_{10}\\frac{26+50}{26}\\!=\\!0.745\\mathrm{m}=\\!74.5\\mathrm{cm}\n$$",
+        "text_format": "latex",
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "예제711",
+        "text_level": 1,
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "그림과 같은 $4\\mathrm{m}$ 두께의 점토층의 지표면에 등분포상재하중 $40\\mathrm{kN}/\\mathrm{m}^{2}\\diamondsuit$ 작용하고 있다 이 점토층 중앙에서의 선행압밀응력이 $70\\mathrm{kN}/\\mathrm{m}^{2}\\diamondsuit]$ 라고 할 때이 점토층의 압밀침하량을 구하라",
+        "page_idx": 33
+    },
+    {
+        "type": "image",
+        "img_path": "images/3f95c9ab246e5d7eb9b0ce9586a51b8b440138741a126ed72096cd350b845017.jpg",
+        "img_caption": [
+            "그림 723 예제 710"
+        ],
+        "img_footnote": [],
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "풀 이",
+        "text_level": 1,
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "점토층 중심부에서 연직응력 $\\scriptstyle{\\sigma^{\\prime}}_{0}=0.8\\times3.5+0.7\\times2=4.2\\mathfrak{t}/\\mathrm{m}^{2}\\diamondsuit].$ 므로 선행압밀응력이 $7\\mathrm{t/m}^{2}$ 까지는 과압밀영역이었다가그이상의 하중에 대해서는 정규압밀영역이다 최종침하량은 식737로부터 다음과 같이 구한다",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "$S_{c}\\,{=}\\,{\\frac{C_{r}}{(1+e_{o})}}H\\,\\mathrm{log}{\\frac{\\sigma_{~c}^{'}}{\\sigma_{~o}^{'}}}\\;\\;{+}\\;\\;{\\frac{C_{c}}{(1+e_{o})}}H\\,\\mathrm{log}{\\frac{\\sigma_{~o}^{'}+\\Delta\\sigma^{'}}{\\sigma_{~c}^{'}}}$ $=\\frac{0.05}{1+1.5}(400)\\ \\log_{10}(\\frac{70}{42})+\\frac{0.35}{1+1.5}(400)\\ \\log_{10}(\\frac{42+40}{70})=1.77+3.85=5.62\\mathrm{cm}$ ",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "연|습|문제",
+        "text_level": 1,
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "71 어떤 점토에 압밀실험을 하여 체적압축계수 ${m_{v}}{=}4.0{\\times}{10}^{-2}\\mathrm{{cm}^{2}/\\mathrm{{kg}}}$ 압밀계수 $C_{v}{=}2.5{\\times}$$10^{-2}\\mathrm{{cm}^{2}/\\mathrm{{sec}}}$ 를 얻었다 이 점토의 투수계수를 구하여라",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "72 양면배수 $8\\mathrm{m}$ 두께의 점토층의 압밀계수가 $C_{v}{=}0.008\\mathrm{cm^{2}/s e c^{\\circ}}]$ 다 압밀 개시후 4개월 후의 압밀 침하량이 7cm라고 할 때 최종압밀침하량을 계산하여라 ",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "73 양면배수된 $5\\mathrm{m}$ 두께의 포화점토에 하중을 재하하여 $200\\,\\mathrm{\\textcircled{>}}$ 후에 $90\\%$ 압밀도에 도달하였다 점토의 압밀계수 $C_{v}$ 를 계산하여라",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "74 일면배수인 두께 4m의 점토층이 있다 이 점토의 압축계수 $C_{v}{=}1.8{\\times}10^{-3}\\mathrm{cm^{2}/s e c\\,o}1$ 라고 할 때100일이 경과한 후의 이 점토층의 평균압밀도를 계산하여라",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "75 $\\mathrm{3m}$ 두께의 포화점토에 하중을 재하하여 나타나는 최종압밀침하량이 $30\\mathrm{cm}$ 라고 할때 초기 $10\\mathrm{cm}$의 침하가 발생하는 데 걸린 시간이 $100{\\overset{\\circ}{\\Xi}}{\\overset{\\circ}{\\circ}}1$ 라면 초기5cm의 침하가 발생하는 데 소요되는 시간을 계산하여라",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "76 예제 $7.5\\dot{9}\\dot{1}$ 서 나타난 압밀 특성을 가진 점토층의 두께가 $2\\mathrm{m}^{\\circ}]$ 고 점토층의 중심에서 초기 $5.0\\mathrm{kg/cm^{2}}\\mathrm{\\Omega^{\\circ}}$ 유효응력을 받고 있다고 한다 상재하중으로 유효응력이 $1.0\\mathrm{{kg/cm}^{2}}$ 늘면 압밀 침하 량은 얼마가 발생하는가? ",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "77 압밀시험을 실시하여 하중증가 $1{\\sim}2\\mathrm{kg/m^{2}}$ 구간에서 다음과 같은 데이터를 얻었다",
+        "page_idx": 35
+    },
+    {
+        "type": "table",
+        "img_path": "images/0eb5e52d31fd575979e2268fd11eab6d75723cd732ddc9f1fbfe0430879a3834.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "1 $\\circ7$ 흙의 압밀계수를 $\\sqrt{\\mathfrak{t}}$ 법으로 구하라  \n2 $10\\mathrm{m}$ 두께의 점성토가 일면배수조건으로 $80\\%$ 압밀에 도달하는 시간은?  \n3 시료의 간극비가 $0.90\\dot{9}]$ 서 079로 변화되었다면 대상 시료의 투수계수는?단 $a_{v}=0.18c m^{2}/k g\\,)$",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "78 점토시험의 압밀을 행하여 하중강도 $1.6\\mathrm{kg/cm^{2}\\hat{\\Xi}}$ _ 때의 압밀시간과 압밀침하량을 측정한 결과다음 표의 결과를 얻었다 이 값으로부터 $\\sqrt{t}$ logt법에 의하여 압밀계수 $C_{v}$ 를구하라 단 시료의두께는 $2\\mathrm{H}{=}1.851\\circ\\mathrm{l}$ 다",
+        "page_idx": 35
+    },
+    {
+        "type": "table",
+        "img_path": "images/d58bddd6d45df14af1fbdcf0ca42aceb45ac176380ef725ffb52ececa9c63d0e.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "79 고속도로 건설을 위한 두께 $2\\mathrm{m}^{\\underbar{\\circ}}$ 성토를 점성토 위에 실시하였다 점성토는 상부는 연약점토와 중간점토로 하부는 밀한사질토로 구성되었다 $\\diamondsuit$ 래그림은 초기 및 성토의 흙의 단면도를 보이 고 있다 지하수위가 침하가 발생한 이후 원지반의 지표면에 있다고 가정하고 다음을 계산하여 라 ",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 36
+    },
+    {
+        "type": "image",
+        "img_path": "images/f309af99b9169b54de888ae172bb070a8c4e856f15002500ca5d7b6dc0273c9b.jpg",
+        "img_caption": [
+            "그림 724 연습문제 79"
+        ],
+        "img_footnote": [],
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "1 연약점토와 중간점토의 가운데 점에서의 $e-\\log{\\sigma_{z}}^{\\prime}$ '를 도시하여라 각도시한도표에 $e_{o}$ ${\\sigma_{z o}}^{\\prime}$ _-$\\sigma_{p}^{\\,\\,^{\\prime}}$ $e_{f}$ $\\sigma_{z f}^{\\phantom{\\dagger}}{}^{\\prime}$ $\\varDelta e$ 를 표시하여라  \n2각점토단면의 중앙부에서 평균압밀계수를 이용하여 전체 침하량을 계산하여라  \n3 상부 점성토를 3등분하여 전체 침하량을 다시 계산하여라",
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "710 $\\scriptstyle\\Delta\\sigma=60\\mathrm{kN}/\\mathrm{m}^{2}\\odot$ 균일하중이 다음과 같은 흙의 단면에 놓여 있다 점토층 중간부의 변형이 점토전체의 평균변형과 같다고 가정하고 다음을 계산하여라",
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "1 $6.0\\mathrm{{kN/m}^{2}}$ 하중에 의하여 1차압밀 후 나타나는 최종침하량을 계산하여라",
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "2 $90\\%$ 1차압밀이 발생하는 시간은?  \n3 1차압밀 종료 후30년 이후발생할전침하1차및 2차압밀의 합를 계산하여라1차 압밀 종료시간 $\\nu_{c}=t_{90}$ 으로 가정",
+        "page_idx": 36
+    },
+    {
+        "type": "image",
+        "img_path": "images/74a913e49978733f802f0f993f17138bb0025b6a9bad0b4b6157396354d28ab3.jpg",
+        "img_caption": [
+            "그림 724 연습문제 710"
+        ],
+        "img_footnote": [],
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "711 간극수압계가 다음 흙단면 A점에 설치되었다 $200\\mathrm{kPa}$ 의 균일하중이 작용하여 $30\\textcircled{\\equiv}$ 후 간극수압 계의 간국수압은 $u\\!=\\!174.6\\mathrm{kPa}^{\\circ}\\big]$ 었다 이때 지반의 침하량은 $0.44\\mathrm{m}\\hat{\\circ}]$ 었다양면배수로 가정 ",
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 37
+    },
+    {
+        "type": "image",
+        "img_path": "images/65d0aa00c938d91f2db794bbe9390e4e06c8ac078aa696a57203f34de17b3efb.jpg",
+        "img_caption": [
+            "그림 726 연습문제 711"
+        ],
+        "img_footnote": [],
+        "page_idx": 37
+    },
+    {
+        "type": "text",
+        "text": "1 균일하중 200kPa가 가해지기 전 측정된 간극수압은? 이때 과잉간극수압은 얼마인가?   \n2 200kPa의 하중이 가해진 직후의 과잉간극수압계에 나타난 간극수압은 얼마인가?   \n3 이 흙의 단면에서 30일에 상응하는 시간계수 T는 얼마인가?   \n4 이 흙의 압밀계수 $C_{v}$ 를 계산하여라   \n5 $90\\%$ 압밀에 걸리는 시간을 계산하여라   \n6 1차압밀에 의하여 나타난 최종침하량을 계산하여라 ",
+        "page_idx": 37
+    },
+    {
+        "type": "text",
+        "text": "712 다음 그림에 보인 바와 같은 $3\\mathrm{m}{\\times}3\\mathrm{m}$ 기초가놓인 점토지반이 있다 이 점토층의 포화단위중량이$18.4\\mathrm{kN}/\\mathrm{m}^{3}\\mathrm{\\diamond}]$ 고 지하수면은 지표에 위치한다고 할때 기초중심의 압밀침하량을 다음과 같이층을나누어 계산하여라",
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "1한층으로 점토층의 중심에서 계산  \n2 3개 층으로 나누어 계산  \n3 위의 계산으로 알수 있는 사항을 설명하여라",
+        "page_idx": 38
+    },
+    {
+        "type": "image",
+        "img_path": "images/6153913f5e8fe279cb96827582f52204df76ecec7ab0e45a011be15996db02e0.jpg",
+        "img_caption": [
+            "그림 727 연습문제 712"
+        ],
+        "img_footnote": [],
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "713연습문제 712를 연직압력증가량 $\\triangle{\\sigma^{\\prime}}$ 의 계산을 점토층의 상부중앙하부에서 유효응력증가분을 영향계수도표그림 511]로부터 구한후식 736을 이용하여 압밀침하량을 계산하여라",
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "참고문헌 ",
+        "text_level": 1,
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "1 권호진 박준범 송영우 이영생2008 토질역학 구미서관   \n2 김상규1991 토질역학 동명사   \n3 한국지반공학회2009 구조물 기초기준해설   \n4 Casagrande A1936 \"Determination of the Preconsolidation Load and its Practical Significance\" Proceedings of First International Conference On Soil Mechanics and Foundation Engineering Cambridge Mass Vol3 pp60-64   \n5 Casagrande A and Fadum RE1940 Notes on Soil Testing for Engineering Purposes Harvard University Graduate Engineering Publication No8   \n6 Craig RF1983 Soil Mechanics 3rd Edition Van Nostrand Reinhold Co   \n7 Das B M1990 Principles of Foundation Engineering 2nd Ed PWS-KENT Publisher Company Boston Pp289- 290   \n8 Das BM2006 Principles of Geotechnical Engineering 6th Editions PwS MA   \n9 Mesri G1973 Coefficient of Secondary Compression Journal of Soil Mechanics and Foundation Division ASCE Vol99 NoSM1 pp123-137   \n10 NAVFAC1971 Design Manual--Soil Mechanics Foundations and Earth Structures NAVFAVC DM-7 US Dapartment of Navy Washington DC   \n11 Rendon-Herrero O1980 \"Universal Compression Index Equation\" Journal of the Geotechnical Engineering Division ASCE Vol106 NoGT11 pp1179-1200   \n12 Schmertmann JH1953 The Undisturbed Consolidation Behavior of Clay Transactions ",
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "ASCE Vol120 p1201 ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "13 Taylor DW1948 Fundamentals of Soil Mechanics John Wiley and Sons New York ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "14 Terzaghi K1943 Theoretical Soil Mechanics John Wiley and Sons New York ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "15 Terzaghi K and Peck RB1948 Soil Mechanics in Engineering Practice John Wiley and Sons New York ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "16 Terzaghi and Peck1967 Soil Mechanics and Engineering Practice 2nd Ed John Wiley and Sons New York ",
+        "page_idx": 39
+    }
+]

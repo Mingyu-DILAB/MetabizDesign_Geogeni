@@ -1,0 +1,208 @@
+{'text': '기초공학 토칠및', 'filename': '흙의 기본적 특성_2.pdf', 'page': 1, 'coordinates': (483, 402, 1522, 550), 'order': 1, 'data_type': 'title'}
+{'text': '2 흙의 기본적 특성 Chapter', 'filename': '흙의 기본적 특성_2.pdf', 'page': 1, 'coordinates': (313, 675, 1683, 800), 'order': 2, 'data_type': 'text'}
+{'text': '박성칙', 'filename': '흙의 기본적 특성_2.pdf', 'page': 1, 'coordinates': (813, 936, 1180, 1041), 'order': 3, 'data_type': 'text'}
+{'text': '입경', 'filename': '흙의 기본적 특성_2.pdf', 'page': 2, 'coordinates': (855, 66, 1144, 166), 'order': 1, 'data_type': 'title'}
+{'text': '크기입경에 따른 분류', 'filename': '흙의 기본적 특성_2.pdf', 'page': 2, 'coordinates': (141, 258, 811, 352), 'order': 2, 'data_type': 'title'}
+{'text': '흙입자는 크기에 따라 자갈 모래 실트 점토 등으로 구분', 'filename': '흙의 기본적 특성_2.pdf', 'page': 2, 'coordinates': (166, 363, 1672, 458), 'order': 3, 'data_type': 'text'}
+{'text': '흙입자는크기에따라자갈모래 실트 점토등으로 구분 흙입자가 비교적 굵은 자갈 모래를 조립토coarse 또는 사질 Soil 토granular 하며 흙입자가 비교적 가는 실트나 점토를 Soil라고 세립토fine Soil', 'filename': '흙의 기본적 특성_2.pdf', 'page': 2, 'coordinates': (175, 388, 1913, 702), 'order': 4, 'data_type': 'text'}
+{'text': 'AASHTO의 입자 크기는 75mm, 4.75mm, 모래 0.075mm이다. MIT의 입자 크기는 75mm, 2mm, 모래 0.075mm와 60mm, 2mm, 실트 0.06mm, 잔토 0.002mm이다. ASTM의 입자 크기는 75mm, 4.75mm, 모래 0.075mm와 75mm, 2mm, 실트 0.002mm이다. USDA의 입자 크기는 75mm, 2mm, 실트 0.05mm와 75mm, 4.75mm, 모래 0.002mm이다.', 'filename': '흙의 기본적 특성_2.pdf', 'page': 2, 'coordinates': {'points': (650, 727, 1958, 1341)}, 'order': 5, 'data_type': 'table'}
+{'text': '1 Unified Soil Classification System 2 American Association of State Highway and Transportation Officials 3 Massachusetts Institute of Technology 4 American Society for Testing and Materials 5 Us Department of Agriculture USDA', 'filename': '흙의 기본적 특성_2.pdf', 'page': 2, 'coordinates': (13, 1155, 627, 1327), 'order': 6, 'data_type': 'text'}
+{'text': '입경', 'filename': '흙의 기본적 특성_2.pdf', 'page': 3, 'coordinates': (855, 66, 1141, 161), 'order': 1, 'data_type': 'title'}
+{'text': '입경의 결정', 'filename': '흙의 기본적 특성_2.pdf', 'page': 3, 'coordinates': (136, 261, 500, 352), 'order': 2, 'data_type': 'title'}
+{'text': '체분석sieve 이상의 입경을 결정 하는데 analysis O075mm 사용 굵은체와 가는체를 위에서부터 아래로 포 개어 놓고 흙을 넣어 흔든 다음 각 체를 통과한 흙의 무게를 계량하여 전체의 무게로 나눈 다 이렇7 결정된 비율은 임의 체에 남아있는 흙의입 경보다 더 가는 게 입경의 흙 전체에 대한 통과중량백분율', 'filename': '흙의 기본적 특성_2.pdf', 'page': 3, 'coordinates': (200, 369, 1927, 775), 'order': 3, 'data_type': 'text'}
+{'text': '비중계 분석hydrometer analysis 0075mm# 200체이하 의 입경 결정에 사용 물에 떨어뜨렸을 때의 구sphere를 침강속도 구의 직경의 제곱에 비례한다는 원리를 이용 는 그 Stokes의', 'filename': '흙의 기본적 특성_2.pdf', 'page': 3, 'coordinates': (191, 788, 1919, 1033), 'order': 4, 'data_type': 'text'}
+{'text': '입경', 'filename': '흙의 기본적 특성_2.pdf', 'page': 4, 'coordinates': (855, 66, 1141, 163), 'order': 1, 'data_type': 'title'}
+{'text': '체분석', 'filename': '흙의 기본적 특성_2.pdf', 'page': 4, 'coordinates': (138, 263, 344, 350), 'order': 2, 'data_type': 'title'}
+{'text': '체분석에 주로 사용하는 표준체는 4 10 20 40 60 100 200번 체이며 체 번호는 안에 54cm 포함된 체눈의 수 1inch2', 'filename': '흙의 기본적 특성_2.pdf', 'page': 4, 'coordinates': (172, 369, 1919, 530), 'order': 3, 'data_type': 'text'}
+{'text': '이 이미지는 원통형의 분리체를 포함한 기계 장비를 보여줍니다. 상부에는 두 개의 고정 클램프가 있고, 중앙에는 칼럼이 위치하여 여러 개의 분리 망을 수용하고 있습니다. 기계의 하부에는 디지털 디스플레이와 버튼이 있어 조작할 수 있는 기능이 있습니다. 전체적으로 주로 실험실이나 산업 환경에서 사용되는 장비로 보입니다.', 'filename': '흙의 기본적 특성_2.pdf', 'page': 4, 'coordinates': {'points': (141, 572, 541, 1211)}, 'order': 4, 'data_type': 'image'}
+{'text': '체 번호 4는 체 크기 4.750mm, 체 번호 6은 체 크기 3.350mm, 체 번호 8은 체 크기 2.360mm, 체 번호 10은 체 크기 2.000mm, 체 번호 16은 체 크기 1.180mm, 체 번호 20은 체 크기 0.850mm, 체 번호 30은 체 크기 0.600mm, 체 번호 40은 체 크기 0.425mm, 체 번호 50은 체 크기 0.300mm, 체 번호 60은 체 크기 0.250mm, 체 번호 80은 체 크기 0.180mm, 체 번호 100은 체 크기 0.150mm, 체 번호 140은 체 크기 0.106mm, 체 번호 200은 체 크기 0.075mm, 체 번호 400은 체 크기 0.038mm입니다.', 'filename': '흙의 기본적 특성_2.pdf', 'page': 4, 'coordinates': {'points': (594, 588, 1063, 1180)}, 'order': 5, 'data_type': 'table'}
+{'text': '체 번호 4는 직경 4.750 mm, 각 체에 남은 흡의 무게 0 g, 잔류율 0%, 가적잔류율 0%, 통과율 100%입니다. 체 번호 10은 직경 2.000 mm, 각 체에 남은 흡의 무게 0 g, 잔류율 0%, 가적잔류율 0%, 통과율 100%입니다. 체 번호 16은 직경 1.180 mm, 각 체에 남은 흡의 무게 2 g, 잔류율 2%, 가적잔류율 2%, 통과율 98%입니다. 체 번호 30은 직경 0.600 mm, 각 체에 남은 흡의 무게 6 g, 잔류율 6%, 가적잔류율 8%, 통과율 92%입니다. 체 번호 40은 직경 0.425 mm, 각 체에 남은 흡의 무게 4 g, 잔류율 4%, 가적잔류율 12%, 통과율 88%입니다. 체 번호 60은 직경 0.250 mm, 각 체에 남은 흡의 무게 5 g, 잔류율 5%, 가적잔류율 17%, 통과율 83%입니다. 체 번호 100은 직경 0.150 mm, 각 체에 남은 흡의 무게 8 g, 잔류율 8%, 가적잔류율 25%, 통과율 75%입니다. 체 번호 200은 직경 0.075 mm, 각 체에 남은 흡의 무게 13 g, 잔류율 13%, 가적잔류율 38%, 통과율 62%입니다. 팬은 잔류율 62%, 가적잔류율 100%, 통과율 0%입니다.', 'filename': '흙의 기본적 특성_2.pdf', 'page': 4, 'coordinates': {'points': (1086, 597, 1966, 913)}, 'order': 6, 'data_type': 'table'}
+{'text': '체분석 결과 예시', 'filename': '흙의 기본적 특성_2.pdf', 'page': 4, 'coordinates': (1341, 925, 1683, 986), 'order': 7, 'data_type': 'text'}
+{'text': '체진동기', 'filename': '흙의 기본적 특성_2.pdf', 'page': 4, 'coordinates': (241, 1250, 444, 1308), 'order': 8, 'data_type': 'text'}
+{'text': '체의 번호와 체눈의 크기', 'filename': '흙의 기본적 특성_2.pdf', 'page': 4, 'coordinates': (533, 1244, 1047, 1302), 'order': 9, 'data_type': 'text'}
+{'text': '입경', 'filename': '흙의 기본적 특성_2.pdf', 'page': 5, 'coordinates': (855, 69, 1138, 161), 'order': 1, 'data_type': 'title'}
+{'text': '비중계분석', 'filename': '흙의 기본적 특성_2.pdf', 'page': 5, 'coordinates': (144, 261, 475, 350), 'order': 2, 'data_type': 'title'}
+{'text': '진공 속에서 낙하하는 물체의 속도는 시간에 따라 증가하지만 물속 에서 침강하는 흙입자의 속도는 마찰저항 때문에 점차 일정 흙입자의 침강속도는 흙입자의 크기 무게 등에 따라 다르며 흙입자 를 구라고 가정하면 흙입자의 침강속도는 Stokes의 법칙을 따름', 'filename': '흙의 기본적 특성_2.pdf', 'page': 5, 'coordinates': (177, 366, 1902, 705), 'order': 3, 'data_type': 'text'}
+{'text': '여기서 Ys -흙입자의 단위중량 Yw-물의 단위중량 1-물의 점성계수 D_흙입자의 직경입경', 'filename': '흙의 기본적 특성_2.pdf', 'page': 5, 'coordinates': (305, 927, 1113, 1322), 'order': 5, 'data_type': 'text'}
+{'text': '이미지에는 측정 기구가 표시되어 있으며, 이 기구의 측면에는 2.5cm 단위로 눈금이 표시되어 있습니다. 기구의 상단에는 넓은 개구부가 있고 그 아래로는 유리관이 연결된 형태로, 유리관의 하단 부분에는 액체가 담긴 구형 구조가 있습니다. 이 구조체의 전체 높이는 기구의 하단에서부터 상단까지의 길이를 측정할 수 있도록 설계되어 있습니다.', 'filename': '흙의 기본적 특성_2.pdf', 'page': 5, 'coordinates': {'points': (1202, 744, 1702, 1344)}, 'order': 6, 'data_type': 'image'}
+{'text': '입경', 'filename': '흙의 기본적 특성_2.pdf', 'page': 6, 'coordinates': (855, 69, 1141, 163), 'order': 1, 'data_type': 'title'}
+{'text': '입도분포곡선', 'filename': '흙의 기본적 특성_2.pdf', 'page': 6, 'coordinates': (133, 261, 538, 350), 'order': 2, 'data_type': 'title'}
+{'text': '체분석과 비중 계분석의 결과들을 반대수용지semi-log 위 graph 에 점으로 표시하고 이 점들을 연결한 곡선', 'filename': '흙의 기본적 특성_2.pdf', 'page': 6, 'coordinates': (172, 366, 1905, 530), 'order': 3, 'data_type': 'text'}
+{'text': '제목: 비중계산  \nX축: 입경 (mm)  \nY축 왼쪽: 통과량 (%)  \nY축 오른쪽: 용적비율 (%)  \n체번호: No. 4, 6, 10, 16, 30, 40, 60, 100, 200  \n곡선: A, B, C 존재  ', 'filename': '흙의 기본적 특성_2.pdf', 'page': 6, 'coordinates': {'points': (50, 586, 1255, 1186)}, 'order': 4, 'data_type': 'image'}
+{'text': '통일보류법  \n실트, 점토  |  모래  \n          |  체분석  |  비중계분석  \n--------------------------------------  \n통과율 (%)  |     |  \n0.001  |   |  \n0.002  |   |  \n0.005  |   |  \n0.01   |   |  \n0.02   |   |  \n0.05   |   |  \n0.1    |   |  \n0.2    |   |  \n0.5    |   |  \n1.0    |   |  \n--------------------------------------  \n체분석 ○  \n비중계분석 ▲  \n-------------------------------------------------------  \n혼합 A, 혼합 B  \nD10, D60, D90  ', 'filename': '흙의 기본적 특성_2.pdf', 'page': 6, 'coordinates': {'points': (1302, 647, 1963, 1136)}, 'order': 5, 'data_type': 'image'}
+{'text': '입경', 'filename': '흙의 기본적 특성_2.pdf', 'page': 7, 'coordinates': (855, 69, 1141, 161), 'order': 1, 'data_type': 'title'}
+{'text': '입도분포곡선', 'filename': '흙의 기본적 특성_2.pdf', 'page': 7, 'coordinates': (141, 255, 536, 338), 'order': 2, 'data_type': 'title'}
+{'text': '이 이미지는 통계적 데이터를 나타내는 그래프로 보입니다. x축은 "입경 (mm)"을 표시하고, y축은 "통과율 (%)"을 나타냅니다. 그래프에는 세 개의 선이 있으며, 각 선은 I, II, III로 레이블이 붙어 있습니다. 각 선은 서로 다른 입경에 대해 통과율의 변화를 보여줍니다. 그래프의 범위는 x축에서 0.001 mm부터 2.0 mm까지, y축에서 0%부터 100%까지입니다.', 'filename': '흙의 기본적 특성_2.pdf', 'page': 7, 'coordinates': {'points': (600, 341, 1394, 830)}, 'order': 3, 'data_type': 'image'}
+{'text': '곡선 I 대부분의 흙입자들의 크기가 거의 비슷한 흙으로서 이런 흙을 입도 불량한 흙poorly Soil 또는 입도 균등한 흙 graded 곡선 프: 흙입자들의 크기가 넓은 범위에 걸쳐 있는 흙으로서 크고 작은 흙입 자가 골고루 섞여 있으므로 입도 양호한 흙well graded Soil 곡선 중간 크기의 흙입자가 없어서 중 간부분이 수평에 가까운 분포를 나 타내는 흙으로서 이런 형태의 입도분포를 계단식 입도 또는 결손분포gap graded', 'filename': '흙의 기본적 특성_2.pdf', 'page': 7, 'coordinates': (280, 877, 1913, 1338), 'order': 4, 'data_type': 'text'}
+{'text': '입경', 'filename': '흙의 기본적 특성_2.pdf', 'page': 8, 'coordinates': (855, 66, 1141, 163), 'order': 1, 'data_type': 'title'}
+{'text': '유효경D 10', 'filename': '흙의 기본적 특성_2.pdf', 'page': 8, 'coordinates': (141, 258, 477, 358), 'order': 2, 'data_type': 'text'}
+{'text': '또는 직경 유효경 유효입경은 통과율 10%에 해당하는 흙입자의', 'filename': '흙의 기본적 특성_2.pdf', 'page': 8, 'coordinates': (166, 369, 1827, 452), 'order': 3, 'data_type': 'text'}
+{'text': '균등계수uniformity Coefficient', 'filename': '흙의 기본적 특성_2.pdf', 'page': 8, 'coordinates': (138, 583, 1072, 675), 'order': 4, 'data_type': 'text'}
+{'text': '\\( C_u = \\frac{D_{60}}{D_{10}} \\)', 'filename': '흙의 기본적 특성_2.pdf', 'page': 8, 'coordinates': {'points': (236, 708, 608, 880)}, 'order': 5, 'data_type': 'image'}
+{'text': '곡률계수coefficient of CUrvature gradation', 'filename': '흙의 기본적 특성_2.pdf', 'page': 8, 'coordinates': (138, 919, 1450, 1011), 'order': 6, 'data_type': 'text'}
+{'text': 'Cc = \\(\\frac{D_{30}^2}{D_{10} \\times D_{60}}\\)', 'filename': '흙의 기본적 특성_2.pdf', 'page': 8, 'coordinates': {'points': (233, 1038, 869, 1266)}, 'order': 7, 'data_type': 'image'}
+{'text': '2 비중', 'filename': '흙의 기본적 특성_2.pdf', 'page': 9, 'coordinates': (847, 66, 1138, 163), 'order': 1, 'data_type': 'title'}
+{'text': '비중specific gravity G', 'filename': '흙의 기본적 특성_2.pdf', 'page': 9, 'coordinates': (136, 263, 863, 361), 'order': 2, 'data_type': 'title'}
+{'text': '어떤 물체의 중량 어떤 물체의 단위중량 비중= 같은부피의물의중량 물의 단위중량 -', 'filename': '흙의 기본적 특성_2.pdf', 'page': 9, 'coordinates': (188, 413, 1838, 583), 'order': 3, 'data_type': 'text'}
+{'text': '흙입자의 비중 Gs', 'filename': '흙의 기본적 특성_2.pdf', 'page': 9, 'coordinates': (116, 711, 691, 802), 'order': 4, 'data_type': 'text'}
+{'text': '단위중량Ys 어떤흙입자의 흙입자의 중량 물의 단위중량', 'filename': '흙의 기본적 특성_2.pdf', 'page': 9, 'coordinates': (158, 844, 1844, 1030), 'order': 5, 'data_type': 'text'}
+{'text': '2 비중', 'filename': '흙의 기본적 특성_2.pdf', 'page': 10, 'coordinates': (847, 69, 1138, 163), 'order': 1, 'data_type': 'title'}
+{'text': '샘발이, 석면철망, 가열기구들, 알콜램프, 플라스크형(피그노미터), 전열기, 스포이드, 10번체, 증류수, 숟가락, 온도계.', 'filename': '흙의 기본적 특성_2.pdf', 'page': 10, 'coordinates': {'points': (38, 438, 1186, 1119)}, 'order': 2, 'data_type': 'image'}
+{'text': "샘플 번호는 SM-1이며, 테스트 날짜는 1996년 3월 13일입니다. 피크노미터 번호는 K-7과 K-8 두 개가 있습니다. K-7의 경우 피크노미터와 토양의 총 중량은 68.31g, 피크노미터의 중량은 43.06g, 토양의 중량은 25.25g입니다. 물과 함께한 피크노미터의 중량은 183.87g이며, 끓는 점 온도는 25도, 이때의 물 밀도는 0.997075g입니다. K-8의 경우 피크노미터와 토양의 총 중량은 71.21g, 피크노미터의 중량은 41.01g, 토양의 중량은 30.20g입니다. 물과 함께한 피크노미터의 중량은 189.04g이며, 끓는 점 온도는 22도, 이때의 물 밀도는 0.997800g입니다. 피크노미터와 물의 중량은 K-7에서 168.41g, K-8에서 170.32g입니다. 두 샘플의 온도는 각각 10도이며, 이때의 물 밀도는 두 경우 모두 0.999728g입니다. 수정된 피크노미터와 물의 중량은 K-7에서 168.08g, K-8에서 170.07g입니다. 부력은 K-7에서 9.45g, K-8에서 11.23g입니다. Gs'는 K-7에서 2.670, K-8에서 2.689입니다. 수정된 Gs는 K-7에서 2.664, K-8에서 2.685입니다. Gs(평균)는 2.67입니다.", 'filename': '흙의 기본적 특성_2.pdf', 'page': 10, 'coordinates': {'points': (1197, 427, 1997, 1191)}, 'order': 3, 'data_type': 'table'}
+{'text': '3 흙의 각 성분 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 11, 'coordinates': (441, 61, 1547, 163), 'order': 1, 'data_type': 'title'}
+{'text': '구성요소의 부피', 'filename': '흙의 기본적 특성_2.pdf', 'page': 11, 'coordinates': (75, 261, 619, 350), 'order': 2, 'data_type': 'title'}
+{'text': 'V+V- I V+V+V', 'filename': '흙의 기본적 특성_2.pdf', 'page': 11, 'coordinates': (97, 416, 738, 502), 'order': 3, 'data_type': 'text'}
+{'text': '무개 W  \n공기  \n물  \n흙입자  \nWw  \nWs  \n부피 V  \nVg  \nVv  \nVw  \nVs  ', 'filename': '흙의 기본적 특성_2.pdf', 'page': 11, 'coordinates': {'points': (844, 400, 1927, 1083)}, 'order': 4, 'data_type': 'image'}
+{'text': '흙입자, 공기, 물이 각각 구분되어 있는 이미지로, 흙입자는 회색으로 표시되어 있으며, 그 사이에 공기와 물이 나타나 있습니다. 공기는 주요한 구획을 차지하고 있고, 전체적으로 파란색 배경 위에 배열되어 보입니다.', 'filename': '흙의 기본적 특성_2.pdf', 'page': 11, 'coordinates': {'points': (191, 994, 652, 1408)}, 'order': 5, 'data_type': 'image'}
+{'text': '3 흙의 각 성분 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 12, 'coordinates': (438, 58, 1547, 169), 'order': 1, 'data_type': 'title'}
+{'text': '간극비void ratio와 간극률porosity', 'filename': '흙의 기본적 특성_2.pdf', 'page': 12, 'coordinates': (97, 255, 1225, 358), 'order': 2, 'data_type': 'text'}
+{'text': 'e = \\(\\frac{V_v}{V_s}\\)\n\nn = \\(\\frac{V_v}{V} \\times 100 (\\%)\\)\n\ne = \\(\\frac{V_v}{V_s} = \\frac{V_v}{V - V_v} = \\frac{n}{1 - n}\\)\n\nn = \\(\\frac{e}{1 + e}\\)', 'filename': '흙의 기본적 특성_2.pdf', 'page': 12, 'coordinates': {'points': (147, 372, 1483, 1050)}, 'order': 3, 'data_type': 'image'}
+{'text': '포화도degree Of Saturation', 'filename': '흙의 기본적 특성_2.pdf', 'page': 12, 'coordinates': (69, 1094, 994, 1180), 'order': 4, 'data_type': 'text'}
+{'text': '3 흙의 각 성분 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 13, 'coordinates': (441, 63, 1547, 163), 'order': 1, 'data_type': 'title'}
+{'text': '예제 23', 'filename': '흙의 기본적 특성_2.pdf', 'page': 13, 'coordinates': (136, 263, 397, 350), 'order': 2, 'data_type': 'title'}
+{'text': '그림 2-66에서 흙입자의 부피가 10cm? 물의 부피가 4cm3 공기의 부피가 1cm 3이다 이 흙 의 간극비 간국률 포화도를 구하라', 'filename': '흙의 기본적 특성_2.pdf', 'page': 13, 'coordinates': (163, 397, 1905, 522), 'order': 3, 'data_type': 'text'}
+{'text': '3 흙의 각 성분 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 14, 'coordinates': (441, 61, 1547, 163), 'order': 1, 'data_type': 'title'}
+{'text': '구성요소의 무게', 'filename': '흙의 기본적 특성_2.pdf', 'page': 14, 'coordinates': (136, 261, 625, 352), 'order': 2, 'data_type': 'title'}
+{'text': '여기서 흙전체의 무게-젖은흙의 의무게', 'filename': '흙의 기본적 특성_2.pdf', 'page': 14, 'coordinates': (166, 586, 1308, 652), 'order': 4, 'data_type': 'text'}
+{'text': 'W-흙입자의 무게 마른 흙의 무게', 'filename': '흙의 기본적 특성_2.pdf', 'page': 14, 'coordinates': (366, 677, 1319, 744), 'order': 5, 'data_type': 'text'}
+{'text': 'W -물의 무게', 'filename': '흙의 기본적 특성_2.pdf', 'page': 14, 'coordinates': (375, 786, 777, 852), 'order': 6, 'data_type': 'text'}
+{'text': '무게  \n공기  \n물  \n흡입자  \n부피  \n\\(W\\), \\(W_w\\), \\(W_s\\)  \n\\(V_g\\), \\(V_w\\), \\(V_v\\), \\(V_s\\)  ', 'filename': '흙의 기본적 특성_2.pdf', 'page': 14, 'coordinates': {'points': (852, 783, 1836, 1397)}, 'order': 7, 'data_type': 'image'}
+{'text': '3 흙의 각 성분 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 15, 'coordinates': (441, 58, 1547, 166), 'order': 1, 'data_type': 'title'}
+{'text': '함수비water Confenf Noisture Content', 'filename': '흙의 기본적 특성_2.pdf', 'page': 15, 'coordinates': (130, 258, 1316, 352), 'order': 2, 'data_type': 'text'}
+{'text': "함수율 w' 흙전체 무게 W 에 대한 물 무게 Ww의 비 토질역학에서는 함수율을 거의 사용하지 않음", 'filename': '흙의 기본적 특성_2.pdf', 'page': 15, 'coordinates': (138, 713, 1366, 1000), 'order': 4, 'data_type': 'text'}
+{'text': "물의 무게 w'- 흙전체의 - 무게 |", 'filename': '흙의 기본적 특성_2.pdf', 'page': 15, 'coordinates': (155, 1066, 897, 1238), 'order': 5, 'data_type': 'text'}
+{'text': '3 흙의 각 성분 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 16, 'coordinates': (441, 58, 1547, 169), 'order': 1, 'data_type': 'title'}
+{'text': '전체단위중 량tota Unit weight Y3/습윤단위중량moist Unit weight Ywet', 'filename': '흙의 기본적 특성_2.pdf', 'page': 16, 'coordinates': (127, 261, 1894, 461), 'order': 2, 'data_type': 'text'}
+{'text': '흙전체의 무게 Y= 흙전체의 부피 [', 'filename': '흙의 기본적 특성_2.pdf', 'page': 16, 'coordinates': (186, 491, 811, 647), 'order': 3, 'data_type': 'text'}
+{'text': '건조단위중량dry Unit weight Ya', 'filename': '흙의 기본적 특성_2.pdf', 'page': 16, 'coordinates': (75, 691, 1133, 791), 'order': 4, 'data_type': 'text'}
+{'text': '흙입자의 무게 W Id -= 흙전체의 부피 /', 'filename': '흙의 기본적 특성_2.pdf', 'page': 16, 'coordinates': (169, 813, 805, 961), 'order': 5, 'data_type': 'text'}
+{'text': 'W[1+ W1+w W %1+w - - [', 'filename': '흙의 기본적 특성_2.pdf', 'page': 16, 'coordinates': (169, 1008, 1661, 1230), 'order': 6, 'data_type': 'text'}
+{'text': '\\(\\gamma_d = \\frac{\\gamma}{1 + w}\\)', 'filename': '흙의 기본적 특성_2.pdf', 'page': 16, 'coordinates': {'points': (183, 1280, 569, 1441)}, 'order': 7, 'data_type': 'image'}
+{'text': '3 흙의 각 성분 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 17, 'coordinates': (441, 63, 1550, 163), 'order': 1, 'data_type': 'title'}
+{'text': '예제 24', 'filename': '흙의 기본적 특성_2.pdf', 'page': 17, 'coordinates': (133, 263, 397, 347), 'order': 2, 'data_type': 'title'}
+{'text': '예제 23에서 흙입자의 무게가 25g일 때 이 흙의 함수비 전체단위중량 건조단위중량을 구하라', 'filename': '흙의 기본적 특성_2.pdf', 'page': 17, 'coordinates': (180, 377, 1883, 433), 'order': 3, 'data_type': 'text'}
+{'text': '3 흙의 각 성분 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 18, 'coordinates': (441, 63, 1550, 163), 'order': 1, 'data_type': 'title'}
+{'text': '예제 25', 'filename': '흙의 기본적 특성_2.pdf', 'page': 18, 'coordinates': (136, 263, 397, 347), 'order': 2, 'data_type': 'title'}
+{'text': "자연상태에서 흙전체의 부피가 9cm? '이며 무게는 18g이고 이것을 건조시킨 무게는 15g이다 흙 입자의 비중 6가 27일 때 이 흙의 함수비 전체단위중량 건조단위중량 간극비 간국률 그리 고 포화도를 구하라", 'filename': '흙의 기본적 특성_2.pdf', 'page': 18, 'coordinates': (177, 391, 1908, 594), 'order': 3, 'data_type': 'text'}
+{'text': '3 흙의 각 성분 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 19, 'coordinates': (441, 63, 1547, 163), 'order': 1, 'data_type': 'title'}
+{'text': '포화도 간극비 함수비 비중 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 19, 'coordinates': (69, 261, 1336, 352), 'order': 2, 'data_type': 'title'}
+{'text': '간국의 부피 V- Ve-e 물의 부피 V - Vs=e S 흙전체의 부피 V- V+V-1+e - 흙입자의 무게 W -I V - IG V = I G 물의 무게 W -- Y V - Y V S-- Y Ve S$-- YI e S', 'filename': '흙의 기본적 특성_2.pdf', 'page': 19, 'coordinates': (33, 383, 1194, 847), 'order': 3, 'data_type': 'text'}
+{'text': '여기서 I -흙입자의 단위중량 I -물의 단위중량 G-흙입자의 비중', 'filename': '흙의 기본적 특성_2.pdf', 'page': 19, 'coordinates': (100, 869, 775, 1138), 'order': 4, 'data_type': 'text'}
+{'text': '무게  \nW  \nW_w = γ_w e S  \n공기  \n물  \nW_s = γ_w G_s  \n흡입자  \nV_w = e S  \nV_v = e  \nV = 1 + e  \nV_s = 1  ', 'filename': '흙의 기본적 특성_2.pdf', 'page': 19, 'coordinates': {'points': (850, 880, 1916, 1402)}, 'order': 5, 'data_type': 'image'}
+{'text': '3 흙의 각 성분 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 20, 'coordinates': (438, 58, 1547, 166), 'order': 1, 'data_type': 'title'}
+{'text': '포화도 간극비 함수비 비중 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 20, 'coordinates': (75, 252, 1344, 355), 'order': 2, 'data_type': 'text'}
+{'text': 'Se = Gs w', 'filename': '흙의 기본적 특성_2.pdf', 'page': 20, 'coordinates': {'points': (1077, 405, 1463, 550)}, 'order': 4, 'data_type': 'image'}
+{'text': '흙의 전체단위중량', 'filename': '흙의 기본적 특성_2.pdf', 'page': 20, 'coordinates': (72, 597, 694, 688), 'order': 5, 'data_type': 'text'}
+{'text': '\\(\\gamma = \\frac{W}{V} = \\frac{W_s + W_w}{V} = \\frac{\\gamma_w G_s + \\gamma_w S e}{1 + e} = \\frac{G_s + S e}{1 + e} \\gamma_w\\)', 'filename': '흙의 기본적 특성_2.pdf', 'page': 20, 'coordinates': {'points': (200, 713, 1761, 902)}, 'order': 6, 'data_type': 'image'}
+{'text': '건조단위중량', 'filename': '흙의 기본적 특성_2.pdf', 'page': 20, 'coordinates': (75, 936, 538, 1025), 'order': 7, 'data_type': 'text'}
+{'text': '\\(\\gamma_d = \\frac{G_s}{1 + e} \\gamma_w\\)', 'filename': '흙의 기본적 특성_2.pdf', 'page': 20, 'coordinates': {'points': (175, 1058, 680, 1261)}, 'order': 8, 'data_type': 'image'}
+{'text': '3 흙의 각 성분 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 21, 'coordinates': (438, 58, 1547, 166), 'order': 1, 'data_type': 'title'}
+{'text': '포화단위중량saturated Unit weight Of soil Sat? Y', 'filename': '흙의 기본적 특성_2.pdf', 'page': 21, 'coordinates': (130, 258, 1552, 355), 'order': 2, 'data_type': 'text'}
+{'text': '수중단위중량submerged Unit weight Ysub', 'filename': '흙의 기본적 특성_2.pdf', 'page': 21, 'coordinates': (77, 600, 1411, 697), 'order': 4, 'data_type': 'text'}
+{'text': 'G+ e G-1 Y= Isat - Iw -= Yw - Yw - +e 1ee', 'filename': '흙의 기본적 특성_2.pdf', 'page': 21, 'coordinates': (180, 716, 1691, 905), 'order': 5, 'data_type': 'text'}
+{'text': '포화단위중량 전체단위중량 건조단위중량 수중단위중 > > 량의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 21, 'coordinates': (91, 936, 1894, 1119), 'order': 6, 'data_type': 'text'}
+{'text': '3 흙의 각 성분 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 22, 'coordinates': (441, 63, 1550, 163), 'order': 1, 'data_type': 'title'}
+{'text': '예제 26', 'filename': '흙의 기본적 특성_2.pdf', 'page': 22, 'coordinates': (138, 263, 397, 350), 'order': 2, 'data_type': 'title'}
+{'text': '간극비 e=07 함수비 25% 흙입자의 비중 G -265인 흙의 간국률 n 포화도 s 전체 " = 단위중량 건조단위중량 포화단위중량 Tat 수중단위중량 i을 Id 구하라', 'filename': '흙의 기본적 특성_2.pdf', 'page': 22, 'coordinates': (102, 383, 1930, 538), 'order': 3, 'data_type': 'text'}
+{'text': '3 흙의 각 성분 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 23, 'coordinates': (441, 63, 1550, 161), 'order': 1, 'data_type': 'title'}
+{'text': '예제 27', 'filename': '흙의 기본적 특성_2.pdf', 'page': 23, 'coordinates': (136, 263, 394, 350), 'order': 2, 'data_type': 'title'}
+{'text': '포화된 흙의 함수비가 20%이고 이 흙을 건조시켰을 때의 건조단위중량이 165t/m?이다 다음 을 구하라', 'filename': '흙의 기본적 특성_2.pdf', 'page': 23, 'coordinates': (58, 394, 1936, 555), 'order': 3, 'data_type': 'text'}
+{'text': '흙입자의 비중 G 2 간극비 3 포화단위중량 E', 'filename': '흙의 기본적 특성_2.pdf', 'page': 23, 'coordinates': (61, 547, 1402, 602), 'order': 4, 'data_type': 'text'}
+{'text': '3 흙의 각 성분 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 24, 'coordinates': (438, 58, 1547, 166), 'order': 1, 'data_type': 'title'}
+{'text': '상대밀도relative density D', 'filename': '흙의 기본적 특성_2.pdf', 'page': 24, 'coordinates': (136, 261, 1000, 355), 'order': 2, 'data_type': 'title'}
+{'text': '여기서e-현재 간극비 |-어느흙의 자연상태에서의 간극비', 'filename': '흙의 기본적 특성_2.pdf', 'page': 24, 'coordinates': (136, 633, 1511, 702), 'order': 4, 'data_type': 'text'}
+{'text': '최대간극비 어느 흙의 Em ax -- 가장 느슨한 상태에서의 간극비 최소간극비 어느 흙의 가장 간극비 Em in - = 조밀한 상태에서의', 'filename': '흙의 기본적 특성_2.pdf', 'page': 24, 'coordinates': (258, 716, 1727, 900), 'order': 5, 'data_type': 'text'}
+{'text': '여기서d-어느흙의 자연상태e에서의 건조단위중량', 'filename': '흙의 기본적 특성_2.pdf', 'page': 24, 'coordinates': (136, 1175, 1450, 1244), 'order': 7, 'data_type': 'text'}
+{'text': '어느흙의가장느슨한 상태Cemar에서의 Idm in 최소건조단위중량', 'filename': '흙의 기본적 특성_2.pdf', 'page': 24, 'coordinates': (330, 1272, 1875, 1350), 'order': 8, 'data_type': 'text'}
+{'text': "어느 흙의 가장 상태em in 조밀한 에서의 Idm ar = 최대건조단위중량 ' : 래 네", 'filename': '흙의 기본적 특성_2.pdf', 'page': 24, 'coordinates': (63, 1375, 1969, 1497), 'order': 9, 'data_type': 'text'}
+{'text': '3 흙의 각 성분 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 25, 'coordinates': (441, 58, 1547, 169), 'order': 1, 'data_type': 'title'}
+{'text': '상대밀도relative density D', 'filename': '흙의 기본적 특성_2.pdf', 'page': 25, 'coordinates': (138, 258, 1002, 358), 'order': 2, 'data_type': 'title'}
+{'text': '조립토를 가장 느슨한 상태', 'filename': '흙의 기본적 특성_2.pdf', 'page': 25, 'coordinates': (163, 366, 911, 452), 'order': 3, 'data_type': 'title'}
+{'text': '모래의 가장 느슨한 상태를 만드는 방법은 낙하높이 약 254 mm1 in를 유 지하면서 모래를 살며시 자유낙하시켜 부피 2830 f3의 몰드를 Cm301 가 득 채우', 'filename': '흙의 기본적 특성_2.pdf', 'page': 25, 'coordinates': (311, 461, 1916, 666), 'order': 4, 'data_type': 'text'}
+{'text': '여기서 W - 몰드를 채우는 데 필요한 모래의 무게 I -몰드의 부피', 'filename': '흙의 기본적 특성_2.pdf', 'page': 25, 'coordinates': (336, 813, 1244, 936), 'order': 6, 'data_type': 'text'}
+{'text': '가장 조밀한 상태', 'filename': '흙의 기본적 특성_2.pdf', 'page': 25, 'coordinates': (169, 966, 666, 1050), 'order': 7, 'data_type': 'title'}
+{'text': '몰드를 채운 모래의 윗면에 014 Kg/cm?2Ib/in?의 상재하중을 가하고 주 파수 3600 진폭 0635mm0025 in인 진동대 위에 몰드를 Cycles/min 놓고서 8분간 진동 상대밀도% 흙의 상태', 'filename': '흙의 기본적 특성_2.pdf', 'page': 25, 'coordinates': (302, 1058, 1905, 1255), 'order': 8, 'data_type': 'text'}
+{'text': '3 흙의 각 성분 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 26, 'coordinates': (441, 63, 1550, 163), 'order': 1, 'data_type': 'title'}
+{'text': '예제 28', 'filename': '흙의 기본적 특성_2.pdf', 'page': 26, 'coordinates': (138, 263, 397, 347), 'order': 2, 'data_type': 'title'}
+{'text': '어느 모래의 현재 상태의 간극비가 06이다 이 모래를 가장 조밀한 상태로 만들면 간극비가 03이고 가장 느슨한 상태로 만들면 간극비가 08이다 이 모래의 현재 상태에서의 상대 |밀도를 구하라', 'filename': '흙의 기본적 특성_2.pdf', 'page': 26, 'coordinates': (100, 380, 1941, 583), 'order': 3, 'data_type': 'text'}
+{'text': '3 흙의 각 성분 사이의 관계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 27, 'coordinates': (441, 63, 1550, 161), 'order': 1, 'data_type': 'title'}
+{'text': '예제 29', 'filename': '흙의 기본적 특성_2.pdf', 'page': 27, 'coordinates': (138, 263, 397, 347), 'order': 2, 'data_type': 'title'}
+{'text': "현장 흙의 구하기 위하여 부피 500cm '의 단위중량을 구멍에서 파낸 젖은 흙의 무게가 900g이 고 건조시킨 후의 무게가 800g이다 건조한 흙 400g을 몰드에 가장 느슨한 상태로 채운 부피 가 3이고 조밀하게 다진 후의 부피는 210cm 3이다 280cm 진동을 가하여 흙입자의 비중 6 27이다 이 흙의 상대밀도를 구하라", 'filename': '흙의 기본적 특성_2.pdf', 'page': 27, 'coordinates': (102, 386, 1933, 672), 'order': 3, 'data_type': 'text'}
+{'text': '4 아터버그한계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 28, 'coordinates': (666, 63, 1316, 161), 'order': 1, 'data_type': 'title'}
+{'text': '흙의 연경도consistency', 'filename': '흙의 기본적 특성_2.pdf', 'page': 28, 'coordinates': (136, 261, 866, 355), 'order': 2, 'data_type': 'title'}
+{'text': '점토는 함수비가 매우 작은 상태에서는 마치 고체덩어리처럼 거동하 며 함수비가 증가하면 소성이 커지고 함수비가 더욱 증 가하면 흙탕 물과 같은 액체상태', 'filename': '흙의 기본적 특성_2.pdf', 'page': 28, 'coordinates': (177, 369, 1913, 613), 'order': 3, 'data_type': 'text'}
+{'text': '소성이란 흙이 하중을 받아 변형이 생긴 후 하중을 제거하여도 원래 의 상태로 회복되지 않는 성질', 'filename': '흙의 기본적 특성_2.pdf', 'page': 28, 'coordinates': (175, 622, 1913, 783), 'order': 4, 'data_type': 'text'}
+{'text': '아터버그한계(Atterberg limits) 그래프입니다. 수직축은 흙의 부피를 나타내며, 수평축은 함수비(%)를 나타냅니다. 그래프는 고체상태, 반고체상태, 소성상태, 액체상태로 나뉘어 있으며, 각각의 상태에 따른 수분 함량을 보여줍니다.', 'filename': '흙의 기본적 특성_2.pdf', 'page': 28, 'coordinates': {'points': (541, 811, 1461, 1411)}, 'order': 5, 'data_type': 'image'}
+{'text': '4 아터버그한계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 29, 'coordinates': (663, 63, 1316, 161), 'order': 1, 'data_type': 'title'}
+{'text': '액성한계 시험', 'filename': '흙의 기본적 특성_2.pdf', 'page': 29, 'coordinates': (138, 263, 502, 344), 'order': 2, 'data_type': 'title'}
+{'text': '1 40번체체눈 크기 042mm를 통과한 흙에 물을 가하여 반죽하고 황동제 접 시에 흙시료를 수평하게 채운다그림 2-9b]', 'filename': '흙의 기본적 특성_2.pdf', 'page': 29, 'coordinates': (219, 363, 1900, 508), 'order': 3, 'data_type': 'text'}
+{'text': '표준 홈파기날을 이용 하여 흙시료 중앙에 홈을 2 판다그림 2-9c M', 'filename': '흙의 기본적 특성_2.pdf', 'page': 29, 'coordinates': (183, 525, 1766, 597), 'order': 4, 'data_type': 'text'}
+{'text': '3 손잡이를 회전시켜 황동제 접시를 1Omm 높이에서 고무판에 떨어지도록 한다 이렇게 여러 번 낙하시킨 후 홈 중앙의 밑부분이 정도 맞닿을 때의 13mm05in 낙하횟수 N과 맞닿은 부분의 흙시료의 함수비 w를 측정한다그림 2-9d', 'filename': '흙의 기본적 특성_2.pdf', 'page': 29, 'coordinates': (213, 608, 1913, 830), 'order': 5, 'data_type': 'text'}
+{'text': '4 같은 흙에 대하여 함수비를 변화시켜 가면서 최소한 네 번의 실험을 실시한다 이때 낙하횟수 N이 15~35회 범위 안에 오도록 한다', 'filename': '흙의 기본적 특성_2.pdf', 'page': 29, 'coordinates': (211, 841, 1888, 988), 'order': 6, 'data_type': 'text'}
+{'text': '5 흙의 함수비 w와 그에 해당하는 낙하횟수 N를 반대수용지semi-log graph 위에 점으로 표시한다그림 이 점들을 연결하면 2-10 w와 |0gN사이의 관 계는 거의 직선으로 그려지며 이 직선을 유동곡선flow Curve이라고 한다', 'filename': '흙의 기본적 특성_2.pdf', 'page': 29, 'coordinates': (219, 1002, 1900, 1222), 'order': 7, 'data_type': 'text'}
+{'text': '유동곡선에서 낙하횟수 N=25에 해당하는 함수비가 그 흙의 액성한 6 계 LL이다', 'filename': '흙의 기본적 특성_2.pdf', 'page': 29, 'coordinates': (172, 1238, 1913, 1308), 'order': 8, 'data_type': 'text'}
+{'text': '4 아터버그한계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 30, 'coordinates': (666, 66, 1319, 161), 'order': 1, 'data_type': 'title'}
+{'text': '액성한계 시험', 'filename': '흙의 기본적 특성_2.pdf', 'page': 30, 'coordinates': (122, 261, 561, 347), 'order': 2, 'data_type': 'title'}
+{'text': '(a) 54mm 반경, 흡입료, 황동제 접시, 손잡이, 경질 고무판.  \n(b) 측면도: 11mm, 8mm, 2mm.  \n(c) 정면도: 경질 고무판.  \n(d) 시험 전.  \n(e) 시험 후.', 'filename': '흙의 기본적 특성_2.pdf', 'page': 30, 'coordinates': {'points': (22, 366, 1130, 1088)}, 'order': 3, 'data_type': 'image'}
+{'text': '이미지에는 "낙하횟수 N"과 "함주기 w(%)"의 그래프가 나타나 있습니다. 그래프는 수직축에 함주기 비율(w%)이 40%에서 60% 사이에 표시되어 있고, 수평축에는 낙하횟수(N)가 2에서 100까지의 범위로 표시되어 있습니다. 파란색 선이 유동곡선으로 나타나 있으며, 특정 점에서 "N = 25"와 "LL = 47.5%"의 값을 표시하고 있습니다. 그래프는 낙하횟수가 증가함에 따라 함주기 비율이 감소하는 경향을 보이고 있습니다.', 'filename': '흙의 기본적 특성_2.pdf', 'page': 30, 'coordinates': {'points': (1113, 375, 1972, 991)}, 'order': 4, 'data_type': 'image'}
+{'text': '실험 후 모습이 담긴 이미지로, 중앙에는 반으로 나눈 시료가 놓인 금속 그릇이 보인다. 왼쪽에는 액성한계 시험기와 그에 연결된 장치가 있고, 오른쪽에는 여러 실험 도구와 용기가 나열되어 있다. 시험기 위에는 "액성한계시험기"라는 라벨이 붙어 있으며, 다른 도구로는 물병, 스푼, 측정 도구 등이 있다.', 'filename': '흙의 기본적 특성_2.pdf', 'page': 30, 'coordinates': {'points': (419, 1069, 1972, 1436)}, 'order': 5, 'data_type': 'image'}
+{'text': '4 아터버그한겨', 'filename': '흙의 기본적 특성_2.pdf', 'page': 31, 'coordinates': (663, 63, 1319, 161), 'order': 1, 'data_type': 'title'}
+{'text': '액성한계 시험', 'filename': '흙의 기본적 특성_2.pdf', 'page': 31, 'coordinates': (136, 261, 563, 352), 'order': 2, 'data_type': 'title'}
+{'text': '액성한계 시험에서 여러 번의 낙하시험을 하는 대신에 간편하게 낙하 시험을 한 번만 실시하여 액성한 계를 구하는 방법을 일점법one 하며 다음과 같은 식을 이용 이때 method이라고 낙하횟수 point N이 범위에 있어야 20~30 함', 'filename': '흙의 기본적 특성_2.pdf', 'page': 31, 'coordinates': (191, 366, 1930, 688), 'order': 3, 'data_type': 'text'}
+{'text': '여기서 N- 흙시료의 홈 중앙의 밑부분이 13mm 맞닿을 때의 낙하횟수 "n 낙하횟수 N에 해당하는 함수비 = tan3 = 012', 'filename': '흙의 기본적 특성_2.pdf', 'page': 31, 'coordinates': (252, 852, 1638, 1069), 'order': 5, 'data_type': 'text'}
+{'text': '액성한계가 큰 흙은 물을 많이 흡수할 수 있으므로 압축성이 큼 점토함유량이 많을수록 유기물함유량이 증가할수록 액성한계 큼', 'filename': '흙의 기본적 특성_2.pdf', 'page': 31, 'coordinates': (166, 1091, 1838, 1269), 'order': 6, 'data_type': 'text'}
+{'text': '4 아터버그한계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 32, 'coordinates': (666, 63, 1316, 161), 'order': 1, 'data_type': 'title'}
+{'text': '소성한계 시험', 'filename': '흙의 기본적 특성_2.pdf', 'page': 32, 'coordinates': (130, 261, 563, 352), 'order': 2, 'data_type': 'title'}
+{'text': '유리판에 잘 반죽된 흙을 놓고 손바닥으로 굴려 함수비를 감소시키면 서 흙실국수 가락 모양을 만든다 실의 지름이 되어 이 3mm 가 토막토막 부서지기 시작할 때의 함수비를 측정하여 소성한 계를 결정', 'filename': '흙의 기본적 특성_2.pdf', 'page': 32, 'coordinates': (194, 369, 1925, 611), 'order': 3, 'data_type': 'text'}
+{'text': '시료와 유리판이 그려진 이미지가 왼쪽에 있으며, 시료는 손과 함께 표시되어 있습니다. 오른쪽에는 유리판이 직경 3mm로 표시된 세로선과 곡선으로 나타나 있습니다.', 'filename': '흙의 기본적 특성_2.pdf', 'page': 32, 'coordinates': {'points': (577, 652, 1522, 1019)}, 'order': 4, 'data_type': 'image'}
+{'text': '그림 2-12 소성한계 시험', 'filename': '흙의 기본적 특성_2.pdf', 'page': 32, 'coordinates': (833, 1038, 1272, 1088), 'order': 5, 'data_type': 'text'}
+{'text': '유 기물함유량의 증가에 따라 커지며 점토광물의 차이에 따른 소성한 계의 변화폭은 액성한계의 변화폭에 비해 매우 작음', 'filename': '흙의 기본적 특성_2.pdf', 'page': 32, 'coordinates': (166, 1102, 1930, 1266), 'order': 6, 'data_type': 'text'}
+{'text': '4 아터버그한계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 33, 'coordinates': (666, 61, 1316, 163), 'order': 1, 'data_type': 'title'}
+{'text': '비소성non plastic NP', 'filename': '흙의 기본적 특성_2.pdf', 'page': 33, 'coordinates': (138, 261, 838, 355), 'order': 2, 'data_type': 'title'}
+{'text': '점토함유량이 적은 흙에서는 앞의 방법에 의해 액성한계나 소성한계 를 구할 수 없는 경우 또한 액성한 계보다 큰 소성한계가 경우 여러 흐 저드과 무이 애서하계와 수 서하계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 33, 'coordinates': (169, 372, 1911, 683), 'order': 3, 'data_type': 'text'}
+{'text': '여러 흙및 점토광물의 액성한계와 소성한계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 33, 'coordinates': (169, 638, 1322, 725), 'order': 4, 'data_type': 'text'}
+{'text': '종류는 모래, 모래질 실트, 점토질 실트, 카올리나이트, 일라이트, 몬트모릴로나이트로 구분됩니다. 각 종류의 액성한계는 모래 30~50%, 모래질 실트 40~70%, 점토질 실트 40~120%, 카올리나이트 30~110%, 일라이트 60~120%, 몬트모릴로나이트 100~900%입니다. 소성한계는 모래 20~40%, 모래질 실트 30~50%, 점토질 실트 30~70%, 카올리나이트 25~40%, 일라이트 35~60%, 몬트모릴로나이트 50~100%입니다.', 'filename': '흙의 기본적 특성_2.pdf', 'page': 33, 'coordinates': {'points': (241, 730, 1936, 1133)}, 'order': 5, 'data_type': 'table'}
+{'text': '4 아터버그한계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 34, 'coordinates': (663, 63, 1316, 163), 'order': 1, 'data_type': 'title'}
+{'text': '수축한계 시험', 'filename': '흙의 기본적 특성_2.pdf', 'page': 34, 'coordinates': (136, 258, 561, 352), 'order': 2, 'data_type': 'title'}
+{'text': '수분이 어느 정도 적어지면 수분이 더 감소하더라도 부피가 더 이상 줄어들지 않는 평형상태에 도달할 때의 함수비를 수축한계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 34, 'coordinates': (166, 366, 1891, 530), 'order': 3, 'data_type': 'text'}
+{'text': '시험 방법 1 직경 444mm 높이 127mm인 유리그릇 속에 물로 포화된 흙을 가득 채우 고 젖은 흙의 무게 W와 부피 V를 측정하여 함수비 w를 구한다 젖은 흙을 노건조시킨 후 마른 2 흙의 무게 W를 측정한다 3 유리그릇에 수은을 채워서 마른 흙의 부피 V2를 측정한다 다음 식으로 수축한계 4 Si를 구한다 V- V Si -- X100', 'filename': '흙의 기본적 특성_2.pdf', 'page': 34, 'coordinates': (166, 525, 1930, 1019), 'order': 4, 'data_type': 'text'}
+{'text': '유리그릇  \n첫은 흡의 부피 = \\( V_1 \\)  \n첫은 흡의 무게 = \\( W_1 \\)  \n(a) 말러기 전  ', 'filename': '흙의 기본적 특성_2.pdf', 'page': 34, 'coordinates': {'points': (27, 1041, 702, 1344)}, 'order': 6, 'data_type': 'image'}
+{'text': '마른 흡의 부피 = V₂  \n마른 흡의 무게 = W₂', 'filename': '흙의 기본적 특성_2.pdf', 'page': 34, 'coordinates': {'points': (825, 1055, 1325, 1322)}, 'order': 7, 'data_type': 'image'}
+{'text': '여기서 젖은 흙의 함수비% V-젖은 흙의 부피 V-마른 흙의 부피 W - 마른 흙의 무게', 'filename': '흙의 기본적 특성_2.pdf', 'page': 34, 'coordinates': (1380, 1083, 1961, 1344), 'order': 8, 'data_type': 'text'}
+{'text': '4 아터버그한계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 35, 'coordinates': (666, 63, 1316, 161), 'order': 1, 'data_type': 'title'}
+{'text': '예제 210', 'filename': '흙의 기본적 특성_2.pdf', 'page': 35, 'coordinates': (138, 263, 436, 347), 'order': 2, 'data_type': 'title'}
+{'text': '점토에 대하여 수축한계 시험을 한 결과가 다음과 같을 때 이 점토의 수축한계를 구하라 젖은 흙의 무게 W -- 338g 젖은 흙의 부피 V -- 231cm3 마른 흙의 무게 W --173g 마른 흙의 부피 V --135cm3', 'filename': '흙의 기본적 특성_2.pdf', 'page': 35, 'coordinates': (180, 375, 1869, 588), 'order': 3, 'data_type': 'text'}
+{'text': '4 아터버그한겨', 'filename': '흙의 기본적 특성_2.pdf', 'page': 36, 'coordinates': (666, 58, 1316, 169), 'order': 1, 'data_type': 'title'}
+{'text': '소성지수plasticity index PI 액성한계와 소성한 계의 차이 흙의 소성지수가 클수록 소성이 크다 하며 압축성이 커짐 PI= LL-PL', 'filename': '흙의 기본적 특성_2.pdf', 'page': 36, 'coordinates': (150, 258, 1644, 641), 'order': 2, 'data_type': 'text'}
+{'text': '수축지수shrinkage index Si 소성한계와 수축한계의 차이', 'filename': '흙의 기본적 특성_2.pdf', 'page': 36, 'coordinates': (108, 675, 1027, 886), 'order': 3, 'data_type': 'text'}
+{'text': 'S트! PL-SL', 'filename': '흙의 기본적 특성_2.pdf', 'page': 36, 'coordinates': (266, 897, 566, 952), 'order': 4, 'data_type': 'text'}
+{'text': '액성지수liquidity index [|', 'filename': '흙의 기본적 특성_2.pdf', 'page': 36, 'coordinates': (113, 994, 977, 1097), 'order': 5, 'data_type': 'text'}
+{'text': 'PL PL - w - LI- LL- PL PI 여기서 자연상태 흙의 함수비 -', 'filename': '흙의 기본적 특성_2.pdf', 'page': 36, 'coordinates': (250, 1119, 1025, 1341), 'order': 6, 'data_type': 'text'}
+{'text': '4 아터버그한계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 37, 'coordinates': (666, 61, 1316, 166), 'order': 1, 'data_type': 'title'}
+{'text': '연경지수consistency index CI', 'filename': '흙의 기본적 특성_2.pdf', 'page': 37, 'coordinates': (122, 258, 1063, 355), 'order': 2, 'data_type': 'text'}
+{'text': '유동지수flow index FI', 'filename': '흙의 기본적 특성_2.pdf', 'page': 37, 'coordinates': (72, 597, 855, 688), 'order': 4, 'data_type': 'text'}
+{'text': '01 2 101 "2 - FI- - 1ogN N2 여기서 낙하횟수 N에 1ogN2 해당하는 흙의 "1 함수비% - - 10% N 낙하횟수 N에 해당하는 흙의 함수비% "2 =', 'filename': '흙의 기본적 특성_2.pdf', 'page': 37, 'coordinates': (158, 708, 1972, 933), 'order': 5, 'data_type': 'text'}
+{'text': '강도지수toughness index 1 소성지수를 나눈 값 유동지수로 PI LL-PL TI- FI FI', 'filename': '흙의 기본적 특성_2.pdf', 'page': 37, 'coordinates': (116, 936, 1019, 1263), 'order': 6, 'data_type': 'text'}
+{'text': '4 아터버그한계', 'filename': '흙의 기본적 특성_2.pdf', 'page': 38, 'coordinates': (666, 63, 1316, 161), 'order': 1, 'data_type': 'title'}
+{'text': '예제 211', 'filename': '흙의 기본적 특성_2.pdf', 'page': 38, 'coordinates': (138, 263, 425, 350), 'order': 2, 'data_type': 'title'}
+{'text': '어느 흙의 액성한계 LL이 80% 소성한계 PL이 30% 수축한계 SL이 10%일 때 이 흙의 소성 지수 PI 수축지수 S[를 구하라', 'filename': '흙의 기본적 특성_2.pdf', 'page': 38, 'coordinates': (177, 377, 1936, 502), 'order': 3, 'data_type': 'text'}
+{'text': '5 흙의 기타 특성', 'filename': '흙의 기본적 특성_2.pdf', 'page': 39, 'coordinates': (636, 61, 1347, 166), 'order': 1, 'data_type': 'title'}
+{'text': '비표면적specific SUrface', 'filename': '흙의 기본적 특성_2.pdf', 'page': 39, 'coordinates': (141, 258, 894, 352), 'order': 2, 'data_type': 'title'}
+{'text': '어떤 물체의 표면적을 질량으로 나눈 값', 'filename': '흙의 기본적 특성_2.pdf', 'page': 39, 'coordinates': (175, 366, 1216, 452), 'order': 3, 'data_type': 'text'}
+{'text': '분석된 점토광물에 대해 다음과 같은 정보가 있습니다. montmorillonite는 두께가 3 × 10⁻⁶ mm, 직경이 100~1000 × 10⁻⁶ mm, 비표면적은 800 m²/g입니다. illite의 두께는 30 × 10⁻⁶ mm, 직경은 10,000 × 10⁻⁶ mm, 비표면적은 80 m²/g입니다. chlorite도 두께가 30 × 10⁻⁶ mm, 직경이 10,000 × 10⁻⁶ mm이며, 비표면적은 80 m²/g입니다. kaolinite의 두께는 50~2000 × 10⁻⁶ mm, 직경은 300~4000 × 10⁻⁶ mm, 비표면적은 15 m²/g입니다.', 'filename': '흙의 기본적 특성_2.pdf', 'page': 39, 'coordinates': {'points': (247, 458, 1872, 866)}, 'order': 4, 'data_type': 'table'}
+{'text': '5 흙의 기타 특성', 'filename': '흙의 기본적 특성_2.pdf', 'page': 40, 'coordinates': (633, 63, 1347, 163), 'order': 1, 'data_type': 'title'}
+{'text': '활성도activity', 'filename': '흙의 기본적 특성_2.pdf', 'page': 40, 'coordinates': (136, 261, 600, 355), 'order': 2, 'data_type': 'title'}
+{'text': '일반적으로 다른 물질을 흡착하거나 물리적 화학적으로 결합하려는 성질의 크기', 'filename': '흙의 기본적 특성_2.pdf', 'page': 40, 'coordinates': (177, 369, 1908, 527), 'order': 3, 'data_type': 'text'}
+{'text': '활성도가 크면 수분의 함량변화에 따른 체적의 수축팽창이 크게 발생 흙입자의 크기가 작을수록 비표면적이 커져 물을 많이 끌어 들이므로 흙의 활성은 점토에서 뚜렷', 'filename': '흙의 기본적 특성_2.pdf', 'page': 40, 'coordinates': (175, 516, 1941, 800), 'order': 4, 'data_type': 'text'}
+{'text': '소성지수 점토의 활성도A 가는입자의 중량 백분율 2um보다', 'filename': '흙의 기본적 특성_2.pdf', 'page': 40, 'coordinates': (380, 822, 1575, 958), 'order': 5, 'data_type': 'text'}
+{'text': '점토광물에는 kaolinite, halloysite(2H₂O), halloysite(4H₂O), illite, Ca-montmorillonite, Na-montmorillonite가 포함되어 있으며, 이들의 활성도는 각각 0.5, 0.5, 0.1, 0.5~1, 1.5, 4~7입니다.', 'filename': '흙의 기본적 특성_2.pdf', 'page': 40, 'coordinates': {'points': (263, 1027, 1786, 1383)}, 'order': 6, 'data_type': 'table'}
+{'text': '5 흙의 기타 특성', 'filename': '흙의 기본적 특성_2.pdf', 'page': 41, 'coordinates': (633, 61, 1347, 163), 'order': 1, 'data_type': 'title'}
+{'text': '비화작용slaking', 'filename': '흙의 기본적 특성_2.pdf', 'page': 41, 'coordinates': (133, 269, 600, 352), 'order': 2, 'data_type': 'title'}
+{'text': '건조한 고체상태의 점토에 갑자기 물을 가하면 점토입자 사이의 결합력이 약해져 서 점토가 붕괴되는 현상 소성상태의 점토에서는 비화현상이 일어나지 않음 사질토층에서 다짐공사를 할 때 건조된 점토를 가해서 혼합한 후에 물을 가하면서 다짐을 하면 점토 비화하여 흙입자를 서로 가 결합시켜 다짐이 단단하게 잘됨', 'filename': '흙의 기본적 특성_2.pdf', 'page': 41, 'coordinates': (155, 375, 1908, 800), 'order': 3, 'data_type': 'text'}
+{'text': '팽창작용bulking', 'filename': '흙의 기본적 특성_2.pdf', 'page': 41, 'coordinates': (138, 827, 602, 908), 'order': 4, 'data_type': 'text'}
+{'text': '이성적하bukng 흙의 부피가 팽창하는 현상 흙입자의 간극에 물이 들어가 표면장력이 발생해서 흙입자 사이가 벌어져서 일시 적으로 부피가 증가', 'filename': '흙의 기본적 특성_2.pdf', 'page': 41, 'coordinates': (155, 861, 1886, 1169), 'order': 5, 'data_type': 'text'}
+{'text': '5 흙의 기타 특성', 'filename': '흙의 기본적 특성_2.pdf', 'page': 42, 'coordinates': (636, 63, 1347, 161), 'order': 1, 'data_type': 'title'}
+{'text': '함수당량', 'filename': '흙의 기본적 특성_2.pdf', 'page': 42, 'coordinates': (138, 272, 377, 352), 'order': 2, 'data_type': 'title'}
+{'text': '흙속의 간극수는 흙입자가 작을수록 흡착수나 모관압력 때문에 자연증발이나 강제 탈수가 어려워짐', 'filename': '흙의 기본적 특성_2.pdf', 'page': 42, 'coordinates': (183, 375, 1913, 522), 'order': 3, 'data_type': 'text'}
+{'text': '원심함수당량centrifuge CME은 물로 moisture 포화된 흙에 중 equivalent 력의 1000배와 같은 원심력을 1시간 동안 가한 후의 흙의 함수비', 'filename': '흙의 기본적 특성_2.pdf', 'page': 42, 'coordinates': (169, 547, 1919, 702), 'order': 4, 'data_type': 'text'}
+{'text': '현장함수당량field FME은 젖은 흙의 매끄러운 moisture 표면에 equivalent 한 방울의 물을 떨어뜨렸을 때 30초 동안 흡수되지 않고 퍼져나가는 경우 이 흙의 함수비', 'filename': '흙의 기본적 특성_2.pdf', 'page': 42, 'coordinates': (183, 722, 1916, 952), 'order': 5, 'data_type': 'text'}
