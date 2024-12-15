@@ -9,7 +9,13 @@ report_llm/output/
 report_llm/llm
 **/md/
 
+qa_llm/generator/MLP-KTLim/
+qa_llm/retriever/bge-m3
+qa_llm/retriever/cache/
+qa_llm/retriever/faiss_index/
+
 #######################################
+.vscode/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

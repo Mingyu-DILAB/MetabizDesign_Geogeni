@@ -1,9 +1,5 @@
-from flask import Blueprint, request, Flask
-import os
-import sys
-import json
-import math
-import random
+import os, sys, json, math, random, argparse
+import torch
 import tiktoken
 import logging
 import pyproj
@@ -12,9 +8,11 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
+
 from loguru import logger
 from tqdm import tqdm
-
+from dotenv import load_dotenv
+from flask import Blueprint, request, Flask
 from collections import OrderedDict
 from langchain.chains import ConversationalRetrievalChain
 from langchain.chat_models import ChatOpenAI
@@ -26,14 +24,11 @@ from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.memory import ConversationBufferMemory
 from langchain.vectorstores import FAISS
 from typing import List
-
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from peft import PeftModel
-from transformers import BitsAndBytesConfig
 
-# A100 2번 사용
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+# A100 3번 사용
+os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 
 def seed(random_seed):
     np.random.seed(random_seed)
@@ -381,95 +376,6 @@ class StreamlitHandler(BaseCallbackHandler):
     def on_llm_new_token(self, token: str, **kwargs) -> None:
         self.text += token
         self.container.markdown(self.text)
-        
-
-def print_messages():
-    for message in st.session_state.messages:
-        with st.chat_message(message.role):
-            st.markdown(message.content)
-            
-def tiktoken_len(text):
-    tokenizer = tiktoken.get_encoding("cl100k_base")
-    tokens = tokenizer.encode(text)
-    return len(tokens)
-
-def get_text(docs):
-    doc_list = []
-    
-    for doc in docs:
-        file_name = doc.name  # doc 객체의 이름을 파일 이름으로 사용
-        with open(file_name, "wb") as file:  # 파일을 doc.name으로 저장
-            file.write(doc.getvalue())
-            logger.info(f"Uploaded {file_name}")
-        if '.pdf' in doc.name:
-            loader = PyPDFLoader(file_name)
-            documents = loader.load_and_split()
-        elif '.docx' in doc.name:
-            loader = Docx2txtLoader(file_name)
-            documents = loader.load_and_split()
-        elif '.pptx' in doc.name:
-            loader = UnstructuredPowerPointLoader(file_name)
-            documents = loader.load_and_split()
-
-        doc_list.extend(documents)
-    return doc_list
-
-def get_text_chunks(text):
-    text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=900,
-        chunk_overlap=100,
-        length_function=tiktoken_len
-    )
-    chunks = text_splitter.split_documents(text)
-    return chunks
-
-def get_vectorstore(text_chunks):
-    embeddings = HuggingFaceEmbeddings(
-                                        model_name="jhgan/ko-sroberta-multitask",
-                                        model_kwargs={'device': 'cpu'},
-                                        encode_kwargs={'normalize_embeddings': True}
-                                        )  
-    vectordb = FAISS.from_documents(text_chunks, embeddings)
-    return vectordb
-
-def get_conversation_chain(vetorestore,openai_api_key):
-    llm = ChatOpenAI(openai_api_key=openai_api_key, model_name = 'gpt-3.5-turbo',temperature=0)
-    conversation_chain = ConversationalRetrievalChain.from_llm(
-            llm=llm, 
-            chain_type="stuff", 
-            retriever=vetorestore.as_retriever(search_type = 'mmr', vervose = True), 
-            memory=ConversationBufferMemory(memory_key='chat_history', return_messages=True, output_key='answer'),
-            get_chat_history=lambda h: h,
-            return_source_documents=True,
-            verbose = True
-        )
-
-    return conversation_chain
-
-# # 좌표 세션 초기화
-# def initialize_session_state():
-#     if 'coordinates' not in st.session_state or st.session_state.coordinates is None:
-#         st.session_state.coordinates = [None, None]
-        
-#     if 'lat' not in st.session_state:
-#         st.session_state.lat = None
-#     if 'lng' not in st.session_state:
-#         st.session_state.lng = None
-
-# def receive_coordinates():
-#     if 'lat' not in st.session_state:
-#         st.session_state.lat = None
-#     if 'lng' not in st.session_state:
-#         st.session_state.lng = None
-
-#     # lat, lng가 존재할 경우 coordinates로 저장
-#     if st.session_state.lat is not None and st.session_state.lng is not None:
-#         lat = st.session_state.lat
-#         lng = st.session_state.lng
-#         st.session_state.coordinates = [lat, lng]
-#         print(f"Received coordinates in Streamlit: lat={lat}, lng={lng}")
-#     else:
-#         print("Coordinates not available in session state.")
 
 
 def load_map():
@@ -497,10 +403,11 @@ def load_map():
                 </script>
             ''', height=800, scrolling=True)
 
-# Haversine 공식에 따른 두 지점 간의 거리 계산 함수
+
 def haversine(criterion_lat, criterion_lng, lat, lng):
-    # 지구 반지름 (m)
-    R = 6371000
+    '''Haversine 공식에 따른 두 지점 간의 거리 계산 함수'''
+
+    R = 6371000 # 지구 반지름 (m)
     
     # 위도와 경도를 라디안으로 변환
     phi1 = math.radians(criterion_lat)
@@ -647,21 +554,6 @@ def find_sichs_within_radius(retrieval_distance: int = 500, max_retrieval: int =
                         pass
     
     return retrieved_sichs
-
-def basic_prompt():
-    return ChatPromptTemplate.from_messages(
-        [
-            (
-                "system",
-                "질문에 짧고 간결하게 답변해주세요."
-            ),
-            MessagesPlaceholder(variable_name="history"), # 대화 기록을 변수로 사용, history가 MessageHistory의 key가 됨
-            (
-                "human",
-                "{question}" # 사용자 질문을 입력
-            )
-        ]
-    )
 
 def preprocess_1_2(retrieved_sich_paths):
     '''1_2'''
@@ -863,11 +755,18 @@ def get_response_1_2(text_1_2):
         bnb_4bit_compute_dtype=torch.bfloat16
     )
     model = AutoModelForCausalLM.from_pretrained(
-        merged_model_path,
-        device_map='cuda',
+        base_model_name,
+        device_map='auto',
         torch_dtype=torch.float16,
-        quantization_config=quantization_config
+        quantization_config=quantization_config,
+        cache_dir=merged_model_path
     )
+    # model = AutoModelForCausalLM.from_pretrained(
+    #     merged_model_path,
+    #     device_map='cuda',
+    #     torch_dtype=torch.float16,
+    #     quantization_config=quantization_config
+    # )
     model.eval()
 
     messages = [
@@ -1066,9 +965,6 @@ def get_response_3(all_test):
             for sich_code, sich_code_values in sub_test_3.items():
                 user_input += f"'{sich_code}': {sich_code_values}\n"
 
-        base_model_name = "Qwen/Qwen2.5-7B-Instruct"
-        lora_adapter_path = os.path.join(os.path.dirname(__file__), "..", "report_llm", "llm", "report_3", "qwen_merged_part3")
-
         prompt = """### 제공된 예시와 같은 출력을 생성하기 위해 다음 공통 지침과 시험 별 지침을 따르세요.
 
 ### 공통 지침
@@ -1095,6 +991,10 @@ def get_response_3(all_test):
 1번 표의 열은 ['시추공코드', '심도(m)', '전단파속도 P파(m/s)', '전단파속도 S파(m/s)', '포아송비(υ)', '전단탄성계수(MPa)', '영률(MPa)', '밀도(g/m^3)'] 로 구성됩니다. 모든 열은 '물리검층_하향식탄성파_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성합니다.
 """
 
+        base_model_name = "Qwen/Qwen2.5-7B-Instruct"
+        lora_adapter_path = os.path.join(os.path.dirname(__file__), "..", "report_llm", "llm", "report_3", "qwen_merged_part3")
+        merged_model_path = os.path.join(os.path.dirname(__file__), "..", "report_llm", "llm", "report_3", "qwen_part3_merged_final")
+
         tokenizer = AutoTokenizer.from_pretrained(base_model_name)
         quantization_config = BitsAndBytesConfig(
             load_in_4bit=True,
@@ -1102,13 +1002,19 @@ def get_response_3(all_test):
             bnb_4bit_quant_type="nf4",
             bnb_4bit_compute_dtype=torch.bfloat16
         )
-        
         model = AutoModelForCausalLM.from_pretrained(
-            lora_adapter_path,
-            device_map='cuda',
+            base_model_name,
+            device_map='auto',
             torch_dtype=torch.float16,
-            quantization_config=quantization_config
+            quantization_config=quantization_config,
+            cache_dir=merged_model_path
         )
+        # model = AutoModelForCausalLM.from_pretrained(
+        #     lora_adapter_path,
+        #     device_map='auto',
+        #     torch_dtype=torch.float16,
+        #     quantization_config=quantization_config
+        # )
         model.eval()
 
         messages = [
@@ -1162,5 +1068,146 @@ def create_report(retrieval_distance, max_retrieval, retrieval_option):
         response_1_2 = get_response_1_2(text_1_2)
         response_3 = get_response_3(all_test)
 
-    report = response_1_2 + "\n\n## [부록] 지반조사 결과\n\n" + response_3
+    report = response_1_2
+    if response_3:
+        report += "\n\n## [부록] 지반조사 결과\n\n" + response_3
     return report
+
+
+class RAGChatbot:
+    def __init__(self, chunks, retriever_model_name, generator_model_name):
+        self.chunks = chunks
+        self.retriever_model_name = retriever_model_name
+        self.generator_model_name = generator_model_name
+
+        self.vector_store = None
+        self.embedding_model = None
+
+        cuda_devices = os.environ.get('CUDA_VISIBLE_DEVICES', None)
+        if cuda_devices is not None:
+            self.device_ids = list(map(int, cuda_devices.split(',')))  # ex: '0,1' -> [0, 1]
+            self.device_map = {f'cuda:{i}': f'cuda:{self.device_ids[i]}' for i in range(len(self.device_ids))}
+        else:
+            self.device_ids = None
+            self.device_map = {'cpu': 'cpu'}
+
+
+    def build_index(self, store_name=os.path.join(os.path.dirname(__file__), "..", "qa_llm", "retriever", "faiss_index")):
+        """청크 임베딩 저장"""
+
+        if not os.path.exists(os.path.join(os.path.dirname(__file__), "..", "qa_llm", "retriever")):
+            os.makedirs(os.path.join(os.path.dirname(__file__), "..", "qa_llm", "retriever"))
+
+        if self.retriever_model_name in ["text-embedding-3-small", "text-embedding-3-large"]:
+            from langchain_openai import OpenAIEmbeddings
+            from langchain.storage import LocalFileStore
+            from langchain_community.vectorstores import FAISS
+            from langchain.embeddings import CacheBackedEmbeddings
+
+            load_dotenv()
+            os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+
+            # 임베딩 생성 (캐시 적용)
+            self.embedding_model = OpenAIEmbeddings(model="text-embedding-3-large")
+            store = LocalFileStore(os.path.join(os.path.dirname(__file__), "..", "qa_llm", "retriever", "cache"))
+            cached_embedder = CacheBackedEmbeddings.from_bytes_store(self.embedding_model, store, namespace=self.embedding_model.model)
+
+            # FAISS 인덱스 생성
+            vector_store = FAISS.from_texts(self.chunks, cached_embedder)
+            vector_store.save_local(store_name)
+            self.vector_store = FAISS.load_local(store_name, self.embedding_model, allow_dangerous_deserialization=True)
+            print(f"FAISS index built with {self.vector_store.index.ntotal} chunks. => 'qa_llm/{store_name}'")
+
+        elif self.retriever_model_name == "BAAI/bge-m3":
+            from FlagEmbedding import BGEM3FlagModel, FlagReranker
+
+            # 임베딩 생성
+            embedding_model_path = os.path.join(os.path.dirname(__file__), "..", "qa_llm", "retriever", "bge-m3")
+            self.embedding_model = BGEM3FlagModel(
+                'BAAI/bge-m3',
+                device_map=self.device_map,
+                use_fp16=True,
+                cache_dir=embedding_model_path,
+            )
+
+            # 로컬 저장 (FAISS 미지원 모델)
+            embedding_save_path = os.path.join(os.path.dirname(__file__), "..", "qa_llm", "retriever", "bge-m3_embeddings.npz")
+            if not os.path.exists(embedding_save_path):
+                chunks_embedding = self.embedding_model.encode(self.chunks)["dense_vecs"]
+                np.savez(embedding_save_path, embeddings=chunks_embedding)
+                print("Embeddings is saved to 'qa_llm/retriever/bge-m3_embeddings.npz'")
+
+        else:
+            raise Exception("Invalid retriever model name")
+
+
+    def search(self, query: str, top_k: int = 5):
+        """쿼리 텍스트와 가장 유사한 청크 검색"""
+
+        if self.retriever_model_name in ["text-embedding-3-small", "text-embedding-3-large"]:
+            retriever = self.vector_store.as_retriever(search_type="similarity", search_kwargs={"k": top_k})
+            contexts = retriever.invoke(query)
+            contexts = "\n".join([doc.page_content for doc in contexts])
+
+        elif self.retriever_model_name == "BAAI/bge-m3":
+            query_embedding = self.embedding_model.encode(query, batch_size=top_k, max_length=500)['dense_vecs']
+            chunks_embedding = np.load(os.path.join(os.path.dirname(__file__), "..", "qa_llm", "retriever", "bge-m3_embeddings.npz"))["embeddings"]
+
+            similarity = query_embedding @ chunks_embedding.T
+            top_k_indices = np.argsort(similarity)[-top_k:].tolist()
+            contexts = "\n".join([self.chunks[i] for i in top_k_indices])
+            
+        return contexts
+
+
+    def generate_response(self, query: str, top_k: int = 5):
+        """쿼리에 대한 응답 생성"""
+
+        # 1. 관련 문서 검색
+        contexts = self.search(query, top_k=top_k)
+
+        # 2. contexts를 기반으로 모델 입력 구성
+        prompt = [
+            {"role": "system", "content": f"아래 주어진 문맥들을 참고하여 사용자 질문에 대해 답변해주세요.\n\n{contexts}\n\n"},
+            {"role": "user", "content": query}
+        ]
+
+        # 3. 모델 응답 생성
+        generator_model_path = os.path.join(os.path.dirname(__file__), "..", "qa_llm", "generator", "MLP-KTLim", "llama-3-Korean-Bllossom-8B")
+        tokenizer = AutoTokenizer.from_pretrained(self.generator_model_name, padding=True, truncation=True, trust_remote_code=True, cache_dir=generator_model_path)
+
+        model = AutoModelForCausalLM.from_pretrained(
+            self.generator_model_name,
+            device_map="auto",
+            torch_dtype=torch.float16,
+            resume_download=True,
+            trust_remote_code=True,
+            cache_dir=generator_model_path
+        )
+        model.eval()
+
+        if tokenizer.pad_token is None:
+            tokenizer.add_special_tokens({'pad_token': '[PAD]'})
+            model.resize_token_embeddings(len(tokenizer))
+        
+        input_ids = tokenizer.apply_chat_template(
+            prompt,
+            add_generation_prompt=True,
+            return_tensors="pt"
+        ).to(model.device)
+
+        terminators = [
+            tokenizer.eos_token_id,
+            tokenizer.convert_tokens_to_ids("<|eot_id|>")
+        ]
+
+        outputs = model.generate(
+            input_ids,
+            max_new_tokens=1024,
+            eos_token_id=terminators,
+            do_sample=True,
+            pad_token_id=tokenizer.eos_token_id
+        )
+
+        response = outputs[0][input_ids.shape[-1]:]
+        return tokenizer.decode(response, skip_special_tokens=True)

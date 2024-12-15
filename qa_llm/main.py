@@ -1,57 +1,60 @@
-import os
-import sys
-
-from langchain.document_loaders import TextLoader
-from langchain.text_splitter import CharacterTextSplitter
-from rag_chatbot import RAGChatbot
-
+import os, sys, argparse
+from utils import RAGChatbot
 os.environ['CUDA_VISIBLE_DEVICES'] = '3'
 
-def load_documents(file_path):
-    try:
-        loader = TextLoader(file_path)
-        documents = loader.load()
-        
-        text_splitter = CharacterTextSplitter(
-            chunk_size=600,
-            separator = "\n",
-            chunk_overlap=0
-        )
-        
-        return text_splitter.split_documents(documents)
-    
-    except FileNotFoundError:
-        print(f"Error: File {file_path} not found.")
-        sys.exit(1)
-    except Exception as e:
-        print(f"Error loading documents: {e}")
-        sys.exit(1)
 
-def main():
-    try:
-        # Initialize the chatbot
-        chatbot = RAGChatbot()
-        
-        # Load and add documents
-        docs = load_documents("output2.txt")
-        chatbot.add_document(docs)
-        
-        # Interactive chat loop
-        while True:
-            try:
-                query = input("You: ")
-                if query.lower() in ['quit', 'exit', 'bye']:
-                    break
-                    
-                response = chatbot.chat(query)
-                print("Assistant:", response)
-
-            except Exception as e:
-                print(f"Error processing query: {e}")
+def define_argparser():
+    p = argparse.ArgumentParser()
+    p.add_argument(
+        '--retriever_model_name',
+        choices=["text-embedding-3-small", "text-embedding-3-large", "BAAI/bge-m3"],
+        default="BAAI/bge-m3",
+    )
+    p.add_argument(
+        '--generator_model_name', 
+        choices=["MLP-KTLim/llama-3-Korean-Bllossom-8B"],
+        default="MLP-KTLim/llama-3-Korean-Bllossom-8B",
+    )
+    args = p.parse_args()
     
-    except Exception as e:
-        print(f"Fatal error: {e}")
-        sys.exit(1)
+    return args
+
+
+def load_chunks():
+    documents_path = os.path.join(os.path.dirname(__file__), "dataset", "MinerU", "MyOCR", "results", "mineru_output")
+
+    chunks = []
+    for root, dirs, files in os.walk(documents_path):
+        if "chunks.txt" in files:
+            with open(os.path.join(root, "chunks.txt"), "r", encoding="utf-8") as chunk_file:
+                lines = chunk_file.readlines()
+                for line in lines:
+                    chunks.append(line.strip())
+            continue
+
+    return chunks
+
+
+def main(args):
+    # Load chunks
+    chunks = load_chunks()
+
+    # Initialize the chatbot
+    chatbot = RAGChatbot(
+        chunks=chunks,
+        retriever_model_name=args.retriever_model_name,
+        generator_model_name=args.generator_model_name,
+    )
+
+    # Build FAISS index
+    chatbot.build_index()
+
+    # User query
+    query = "모래의 전단강도에 가장 큰 영향을 미치는 요소는 무엇인가요?"
+    response = chatbot.generate_response(query, top_k=5)
+    print(response)
+    
 
 if __name__ == "__main__":
-    main()
+    args = define_argparser()
+    main(args)
