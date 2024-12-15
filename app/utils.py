@@ -1160,7 +1160,7 @@ class RAGChatbot:
         return contexts
 
 
-    def generate_response(self, query: str, top_k: int = 5):
+    def generate_response(self, query: str, report: str, top_k: int = 5):
         """쿼리에 대한 응답 생성"""
 
         # 1. 관련 문서 검색
@@ -1168,7 +1168,7 @@ class RAGChatbot:
 
         # 2. contexts를 기반으로 모델 입력 구성
         prompt = [
-            {"role": "system", "content": f"아래 주어진 문맥들을 참고하여 사용자 질문에 대해 답변해주세요.\n\n{contexts}\n\n"},
+            {"role": "system", "content": f"### 지침\n아래 주어진 지반조사보고서, 사용자 질문과 관련된 컨텍스트를 참고하여 사용자 질문에 대해 답변해주세요.\n\n### 지반조사보고서\n{report}\n\n### 컨텍스트\n{contexts}\n\n"},
             {"role": "user", "content": query}
         ]
 

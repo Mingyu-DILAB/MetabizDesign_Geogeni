@@ -191,7 +191,7 @@ def main():
                     with st.spinner("Thinking..."):
                         stream_handler = StreamlitHandler(st.empty())
 
-                        response = chatbot.generate_response(user_input, top_k=5)
+                        response = chatbot.generate_response(user_input, st.session_state.report, top_k=5)
 
                         st.session_state["messages"].append(ChatMessage(role="assistant", content=response))
                         st.experimental_rerun()
