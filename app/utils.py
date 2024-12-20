@@ -8,6 +8,8 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
+import time
+import asyncio
 
 from loguru import logger
 from tqdm import tqdm
@@ -26,6 +28,7 @@ from langchain.vectorstores import FAISS
 from typing import List
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from peft import PeftModel
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # A100 3번 사용
 os.environ["CUDA_VISIBLE_DEVICES"] = "3"
@@ -731,7 +734,8 @@ def preprocess_3(retrieved_sich_paths):
 
     return all_test
 
-def get_response_1_2(text_1_2):    
+async def get_response_1_2(text_1_2):    
+    await asyncio.sleep(1)
     base_model_name = "Qwen/Qwen2.5-7B-Instruct"
     
     lora_adapter_path = os.path.join(os.path.dirname(__file__), "..", "report_llm", "llm", "report_1_2", "Qwen2.5-7B-Instruct_1epoch_1batch_53963")
@@ -755,11 +759,10 @@ def get_response_1_2(text_1_2):
         bnb_4bit_compute_dtype=torch.bfloat16
     )
     model = AutoModelForCausalLM.from_pretrained(
-        base_model_name,
+        merged_model_path,
         device_map='auto',
         torch_dtype=torch.float16,
         quantization_config=quantization_config,
-        cache_dir=merged_model_path
     )
     # model = AutoModelForCausalLM.from_pretrained(
     #     merged_model_path,
@@ -792,7 +795,8 @@ def get_response_1_2(text_1_2):
     response_1_2 = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
     return response_1_2.strip()
 
-def get_response_3(all_test):
+async def get_response_3(all_test):
+    await asyncio.sleep(1)
     response_3 = """"""
 
     # 메인 카테고리 별로 보고서 생성
@@ -1003,11 +1007,10 @@ def get_response_3(all_test):
             bnb_4bit_compute_dtype=torch.bfloat16
         )
         model = AutoModelForCausalLM.from_pretrained(
-            base_model_name,
+            merged_model_path,
             device_map='auto',
             torch_dtype=torch.float16,
-            quantization_config=quantization_config,
-            cache_dir=merged_model_path
+            quantization_config=quantization_config
         )
         # model = AutoModelForCausalLM.from_pretrained(
         #     lora_adapter_path,
@@ -1041,6 +1044,22 @@ def get_response_3(all_test):
         response_3 += f"{response}\n"
 
     return response_3.strip()
+
+async def async_report(test_1_2, all_test):
+    # 두 태스크를 비동기적으로 실행
+    task_1 = asyncio.create_task(get_response_1_2(test_1_2))
+    task_2 = asyncio.create_task(get_response_3(all_test))
+
+    # 병렬 실행 대기
+    await asyncio.gather(task_1, task_2)
+
+    # 결과 가져오기
+    result_1 = task_1.result()
+    result_2 = task_2.result()
+    
+    return result_1, result_2
+
+
            
 def create_report(retrieval_distance, max_retrieval, retrieval_option):
     '''사용자 입력 좌표로부터 {retrieval_distance}(m) 내의 시추공 데이터 중에서 0 ~ {max_retrieval}개를 참고하여 보고서 생성'''
@@ -1060,13 +1079,21 @@ def create_report(retrieval_distance, max_retrieval, retrieval_option):
 
         retrieved_sich_paths = {key: all_file_paths[key] for key, value in retrieved_sichs.items()}
 
+    
     with st.spinner("Preprocessing data..."):
+        start = time.time()
         text_1_2 = preprocess_1_2(retrieved_sich_paths)
         all_test = preprocess_3(retrieved_sich_paths)
-
+        end = time.time()
+        print(f"데이터 전처리 시간은 {end-start}입니다.")
+    
     with st.spinner("Generating report..."):
-        response_1_2 = get_response_1_2(text_1_2)
-        response_3 = get_response_3(all_test)
+        start = time.time()
+        
+        response_1_2, response_3 = asyncio.run(async_report(text_1_2, all_test))
+            
+        end = time.time()
+        print(f"3번 보고서 생성 시간은 {end-start}입니다.")
 
     report = response_1_2
     if response_3:
