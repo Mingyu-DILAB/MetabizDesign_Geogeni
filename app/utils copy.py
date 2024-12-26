@@ -1,6 +1,3 @@
-from llm import LLM
-import pickle
-from queue import Queue
 import os, sys, json, math, random, argparse
 import torch
 import tiktoken
@@ -12,6 +9,7 @@ import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
 import time
+
 from loguru import logger
 from tqdm import tqdm
 from dotenv import load_dotenv
@@ -29,50 +27,9 @@ from langchain.vectorstores import FAISS
 from typing import List
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from peft import PeftModel
-from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # A100 3번 사용
 os.environ["CUDA_VISIBLE_DEVICES"] = "3"
-
-llm_1_merged_model_path = '/home/user/MetabizDesign/eunsu/test_streamlit/test_app_llm/merged_model_2'
-llm_1_prompt = """
-### Instruction:
-당신은 주어진 context를 활용하여 지반조사 Report를 작성하는 데 특화된 지반 도메인 전문가입니다.
-지반조사 Report는 주어진 예시와 같이 1. 지역정보, 2. 조사내역 요약 순서로 반드시 작성되어야 하며, 결론 없이 마무리해야 합니다.
-1. 지역정보는 주어진 context에서 address 정보만 활용하며 사전지식에 기반하여 작성합니다. address 정보로부터 조사지역의 위치를 파악하고, 조사지역 위치로부터 1km 이내 부근에 대한 교통현황, 산계, 인근시설 등과 같은 요약 정보를 작성해야 합니다. 1km 이내의 범위에 있는 학교나 저수지, 아파트, 빌딩, 지하철역 등과 같은 큰 건물에 대해 작성하고, 만약 이러한 주변 정보가 없다면, 억지로 조사지역 인근에 대한 요약 정보를 작성하지 마세요.
-2. 조사내역 요약은 먼저 '1) 주변 시추공 좌표 정보'를 표로 작성합니다. 표의 열은 시추공코드, 위도, 경도, 지하수위(-m), 표고(m)로 구성되며, 위도와 경도는 각 시추공의 context에서 'LL'의 값을 참고하여 예시와 같이 작성하세요. 지하수위와 표고는 각 시추공의 context에서 '지하수위', '표고'를 참고하여 예시와 같이 작성하세요.
-그리고 '2) 시험 DB 내역 (실내시험, 현장시험 등)'을 표로 작성합니다. 주어진 context의 '시험 DB 내역'을 참조하여 예시와 같이 각 시험에 대한 시험명과 시험 입력 개수를 표로 작성하세요.
-마지막으로 '3) 지층 개요'를 표로 작성합니다. 주어진 context의 '지층 개요'를 참조하여 예시와 같이 지층 개요에 대한 표를 작성합니다. 표의 열은 '구분', '토질', '상대밀도', '층후(m)'로 구성되며, '토질' 열과 '상대밀도' 열은 context에서 각 지층의 'desc'를 참조하여 작성합니다. 특히, '상대밀도' 열의 값은 'desc'에 여러 시추공의 상대밀도 정보가 있을 수도 있고 전혀 없을 수도 있습니다. 만약 여러 시추공의 정보가 있다면 이들의 상대밀도들을 종합하여 최소~최대 상대밀도를 표에 작성하고, 상대밀도 정보를 찾을 수 없다면 억지로 추측해서 작성하지 말고 반드시 '-'로 표시하세요.
-"""
-
-llm_3_merged_model_path = '/home/user/MetabizDesign/hajun/part3_llm/outputs/qwen_merged_part3'
-llm_2_prompt = """### 제공된 예시와 같은 출력을 생성하기 위해 다음 공통 지침과 시험 별 지침을 따르세요.
-
-### 공통 지침
-입력으로 시험번호, 주 시험명, 생성해야 할 표 개수, 그리고 지반시험 데이터가 주어집니다. 주 시험명은 '토질시험', '현장투수시험', '표준관입시험', '암석시험', '하향식탄성파' 중 주어집니다.
-출력은 시험번호와 주 시험명을 포함하는 헤딩으로 시작되며, '### (시험번호) 주 시험명' 형식을 따릅니다. 그 다음으로 아래 시험 별 지침에 따라 각 시험 유형에 대해 데이터를 요약하는 표를 작성해야 합니다.
-
-### 시험 별 지침
-# '토질시험':
-하위시험번호 1번에 대한 정보가 주어지면 1번 표를 작성합니다. 1번 표의 열은 ['시추공코드', '심도(m)', 'Wn(%)', 'Gs', 'LL(%)', 'PI', 'No.4(%)', 'No.10(%)', 'No.40(%)', 'No.200(%)', '0.005mm 이하(%)', 'USCS'] 로 구성됩니다. '심도(m)' 열은 주어진 심도 값들을 모두 작성합니다. 'Wn(%)', 'Gs', 'LL(%)', 'PI', 'USCS' 열은 '기본물성_기본물성시험_(시추공코드).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성하세요. 'No.4(%)', 'No.10(%)', 'No.40(%)', 'No.200(%)', '0.005mm 이하(%)' 열은 '토사_입도분석_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성하세요.
-하위시험번호 2번에 대한 정보가 주어지면 2번 표를 작성합니다. 2번 표의 열은 ['시추공코드', '심도(m)', '일축압축강도(자연시료)(kgf/cm^2)', '삼축압축(CU) 점착력(kgf/cm^2)', '삼축압축(CU) 내부마찰각(ϕ, °)', '삼축압축(UU) 점착력(C_u, kgf/cm^2)', '압밀 선행압밀하중(PC, kgf/cm^2)', '압밀 압축지수(Cc)'] 로 구성됩니다. '심도(m)' 열은 주어진 심도 값들을 모두 작성합니다. '일축압축강도(자연시료)(kgf/cm^2)' 열은 '토사_일축압축_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성하세요. '삼축압축(CU) 점착력(kgf/cm^2)', '삼축압축(CU) 내부마찰각(ϕ, °)' 열은 '토사_삼축압축_CU_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성하세요. '삼축압축(UU) 점착력(C_u, kgf/cm^2)' 열은 '토사_삼축압축_UU_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성하세요. '압밀 선행압밀하중(PC, kgf/cm^2)', '압밀 압축지수(Cc)' 열은 '토사_압밀시험_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성하세요.
-하위시험번호 3번에 대한 정보가 주어지면 3번 표를 작성합니다. 3번 표의 열은 ['시추공코드', '심도(m)', 'A다짐 최대건조밀도(kN/m^3)', 'A다짐 최적함수비(OMC, %)', 'D다짐 최대건조밀도(kN/m^3)', 'D다짐 최적함수비(OMC, %)'] 로 구성됩니다. 모든 열은 '토사_CBR_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성합니다.
-
-# '현장투수 및 수압시험':
-1번 표의 열은 ['시추공코드', '심도(m)', '현장투수 평균투수계수(cm/sec)', '시간간격(sec)', '수압(MPa)', '현장수압 평균투수계수(cm/sec)', '평균루전값(l/min/m)'] 로 구성됩니다. '심도(m)' 열은 주어진 심도 값들을 모두 작성합니다. '현장투수 평균투수계수(cm/sec)' 열은 '기본현장_현장투수시험_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성하세요. '시간간격(sec)', '수압(MPa)', '현장수압 평균투수계수(cm/sec)', '평균루전값(l/min/m)' 열은 '기본현장_현장수압시험_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성하세요.
-
-# '표준관입시험':
-1번 표의 열은 ['시추공코드', '심도(-m)', 'N값'] 로 구성됩니다. '심도(-m)' 열은 '기본현장_표준관입_표준관입심도(-m)' 의 값을 참고하여 작성합니다. 'N값' 열은 '기본현장_표준관입_표준관입시험' 의 값을 참고하여 작성합니다.
-
-# '암석시험':
-하위시험번호 1번에 대한 정보가 주어지면 1번 표를 작성합니다. 1번 표의 열은 ['시추공코드', '심도(m)', '일축압축강도(kgf/cm^2)', '탄성계수(kgf/cm^2)', '삼축압축 점착력(MPa)', '삼축압축 내부마찰각(Φ, °)', '점하중 일축압축강도(MPa)', '점하중강도(MPa)'] 로 구성됩니다. '심도(m)' 열은 주어진 심도 값들을 모두 작성합니다. '일축압축강도(kgf/cm^2)', '탄성계수(kgf/cm^2)' 열은 '암석_일축압축_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성합니다. '삼축압축 점착력(MPa)', '삼축압축 내부마찰각(Φ, °)' 열은 '암석_삼축압축_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성합니다. '점하중 일축압축강도(MPa)', '점하중강도(MPa)' 열은 '암석_점하중_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성합니다.
-하위시험번호 2번에 대한 정보가 주어지면 2번 표를 작성합니다. 2번 표의 열은 ['시추공코드', '심도(m)', '절리면 점착력(MPa)', '절리면 내부마찰각(Φ, °)', '절리면압축강도(MPa)', '절리면 수직응력(MPa)', '절리면 전단응력(MPa)'] 로 구성됩니다. 모든 열은 '암석_절리면전단_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성합니다.
-
-# '하향식탄성파':
-1번 표의 열은 ['시추공코드', '심도(m)', '전단파속도 P파(m/s)', '전단파속도 S파(m/s)', '포아송비(υ)', '전단탄성계수(MPa)', '영률(MPa)', '밀도(g/m^3)'] 로 구성됩니다. 모든 열은 '물리검층_하향식탄성파_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성합니다.
-"""
-llm_1_2 = LLM(llm_1_merged_model_path, llm_1_prompt)
-llm_3 = LLM(llm_3_merged_model_path, llm_2_prompt)
 
 def seed(random_seed):
     np.random.seed(random_seed)
@@ -80,7 +37,13 @@ def seed(random_seed):
     os.environ['PYTHONHASHSEED'] = str(random_seed)
 seed(42)
 
-
+ALL_TEST = {
+    "토질시험": ["기본물성_기본물성시험", "토사_입도분석", "토사_일축압축", "토사_삼축압축_CU", "토사_삼축압축_UU", "토사_압밀시험", "토사_CBR"],
+    "현장투수 및 수압시험": ["기본현장_현장수압시험", "기본현장_현장투수시험"],
+    "표준관입시험": ["기본현장_표준관입시험"],
+    "암석시험": ["암석_삼축압축", "암석_일축압축", "암석_절리면전단", "암석_점하중"],
+    "하향식탄성파": ["물리검층_하향식탄성파"]
+}
 
 class Chunking_1_2():
     def __init__(self, file_path, extension="pdf"):
@@ -768,8 +731,316 @@ def preprocess_3(retrieved_sich_paths):
         pass
 
     return all_test
- 
-   
+
+def get_response_1_2(text_1_2):    
+    base_model_name = "Qwen/Qwen2.5-7B-Instruct"
+    
+    lora_adapter_path = os.path.join(os.path.dirname(__file__), "..", "report_llm", "llm", "report_1_2", "Qwen2.5-7B-Instruct_1epoch_1batch_53963")
+    merged_model_path = os.path.join(os.path.dirname(__file__), "..", "report_llm", "llm", "report_1_2", "merged_model_2")
+
+    prompt = """
+    ### Instruction:
+    당신은 주어진 context를 활용하여 지반조사 Report를 작성하는 데 특화된 지반 도메인 전문가입니다.
+    지반조사 Report는 주어진 예시와 같이 1. 지역정보, 2. 조사내역 요약 순서로 반드시 작성되어야 하며, 결론 없이 마무리해야 합니다.
+    1. 지역정보는 주어진 context에서 address 정보만 활용하며 사전지식에 기반하여 작성합니다. address 정보로부터 조사지역의 위치를 파악하고, 조사지역 위치로부터 1km 이내 부근에 대한 교통현황, 산계, 인근시설 등과 같은 요약 정보를 작성해야 합니다. 1km 이내의 범위에 있는 학교나 저수지, 아파트, 빌딩, 지하철역 등과 같은 큰 건물에 대해 작성하고, 만약 이러한 주변 정보가 없다면, 억지로 조사지역 인근에 대한 요약 정보를 작성하지 마세요.
+    2. 조사내역 요약은 먼저 '1) 주변 시추공 좌표 정보'를 표로 작성합니다. 표의 열은 시추공코드, 위도, 경도, 지하수위(-m), 표고(m)로 구성되며, 위도와 경도는 각 시추공의 context에서 'LL'의 값을 참고하여 예시와 같이 작성하세요. 지하수위와 표고는 각 시추공의 context에서 '지하수위', '표고'를 참고하여 예시와 같이 작성하세요.
+    그리고 '2) 시험 DB 내역 (실내시험, 현장시험 등)'을 표로 작성합니다. 주어진 context의 '시험 DB 내역'을 참조하여 예시와 같이 각 시험에 대한 시험명과 시험 입력 개수를 표로 작성하세요.
+    마지막으로 '3) 지층 개요'를 표로 작성합니다. 주어진 context의 '지층 개요'를 참조하여 예시와 같이 지층 개요에 대한 표를 작성합니다. 표의 열은 '구분', '토질', '상대밀도', '층후(m)'로 구성되며, '토질' 열과 '상대밀도' 열은 context에서 각 지층의 'desc'를 참조하여 작성합니다. 특히, '상대밀도' 열의 값은 'desc'에 여러 시추공의 상대밀도 정보가 있을 수도 있고 전혀 없을 수도 있습니다. 만약 여러 시추공의 정보가 있다면 이들의 상대밀도들을 종합하여 최소~최대 상대밀도를 표에 작성하고, 상대밀도 정보를 찾을 수 없다면 억지로 추측해서 작성하지 말고 반드시 '-'로 표시하세요.
+    """
+
+    tokenizer = AutoTokenizer.from_pretrained(base_model_name)
+    quantization_config = BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_use_double_quant=True,
+        bnb_4bit_quant_type="nf4",
+        bnb_4bit_compute_dtype=torch.bfloat16
+    )
+    model = AutoModelForCausalLM.from_pretrained(
+        merged_model_path,
+        device_map='auto',
+        torch_dtype=torch.float16,
+        quantization_config=quantization_config,
+    )
+    # model = AutoModelForCausalLM.from_pretrained(
+    #     merged_model_path,
+    #     device_map='cuda',
+    #     torch_dtype=torch.float16,
+    #     quantization_config=quantization_config
+    # )
+    model.eval()
+
+    messages = [
+        {"role": "system", "content": prompt},
+        {"role": "user", "content": text_1_2}
+    ]
+    
+    text = tokenizer.apply_chat_template(
+        messages,
+        tokenize=False,
+        add_generation_prompt=True
+    )
+    model_inputs = tokenizer([text], return_tensors="pt").to(model.device)
+
+    generated_ids = model.generate(
+        **model_inputs,
+        max_new_tokens=2048
+    )
+    generated_ids = [
+        output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
+    ]
+
+    response_1_2 = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+    return response_1_2.strip()
+
+def get_response_3(all_test):
+    response_3 = """"""
+
+    # 메인 카테고리 별로 보고서 생성
+    for category_idx, (main_category, all_info) in enumerate(all_test.items()):
+        print(f"Generating report ({category_idx+1}) {main_category}...", end=" ")
+
+        user_input = """"""
+        user_input += f"### 시험번호: {category_idx+1}\n"
+        user_input += f"주 시험명: {main_category}\n"
+
+        # 존재하는 하위 시험들 list-up
+        sub_categories = ALL_TEST[main_category]
+        sub_tests = {sub_category: [] for sub_category in sub_categories}
+
+        for sich_code, info in all_info.items():
+            file_names = list(info.keys())
+
+            # 파일 이름들을 순회하면서, 어떤 시험에 속하는지 검색
+            for file_name in file_names:
+                for sub_category in sub_categories:
+                    if file_name.startswith(sub_category):
+                        sub_tests[sub_category].append(file_name)
+                        break
+        
+        # 저장 포멧을 '시추공' 기준에서 '하위 시험'으로 변경
+        new_all_info = {sub_category: {} for sub_category, sub_files in sub_tests.items()}
+
+        for sub_category, sub_files in sub_tests.items():
+            for sub_file in sub_files:
+
+                for info in list(all_info.values()):
+                    for file_name, content in info.items():
+                        if file_name == sub_file:
+                            new_all_info[sub_category][file_name] = content
+
+        new_all_info = {k: v for k, v in new_all_info.items() if v}
+
+        # 값이 아무것도 없다면 해당 시험은 스킵
+        is_skip = True
+        for sub_category, info in new_all_info.items():
+            for file_name, content in info.items():
+                for key, value in content.items():
+                    if value:
+                        is_skip = False
+                        break
+        if is_skip:
+            print("Skip")
+            continue
+
+        # 시추공코드 내림차순 정렬
+        sorted_new_all_info = dict()
+        for sub_category, info in new_all_info.items():
+            sorted_file_names = sorted(info.keys())
+
+            sorted_dict = OrderedDict()
+            for file_name in sorted_file_names:
+                value = info[file_name]
+                sorted_dict[file_name] = value
+
+            sorted_new_all_info[sub_category] = sorted_dict
+
+        sub_test_1 = {}
+        sub_test_2 = {}
+        sub_test_3 = {}
+        for sub_category_idx, (sub_category, info) in enumerate(sorted_new_all_info.items()):
+            if sub_category in ['기본물성_기본물성시험', '토사_입도분석', '기본현장_현장수압시험', '기본현장_현장투수시험', '기본현장_표준관입시험', '암석_삼축압축', '암석_일축압축', '암석_점하중', '물리검층_하향식탄성파']:
+                for file_name, content in info.items():
+                    sich_code = file_name.split(".")[0].split("_")[-1]
+
+                    if sich_code not in sub_test_1.keys():
+                        sub_test_1[sich_code] = {}
+                    sub_test_1[sich_code][file_name] = content
+                    
+            elif sub_category in ['토사_일축압축', '토사_삼축압축_CU', '토사_삼축압축_UU', '토사_압밀시험', '암석_절리면전단']:
+                for file_name, content in info.items():
+                    sich_code = file_name.split(".")[0].split("_")[-1]
+
+                    if sich_code not in sub_test_2.keys():
+                        sub_test_2[sich_code] = {}
+                    sub_test_2[sich_code][file_name] = content
+                
+            elif sub_category in ['토사_CBR']:
+                for file_name, content in info.items():
+                    sich_code = file_name.split(".")[0].split("_")[-1]
+
+                    if sich_code not in sub_test_3.keys():
+                        sub_test_3[sich_code] = {}
+                    sub_test_3[sich_code][file_name] = content
+        
+        # 같은 표를 구성하는 시험 내에서, 어떤 시험은 존재하나 다른 시험은 존재하지 않을 경우
+        # 존재하지 않는 시험에 대해 nan 값으로라도 추가하여 LLM이 아예 생성하지 않는 경우를 방지
+        if main_category == "토질시험":
+            if sub_test_1:
+                for sich_code, info in sub_test_1.copy().items():
+                    all_tests = [k.replace(k.split("_")[-1], "")[:-1] for k in info.keys()]
+                    if ("기본물성_기본물성시험" in all_tests) and ("토사_입도분석" not in all_tests):
+                        new_key = f"토사_입도분석_{sich_code}.xlsx"
+                        sub_test_1[sich_code][new_key] = {"토사_입도분석_심도": [depth for depth in range(len(sub_test_1[sich_code][f"기본물성_기본물성시험_{sich_code}.xlsx"]["기본물성_기본물성_심도(G L, -m)"]))], "토사_입도분석_체통과백분율#4": [float("nan") for _ in range(len(sub_test_1[sich_code][f"기본물성_기본물성시험_{sich_code}.xlsx"]["기본물성_기본물성_심도(G L, -m)"]))], "토사_입도분석_체통과백분율#10": [float("nan") for _ in range(len(sub_test_1[sich_code][f"기본물성_기본물성시험_{sich_code}.xlsx"]["기본물성_기본물성_심도(G L, -m)"]))], "토사_입도분석_체통과백분율#40": [float("nan") for _ in range(len(sub_test_1[sich_code][f"기본물성_기본물성시험_{sich_code}.xlsx"]["기본물성_기본물성_심도(G L, -m)"]))], "토사_입도분석_체통과백분율#200": [float("nan") for _ in range(len(sub_test_1[sich_code][f"기본물성_기본물성시험_{sich_code}.xlsx"]["기본물성_기본물성_심도(G L, -m)"]))], "토사_입도분석_체통과백분율#0.005mm이하": [float("nan") for _ in range(len(sub_test_1[sich_code][f"기본물성_기본물성시험_{sich_code}.xlsx"]["기본물성_기본물성_심도(G L, -m)"]))]}
+            if sub_test_2:
+                for sich_code, info in sub_test_2.copy().items():
+                    all_tests = [k.replace(k.split("_")[-1], "")[:-1] for k in info.keys()]
+
+                    for test_name in ['토사_삼축압축_CU', '토사_삼축압축_UU', '토사_압밀시험']:
+                        if ('토사_일축압축' in all_tests) and (test_name not in all_tests):
+                            new_key = f"{test_name}_{sich_code}.xlsx"
+
+                            if test_name == "토사_삼축압축_CU":
+                                sub_test_2[sich_code][new_key] = {"토사_삼축압축CU_심도": [float("nan")], "토사_삼축압축CU_점착력": [float("nan")], "토사_삼축압축CU_내부마찰각": [float("nan")]}
+                            elif test_name == "토사_삼축압축_UU":
+                                sub_test_2[sich_code][new_key] = {"토사_삼축압축UU_심도": [float("nan")], "토사_삼축압축UU_점착력": [float("nan")]}
+                            elif test_name == "토사_압밀시험":
+                                sub_test_2[sich_code][new_key] = {"토사_압밀_심도": [float("nan")], "토사_압밀_선행압밀하중": [float("nan")], "토사_압밀_압축지수": [float("nan")]}
+
+        elif main_category == "현장투수 및 수압시험":
+            if sub_test_1:
+                for sich_code, info in sub_test_1.copy().items():
+                    all_tests = [k.replace(k.split("_")[-1], "")[:-1] for k in info.keys()]
+
+                    if ("기본현장_현장투수시험" in all_tests) and ("기본현장_현장수압시험" not in all_tests):
+                        new_key = f"기본현장_현장수압시험_{sich_code}.xlsx"
+                        sub_test_1[sich_code][new_key] = {"기본현장_현장수압_심도(m)": [depth for depth in range(len(sub_test_1[sich_code][f"기본현장_현장투수시험_{sich_code}.xlsx"]["기본현장_현장투수_심도(m)"]))], "기본현장_현장수압_시간간격": [float("nan") for _ in range(len(sub_test_1[sich_code][f"기본현장_현장투수시험_{sich_code}.xlsx"]["기본현장_현장투수_심도(m)"]))], "기본현장_현장수압_수압": [float("nan") for _ in range(len(sub_test_1[sich_code][f"기본현장_현장투수시험_{sich_code}.xlsx"]["기본현장_현장투수_심도(m)"]))], "기본현장_현장수압_평균투수계수": [float("nan") for _ in range(len(sub_test_1[sich_code][f"기본현장_현장투수시험_{sich_code}.xlsx"]["기본현장_현장투수_심도(m)"]))], "기본현장_현장수압_평균루전값": [float("nan") for _ in range(len(sub_test_1[sich_code][f"기본현장_현장투수시험_{sich_code}.xlsx"]["기본현장_현장투수_심도(m)"]))]}
+
+        elif main_category == "암석시험":
+            if sub_test_1:
+                for sich_code, info in sub_test_1.copy().items():
+                    all_tests = [k.replace(k.split("_")[-1], "")[:-1] for k in info.keys()]
+
+                    for test_name in ['암석_삼축압축', '암석_점하중']:
+                        if ('암석_일축압축' in all_tests) and (test_name not in all_tests):
+                            new_key = f"{test_name}_{sich_code}.xlsx"
+
+                            if test_name == "암석_삼축압축":
+                                sub_test_1[sich_code][new_key] = {"암석_삼축압축_심도": [float("nan")], "암석_삼축압축_점착력": [float("nan")], "암석_삼축압축_내부마찰각": [float("nan")]}
+                            elif test_name == "암석_점하중":
+                                sub_test_1[sich_code][new_key] = {"암석_점하중_심도": [float("nan")], "암석_점하중_점하중강도": [float("nan")], "암석_점하중_일축압축강도": [float("nan")]}
+
+        # 프롬프트에 생성해야 될 표 개수 입력
+        write_test_1 = False
+        write_test_2 = False
+        write_test_3 = False
+        n_tables = 0
+        for sub_category_idx, (sub_category, info) in enumerate(sorted_new_all_info.items()):
+            if sub_category in ['기본물성_기본물성시험', '토사_입도분석', '기본현장_현장수압시험', '기본현장_현장투수시험', '기본현장_표준관입시험', '암석_삼축압축', '암석_일축압축', '암석_점하중', '물리검층_하향식탄성파']:
+                if write_test_1 == False:
+                    write_test_1 = True
+                    n_tables += 1
+            elif sub_category in ['토사_일축압축', '토사_삼축압축_CU', '토사_삼축압축_UU', '토사_압밀시험', '암석_절리면전단']:
+                if write_test_2 == False:
+                    write_test_2 = True
+                    n_tables += 1
+            elif sub_category in ['토사_CBR']:
+                if write_test_3 == False:
+                    write_test_3 = True
+                    n_tables += 1
+        user_input += f"생성해야 할 표 개수: {n_tables}\n"
+
+        # 입력 프롬프트 작성
+        if len(sub_test_1):
+            user_input += "\n# 하위시험번호: 1\n"
+            for sich_code, sich_code_values in sub_test_1.items():
+                user_input += f"'{sich_code}': {sich_code_values}\n"
+
+        if len(sub_test_2):
+            user_input += "\n# 하위시험번호: 2\n"
+            for sich_code, sich_code_values in sub_test_2.items():
+                user_input += f"'{sich_code}': {sich_code_values}\n"
+
+        if len(sub_test_3):
+            user_input += "\n# 하위시험번호: 3\n"
+            for sich_code, sich_code_values in sub_test_3.items():
+                user_input += f"'{sich_code}': {sich_code_values}\n"
+
+        prompt = """### 제공된 예시와 같은 출력을 생성하기 위해 다음 공통 지침과 시험 별 지침을 따르세요.
+
+### 공통 지침
+입력으로 시험번호, 주 시험명, 생성해야 할 표 개수, 그리고 지반시험 데이터가 주어집니다. 주 시험명은 '토질시험', '현장투수시험', '표준관입시험', '암석시험', '하향식탄성파' 중 주어집니다.
+출력은 시험번호와 주 시험명을 포함하는 헤딩으로 시작되며, '### (시험번호) 주 시험명' 형식을 따릅니다. 그 다음으로 아래 시험 별 지침에 따라 각 시험 유형에 대해 데이터를 요약하는 표를 작성해야 합니다.
+
+### 시험 별 지침
+# '토질시험':
+하위시험번호 1번에 대한 정보가 주어지면 1번 표를 작성합니다. 1번 표의 열은 ['시추공코드', '심도(m)', 'Wn(%)', 'Gs', 'LL(%)', 'PI', 'No.4(%)', 'No.10(%)', 'No.40(%)', 'No.200(%)', '0.005mm 이하(%)', 'USCS'] 로 구성됩니다. '심도(m)' 열은 주어진 심도 값들을 모두 작성합니다. 'Wn(%)', 'Gs', 'LL(%)', 'PI', 'USCS' 열은 '기본물성_기본물성시험_(시추공코드).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성하세요. 'No.4(%)', 'No.10(%)', 'No.40(%)', 'No.200(%)', '0.005mm 이하(%)' 열은 '토사_입도분석_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성하세요.
+하위시험번호 2번에 대한 정보가 주어지면 2번 표를 작성합니다. 2번 표의 열은 ['시추공코드', '심도(m)', '일축압축강도(자연시료)(kgf/cm^2)', '삼축압축(CU) 점착력(kgf/cm^2)', '삼축압축(CU) 내부마찰각(ϕ, °)', '삼축압축(UU) 점착력(C_u, kgf/cm^2)', '압밀 선행압밀하중(PC, kgf/cm^2)', '압밀 압축지수(Cc)'] 로 구성됩니다. '심도(m)' 열은 주어진 심도 값들을 모두 작성합니다. '일축압축강도(자연시료)(kgf/cm^2)' 열은 '토사_일축압축_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성하세요. '삼축압축(CU) 점착력(kgf/cm^2)', '삼축압축(CU) 내부마찰각(ϕ, °)' 열은 '토사_삼축압축_CU_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성하세요. '삼축압축(UU) 점착력(C_u, kgf/cm^2)' 열은 '토사_삼축압축_UU_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성하세요. '압밀 선행압밀하중(PC, kgf/cm^2)', '압밀 압축지수(Cc)' 열은 '토사_압밀시험_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성하세요.
+하위시험번호 3번에 대한 정보가 주어지면 3번 표를 작성합니다. 3번 표의 열은 ['시추공코드', '심도(m)', 'A다짐 최대건조밀도(kN/m^3)', 'A다짐 최적함수비(OMC, %)', 'D다짐 최대건조밀도(kN/m^3)', 'D다짐 최적함수비(OMC, %)'] 로 구성됩니다. 모든 열은 '토사_CBR_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성합니다.
+
+# '현장투수 및 수압시험':
+1번 표의 열은 ['시추공코드', '심도(m)', '현장투수 평균투수계수(cm/sec)', '시간간격(sec)', '수압(MPa)', '현장수압 평균투수계수(cm/sec)', '평균루전값(l/min/m)'] 로 구성됩니다. '심도(m)' 열은 주어진 심도 값들을 모두 작성합니다. '현장투수 평균투수계수(cm/sec)' 열은 '기본현장_현장투수시험_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성하세요. '시간간격(sec)', '수압(MPa)', '현장수압 평균투수계수(cm/sec)', '평균루전값(l/min/m)' 열은 '기본현장_현장수압시험_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성하세요.
+
+# '표준관입시험':
+1번 표의 열은 ['시추공코드', '심도(-m)', 'N값'] 로 구성됩니다. '심도(-m)' 열은 '기본현장_표준관입_표준관입심도(-m)' 의 값을 참고하여 작성합니다. 'N값' 열은 '기본현장_표준관입_표준관입시험' 의 값을 참고하여 작성합니다.
+
+# '암석시험':
+하위시험번호 1번에 대한 정보가 주어지면 1번 표를 작성합니다. 1번 표의 열은 ['시추공코드', '심도(m)', '일축압축강도(kgf/cm^2)', '탄성계수(kgf/cm^2)', '삼축압축 점착력(MPa)', '삼축압축 내부마찰각(Φ, °)', '점하중 일축압축강도(MPa)', '점하중강도(MPa)'] 로 구성됩니다. '심도(m)' 열은 주어진 심도 값들을 모두 작성합니다. '일축압축강도(kgf/cm^2)', '탄성계수(kgf/cm^2)' 열은 '암석_일축압축_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성합니다. '삼축압축 점착력(MPa)', '삼축압축 내부마찰각(Φ, °)' 열은 '암석_삼축압축_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성합니다. '점하중 일축압축강도(MPa)', '점하중강도(MPa)' 열은 '암석_점하중_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성합니다.
+하위시험번호 2번에 대한 정보가 주어지면 2번 표를 작성합니다. 2번 표의 열은 ['시추공코드', '심도(m)', '절리면 점착력(MPa)', '절리면 내부마찰각(Φ, °)', '절리면압축강도(MPa)', '절리면 수직응력(MPa)', '절리면 전단응력(MPa)'] 로 구성됩니다. 모든 열은 '암석_절리면전단_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성합니다.
+
+# '하향식탄성파':
+1번 표의 열은 ['시추공코드', '심도(m)', '전단파속도 P파(m/s)', '전단파속도 S파(m/s)', '포아송비(υ)', '전단탄성계수(MPa)', '영률(MPa)', '밀도(g/m^3)'] 로 구성됩니다. 모든 열은 '물리검층_하향식탄성파_(시추공번호).xlsx' 의 정보에서 매칭되는 키의 값을 참고하여 작성합니다.
+"""
+
+        base_model_name = "Qwen/Qwen2.5-7B-Instruct"
+        lora_adapter_path = os.path.join(os.path.dirname(__file__), "..", "report_llm", "llm", "report_3", "qwen_merged_part3")
+        merged_model_path = os.path.join(os.path.dirname(__file__), "..", "report_llm", "llm", "report_3", "qwen_part3_merged_final")
+
+        tokenizer = AutoTokenizer.from_pretrained(base_model_name)
+        quantization_config = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_use_double_quant=True,
+            bnb_4bit_quant_type="nf4",
+            bnb_4bit_compute_dtype=torch.bfloat16
+        )
+        model = AutoModelForCausalLM.from_pretrained(
+            merged_model_path,
+            device_map='auto',
+            torch_dtype=torch.float16,
+            quantization_config=quantization_config
+        )
+        # model = AutoModelForCausalLM.from_pretrained(
+        #     lora_adapter_path,
+        #     device_map='auto',
+        #     torch_dtype=torch.float16,
+        #     quantization_config=quantization_config
+        # )
+        model.eval()
+
+        messages = [
+            {"role": "system", "content": prompt},
+            {"role": "user", "content": user_input}
+        ]
+        
+        user_input = tokenizer.apply_chat_template(
+            messages,
+            tokenize=False,
+            add_generation_prompt=True
+        )
+        model_inputs = tokenizer([user_input], return_tensors="pt").to(model.device)
+
+        generated_ids = model.generate(
+            **model_inputs,
+            max_new_tokens=2048
+        )
+        generated_ids = [
+            output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
+        ]
+
+        response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+        response_3 += f"{response}\n"
+
+    return response_3.strip()
+           
 def create_report(retrieval_distance, max_retrieval, retrieval_option):
     '''사용자 입력 좌표로부터 {retrieval_distance}(m) 내의 시추공 데이터 중에서 0 ~ {max_retrieval}개를 참고하여 보고서 생성'''
     
@@ -794,25 +1065,16 @@ def create_report(retrieval_distance, max_retrieval, retrieval_option):
         text_1_2 = preprocess_1_2(retrieved_sich_paths)
         all_test = preprocess_3(retrieved_sich_paths)
         end = time.time()
-        
-        with open('text_1_2.txt', 'w') as file:
-            file.write(text_1_2)
-        with open('all_test.txt', 'w') as file:
-            file.write(str(all_test))
-        
-        text_1_2 = text_1_2.split('\n')[0]        
-        
         print(f"데이터 전처리 시간은 {end-start}입니다.")
-
     
     with st.spinner("Generating report..."):
         start = time.time()
-
-        response_1_2 = llm_1_2.get_response_1_2(text_1_2)
+        response_1_2 = get_response_1_2(text_1_2)
         end = time.time()
-        print(f"1_2번 보고서 생성시간은 {end-start}입니다")
+        print(f"1,2번 보고서 생성 시간은 {end-start}입니다.")
+        
         start = time.time()
-        response_3 = llm_3.get_response_3(all_test)
+        response_3 = get_response_3(all_test)
         end = time.time()
         print(f"3번 보고서 생성 시간은 {end-start}입니다.")
 

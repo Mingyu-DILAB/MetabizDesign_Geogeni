@@ -2,7 +2,7 @@ import os, sys
 import tiktoken
 import streamlit as st
 import streamlit.components.v1 as components
-from llm import LLM
+
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
@@ -141,8 +141,7 @@ def load_chunks():
 def main():
     basic_setting()
     sidebar()
-    
-    
+
     # 초기 화면
     if st.session_state["screen"] == "map":
         load_map()

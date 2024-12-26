@@ -1,7 +1,3 @@
-app/aa.py
-app/app copy.py
-app/utils copy.py
-
 dataset/*/
 dataset/a.py
 dataset/pjCoord.json
