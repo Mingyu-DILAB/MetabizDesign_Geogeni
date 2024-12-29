@@ -1,27 +1,9 @@
 import os, sys
-import tiktoken
 import streamlit as st
 import streamlit.components.v1 as components
-from llm import LLM
-from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI
-from langchain.chains import ConversationalRetrievalChain
-from langchain.memory import ConversationBufferMemory
-from langchain.vectorstores import FAISS
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.chat_message_histories import ChatMessageHistory
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import ChatMessage
-from langchain_core.output_parsers import StrOutputParser
-from langchain_core.chat_history import BaseChatMessageHistory
-from langchain_core.runnables.history import RunnableWithMessageHistory
-from langchain.document_loaders import PyPDFLoader, Docx2txtLoader, UnstructuredPowerPointLoader
 
 from utils import *
-
-# load_dotenv()
-# os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 def basic_setting():
     st.set_page_config(
@@ -39,6 +21,9 @@ def basic_setting():
         "screen": "map", # initial screen
         "store": dict(), # A dictionary to store conversation history of session
         "messages": [],
+        "load_report_llm": None,
+        "load_RAG_retriever_llm": None,
+        "load_RAG_generator_llm": None,
     }
     
     for key, value in defaults.items():
@@ -57,18 +42,6 @@ def sidebar():
             ["Primary", "Nearest"],
             help=f"Primary: Max Retrieval개가 검색되면 중단, Nearest: 모두 검색 후 가장 가까운 Max Retrieval개 필터링",
         )
-        
-        # st.write("## 기타")
-        # uploaded_files = st.file_uploader("Upload your file", type=['pdf','docx'], accept_multiple_files=True)
-        # openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
-        # process = st.button("Process")
-        
-        # session_id = st.text_input("Session ID", value="ex")
-        # clear_btn = st.button("Clear")
-        # if clear_btn:
-        #     st.session_state["messages"] = []
-        #     st.session_state["store"] = dict()
-        #     st.experimental_rerun()
 
         st.write("## 초기화면")
         reset_btn = st.button("Reset")
@@ -76,16 +49,6 @@ def sidebar():
             for key in st.session_state.keys():
                 del st.session_state[key]
             st.experimental_rerun()
-    
-    # if process:
-    #     if not openai_api_key:
-    #         st.info("Please add your OpenAI API key to continue.")
-    #         st.stop()
-    #     files_text = get_text(uploaded_files)
-    #     text_chunks = get_text_chunks(files_text)
-    #     vetorestore = get_vectorstore(text_chunks)
-    #     st.session_state.conversation = get_conversation_chain(vetorestore, openai_api_key)
-    #     st.session_state.processComplete = True
 
 def get_coordinates():
     lat_lng_coordinates_container = st.empty()
@@ -99,11 +62,6 @@ def get_coordinates():
     if st.button("Create Report"):
         st.session_state.lat_lng_coordinates = [float(lat_input), float(lng_input)]
         st.session_state.report = create_report(retrieval_distance, max_retrieval, retrieval_option)
-        # try:
-        #     st.session_state.lat_lng_coordinates = [float(lat_input), float(lng_input)]
-        #     st.session_state.report = create_report(retrieval_distance, max_retrieval, retrieval_option)
-        # except:
-        #     st.error("Please enter valid numeric values for both latitude and longitude.")
 
 def switch_screen(screen_name):
     st.session_state["screen"] = screen_name
@@ -142,10 +100,14 @@ def main():
     basic_setting()
     sidebar()
     
-    
     # 초기 화면
     if st.session_state["screen"] == "map":
         load_map()
+        
+        if not st.session_state.load_report_llm:
+            load_report_llm()
+            st.experimental_rerun()
+        
         get_coordinates()
         
         if st.session_state.report:
@@ -196,50 +158,6 @@ def main():
 
                         st.session_state["messages"].append(ChatMessage(role="assistant", content=response))
                         st.experimental_rerun()
-
-        # with col2:
-        #     container = st.container(border=True, height=900)
-
-        #     # Show previous chat
-        #     for message in st.session_state.messages:
-        #         container.chat_message(message.role).write(message.content)
-            
-        #     # Enter messages from the user
-        #     if user_input := st.chat_input("Geogeni 메시지 입력"):
-        #         st.session_state.messages.append(ChatMessage(role="user", content=user_input))
-                    
-        #         container.chat_message("user").write(user_input)
-                        
-        #         with container.chat_message("assistant"):
-        #             with st.spinner("Thinking..."):
-        #                 stream_handler = StreamlitHandler(st.empty())
-                    
-        #                 prompt = basic_prompt()
-        #                 llm = ChatOpenAI(streaming=True, callbacks=[stream_handler])
-        #                 chain = prompt | llm
-                        
-        #                 def get_session_history(session_id: str) -> BaseChatMessageHistory:
-        #                     '''Retrieval of session records based on session ID'''
-                            
-        #                     if session_id not in st.session_state["store"]:
-        #                         st.session_state["store"][session_id] = ChatMessageHistory()
-        #                     return st.session_state["store"][session_id]
-                        
-        #                 chain_with_memory = (
-        #                     RunnableWithMessageHistory(
-        #                         chain,
-        #                         get_session_history,
-        #                         input_messages_key="question", # 체인을 invoke할 때 사용자 쿼리 입력으로 지정하는 key
-        #                         history_messages_key="history", # 대화 기록으로 지정하는 key
-        #                     )
-        #                 )
-                        
-        #                 response = chain_with_memory.invoke(
-        #                     {"question": user_input},
-        #                     config={"configurable": {"session_id": "ex"}},
-        #                 )
-                        
-        #                 st.session_state["messages"].append(ChatMessage(role="assistant", content=response.content))
 
 if __name__ == '__main__':
     main()

@@ -8,16 +8,16 @@
 
 python -m venv venv
 . venv/bin/activate
-python -m pip install -r requirements.txt
+pip install -r requirements308.txt
 ```
 
 ```bash
-'''python version => 3.12.7'''
+'''python version => 3.11.0'''
 '''cuda version => 12.1'''
 
-python -m venv venv
-. venv/bin/activate
-python -m pip install -r requirements2.txt
+conda create -n mbd_geogeni -y python==3.11
+conda activate mbd_geogeni
+pip install -r requirements311.txt
 ```
 
 ### Dataset Download

@@ -1,3 +1,8 @@
+app/*
+!app/app.py
+!app/utils.py
+!app/custom_map/
+
 dataset/*/
 dataset/a.py
 dataset/pjCoord.json
