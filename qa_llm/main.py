@@ -1,5 +1,5 @@
 import os, sys, argparse
-from utils import RAGChatbot
+from rag_chatbot import RAGChatbot
 os.environ['CUDA_VISIBLE_DEVICES'] = '3'
 
 
@@ -51,7 +51,8 @@ def main(args):
 
     # User query
     query = "모래의 전단강도에 가장 큰 영향을 미치는 요소는 무엇인가요?"
-    response = chatbot.generate_response(query, top_k=5)
+    report = ""
+    response = chatbot.generate_response(query, report ,top_k=5)
     print(response)
     
 

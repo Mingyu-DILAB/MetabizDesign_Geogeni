@@ -5,6 +5,8 @@ import streamlit.components.v1 as components
 from langchain_core.messages import ChatMessage
 
 from utils import *
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "qa_llm")))
+from rag_chatbot import RAGChatbot
 
 def basic_setting():
     st.set_page_config(
@@ -84,7 +86,6 @@ def define_argparser():
     return args
 
 def load_chunks():
-    # documents_path = os.path.join(os.path.dirname(__file__), "..", "qa_llm", "dataset", "MinerU", "MyOCR", "results", "mineru_output")
     documents_path = os.path.join(os.path.dirname(__file__), "..", "qa_llm", "dataset", "MinerU", "MyOCR", "results_2", "mineru_output")
 
     chunks = []

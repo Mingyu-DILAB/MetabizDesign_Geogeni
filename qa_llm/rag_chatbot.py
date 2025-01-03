@@ -17,16 +17,8 @@ class RAGChatbot:
         self.vector_store = None
         self.embedding_model = None
 
-        cuda_devices = os.environ.get('CUDA_VISIBLE_DEVICES', None)
-        if cuda_devices is not None:
-            self.device_ids = list(map(int, cuda_devices.split(',')))  # ex: '0,1' -> [0, 1]
-            self.device_map = {f'cuda:{i}': f'cuda:{self.device_ids[i]}' for i in range(len(self.device_ids))}
-        else:
-            self.device_ids = None
-            self.device_map = {'cpu': 'cpu'}
 
-
-    def build_index(self, store_name="retriever/faiss_index"):
+    def build_index(self, store_name=os.path.join(os.path.dirname(__file__), "retriever", "faiss_index")):
         """청크 임베딩 저장"""
 
         if not os.path.exists(os.path.join(os.path.dirname(__file__), "retriever")):
@@ -59,15 +51,17 @@ class RAGChatbot:
             embedding_model_path = os.path.join(os.path.dirname(__file__), "retriever", "bge-m3")
             self.embedding_model = BGEM3FlagModel(
                 'BAAI/bge-m3',
-                device_map=self.device_map,
+                device_map="auto",
                 use_fp16=True,
                 cache_dir=embedding_model_path,
             )
-            chunks_embedding = self.embedding_model.encode(self.chunks)["dense_vecs"]
-
+            
             # 로컬 저장 (FAISS 미지원 모델)
-            np.savez(os.path.join(os.path.dirname(__file__), "retriever", "bge-m3_embeddings.npz"), embeddings=chunks_embedding)
-            print("Embeddings is saved to 'qa_llm/retriever/bge-m3_embeddings.npz'")
+            embedding_save_path = os.path.join(os.path.dirname(__file__), "retriever", "bge-m3_embeddings.npz")
+            if not os.path.exists(embedding_save_path):
+                chunks_embedding = self.embedding_model.encode(self.chunks)["dense_vecs"]
+                np.savez(embedding_save_path, embeddings=chunks_embedding)
+                print("Embeddings is saved to 'qa_llm/retriever/bge-m3_embeddings.npz'")
 
         else:
             raise Exception("Invalid retriever model name")
@@ -92,7 +86,7 @@ class RAGChatbot:
         return contexts
 
 
-    def generate_response(self, query: str, top_k: int = 5):
+    def generate_response(self, query: str, report: str, top_k: int = 5):
         """쿼리에 대한 응답 생성"""
 
         # 1. 관련 문서 검색
@@ -100,7 +94,7 @@ class RAGChatbot:
 
         # 2. contexts를 기반으로 모델 입력 구성
         prompt = [
-            {"role": "system", "content": f"아래 주어진 문맥들을 참고하여 사용자 질문에 대해 답변해주세요.\n\n{contexts}\n\n"},
+            {"role": "system", "content": f"### 지침\n아래 주어진 지반조사보고서, 사용자 질문과 관련된 컨텍스트를 참고하여 사용자 질문에 대해 답변해주세요.\n\n### 지반조사보고서\n{report}\n\n### 컨텍스트\n{contexts}\n\n"},
             {"role": "user", "content": query}
         ]
 
