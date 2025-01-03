@@ -14,7 +14,7 @@ from langchain.vectorstores import FAISS
 from langchain_core.callbacks.base import BaseCallbackHandler
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
-# os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 ALL_TEST = {

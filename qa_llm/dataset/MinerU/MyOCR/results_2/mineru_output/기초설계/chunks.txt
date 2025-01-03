@@ -1,0 +1,154 @@
+{'text': "제목: 10장기초 <'설계, 내용: 101 개 요", 'filename': '기초설계.pdf', 'page': 1, 'coordinates': (152, 263, 311, 305), 'order': 1, 'data_type': 'text'}
+{'text': '1] 기초의개념:기둥이나 벽체를통하여 - 전달된 건물의하중을 지반에 전달하는 구조물', 'filename': '기초설계.pdf', 'page': 1, 'coordinates': (150, 366, 1419, 408), 'order': 2, 'data_type': 'text'}
+{'text': '2 기초의 기능 :건물에서 전달되는 단위 면적당의 하중을 지반이 지지할수 있는 힘의 크기 - 로 하중을 분산시키는 기능', 'filename': '기초설계.pdf', 'page': 1, 'coordinates': (144, 461, 1500, 555), 'order': 3, 'data_type': 'text'}
+{'text': '3 기초의 설계 상부 건물의 하중을 지지하고지내력이 부담 지반으로 부터 작용하는 : 토압 에 견딜수 있도록 설계 침하량을 최소화:충분한 지내력을 가진 지반층에 기초를 설치 부동침하방지 :구조체에 2차응력 발생 및 균열 발생을 억제', 'filename': '기초설계.pdf', 'page': 1, 'coordinates': (147, 611, 1497, 800), 'order': 4, 'data_type': 'text'}
+{'text': '지내력:흙의 특성에 따라 지반이 있는저항력 무고', 'filename': '기초설계.pdf', 'page': 1, 'coordinates': (152, 855, 989, 894), 'order': 5, 'data_type': 'text'}
+{'text': '** 토압:상부구조물의 하중에 따라 지반으로 부터기초에작용하는 외력', 'filename': '기초설계.pdf', 'page': 1, 'coordinates': (150, 905, 1236, 944), 'order': 6, 'data_type': 'text'}
+{'text': '5 기초의 - 종류', 'filename': '기초설계.pdf', 'page': 2, 'coordinates': (152, 191, 369, 227), 'order': 1, 'data_type': 'text'}
+{'text': '1 독립 기초:독립기초판 위에 단일 기둥이 놓임 [ 그림 1a 기둥사이 거리가 멀고 지내력이 비교적 양호한 경우에 적용 -', 'filename': '기초설계.pdf', 'page': 2, 'coordinates': (200, 241, 1127, 350), 'order': 2, 'data_type': 'text'}
+{'text': '정방향 또는 장방형', 'filename': '기초설계.pdf', 'page': 2, 'coordinates': (211, 338, 541, 377), 'order': 3, 'data_type': 'text'}
+{'text': '(b) Spread footing.  \n(c) Stepped footing.  \n(d) Tapered footing.  \n(e) Pile cap.  ', 'filename': '기초설계.pdf', 'page': 2, 'coordinates': {'points': (547, 380, 1194, 911)}, 'order': 4, 'data_type': 'image'}
+{'text': '2 연속기초:기둥사이 거리가 가까운 여러 개의 기둥을 하나의 줄기초 위에 놓음 그림 1c', 'filename': '기초설계.pdf', 'page': 3, 'coordinates': (191, 188, 1377, 277), 'order': 1, 'data_type': 'text'}
+{'text': '이미지 중앙에 나무판이 있고, 그 위에 세 개의 수직 기둥이 있습니다. 나무판은 두껍고 안정감 있게 보이며, 기둥은 직사각형 형태로 비교적 균일하게 배치되어 있습니다. 나무판의 가장자리는 매끈하며, 아래쪽에는 단단한 바닥 구조가 보입니다.', 'filename': '기초설계.pdf', 'page': 3, 'coordinates': {'points': (583, 472, 1077, 594)}, 'order': 2, 'data_type': 'image'}
+{'text': '줄기초 또는조적벽을지지하는기초[ 1[6', 'filename': '기초설계.pdf', 'page': 4, 'coordinates': (197, 191, 1108, 227), 'order': 1, 'data_type': 'text'}
+{'text': '벽체외주면을기준으로 단변방향의 단위폭 1m 의 캔탈레버보로설계', 'filename': '기초설계.pdf', 'page': 4, 'coordinates': (208, 241, 1252, 277), 'order': 2, 'data_type': 'text'}
+{'text': '이미지에는 구조물의 단면이 그려져 있으며, 직사각형 형태의 기둥이 바닥에 놓여 있는 모습입니다. 기둥의 상단에는 수직으로 나열된 화살표가 있으며, 이는 외부에서 작용하는 힘이나 하중을 나타내고 있습니다. 기둥의 밑부분에는 突起(돌출부)가 있으며, 전체 구조물은 안정성을 위해 설계된 것으로 보입니다.', 'filename': '기초설계.pdf', 'page': 4, 'coordinates': {'points': (552, 330, 950, 688)}, 'order': 3, 'data_type': 'image'}
+{'text': "복합기초: 하나의 기초판'위에' 이상의기둥을지지 [그림 1d", 'filename': '기초설계.pdf', 'page': 5, 'coordinates': (197, 188, 1250, 227), 'order': 1, 'data_type': 'text'}
+{'text': '두 기둥사이 거리가 가깝거나 지내력이 작아서 독립기초로 하기 어려운 경우 - 기초의 저면에 등분포토압을 일으키도록 두 기둥의 합력과 기초저면의 도심을 일치시킴', 'filename': '기초설계.pdf', 'page': 5, 'coordinates': (202, 241, 1352, 369), 'order': 2, 'data_type': 'text'}
+{'text': 'Combined footing. Property line.', 'filename': '기초설계.pdf', 'page': 5, 'coordinates': {'points': (527, 483, 1014, 772)}, 'order': 3, 'data_type': 'image'}
+{'text': '5 온통기초 [매트기초] 하나의 기초판 위에구조물전체의 기둥이나 벽체를', 'filename': '기초설계.pdf', 'page': 6, 'coordinates': (197, 191, 1308, 227), 'order': 1, 'data_type': 'text'}
+{'text': '지지하는 기초', 'filename': '기초설계.pdf', 'page': 6, 'coordinates': (566, 238, 772, 277), 'order': 2, 'data_type': 'text'}
+{'text': '사용조건', 'filename': '기초설계.pdf', 'page': 6, 'coordinates': (247, 291, 419, 322), 'order': 3, 'data_type': 'text'}
+{'text': 'a 지반의 지내력이작아서 독립기초로 할 경우 기초저면적이 커져서 전체바닥 면 적 의1/2 이상일경우 b 토질조건상 말뚝기초가 적합하지 않은 경우 지반의 침하량은 다소 커지나 기초판 전체의 강성이 커져 부동침하를 작게 할수 있 다', 'filename': '기초설계.pdf', 'page': 6, 'coordinates': (255, 322, 1494, 511), 'order': 4, 'data_type': 'text'}
+{'text': '이미지에는 여러 개의 직사각형 지지대가 보이며, 각각의 지지대 위에는 아래로 향하는 화살표가 그려져 있습니다. 이러한 화살표는 지지대에 가해지는 힘이나 하중을 나타내는 것으로 보입니다. 바닥은 규칙적인 패턴으로 되어 있으며, 전체 구조는 지지대들이 고르게 배열되어 있는 형태입니다.', 'filename': '기초설계.pdf', 'page': 6, 'coordinates': {'points': (516, 561, 1183, 836)}, 'order': 5, 'data_type': 'image'}
+{'text': '6 말뚝기초 :지반 지내력이 부족하여 독립기초가 어려울 경우 말뚝으로 지지하는 기초', 'filename': '기초설계.pdf', 'page': 7, 'coordinates': (197, 188, 1375, 275), 'order': 1, 'data_type': 'text'}
+{'text': "종류:마찰말뚝' 지지말뚝 -", 'filename': '기초설계.pdf', 'page': 7, 'coordinates': (244, 288, 622, 327), 'order': 2, 'data_type': 'text'}
+{'text': '이미지에는 평평한 기판 위에 직사각형 기둥이 세워져 있으며, 기판의 아래쪽에는 원통형 지지대가 여러 개 배치되어 있습니다. 기판은 수평으로 놓여 있으며, 기둥은 기판의 중앙에 위치해 있습니다. 원통형 지지대는 기판의 모서리 근처에 있습니다.', 'filename': '기초설계.pdf', 'page': 7, 'coordinates': {'points': (494, 383, 930, 713)}, 'order': 3, 'data_type': 'image'}
+{'text': '102 기초해석의 기본사항', 'filename': '기초설계.pdf', 'page': 8, 'coordinates': (155, 191, 583, 233), 'order': 1, 'data_type': 'text'}
+{'text': '1021 기초에 작용하는 토압', 'filename': '기초설계.pdf', 'page': 8, 'coordinates': (152, 297, 558, 336), 'order': 2, 'data_type': 'text'}
+{'text': '1토압:기초상부 하중이 수직으로 기초에 전달될 때기초를 떠받치는 - 지반의 압력 -', 'filename': '기초설계.pdf', 'page': 8, 'coordinates': (152, 488, 1361, 530), 'order': 3, 'data_type': 'text'}
+{'text': '2 토압의 분포:지반의종류와 - 기초의 지반에 대한상대강성에 영향을 받는다 그러나설계상 토압은 균등하게 분포하는 것으로 가정 한다', 'filename': '기초설계.pdf', 'page': 8, 'coordinates': (152, 636, 1286, 727), 'order': 4, 'data_type': 'text'}
+{'text': '사질토:기초주위의 흙이 바깥쪽으로 이동하기 때문에 기초중심에서 증가하고 주변에 서는 감소[그림 3a]', 'filename': '기초설계.pdf', 'page': 9, 'coordinates': (222, 188, 1494, 277), 'order': 1, 'data_type': 'text'}
+{'text': '점토:강한 점착력 때문에 이동이 일어나지 않고 기초 주변에 평균토압과 전단저항력 이 형성되어 기초중심에서 감소하고 주변에서는 증가 [그림 36 ]', 'filename': '기초설계.pdf', 'page': 9, 'coordinates': (216, 286, 1494, 427), 'order': 2, 'data_type': 'text'}
+{'text': '(a) 사질토 지반에 대해 설명하며, 상단에서 아래로 향하는 힘 P가 작용하고, 하부에는 화살표로 표시된 지반의 지지력을 나타냅니다. (b) 점토 지반에 대해서도 유사한 방식으로 표시하며, 상단에서 아래로 향하는 힘 P가 작용하고, 하부에 화살표로 지지력을 나타냅니다.', 'filename': '기초설계.pdf', 'page': 9, 'coordinates': {'points': (477, 466, 1158, 863)}, 'order': 3, 'data_type': 'image'}
+{'text': '1022 허용지내력과기초의 크기', 'filename': '기초설계.pdf', 'page': 10, 'coordinates': (155, 188, 625, 227), 'order': 1, 'data_type': 'text'}
+{'text': '1 지내력에 영향요인 기초의 형태와 깊이 상부하중의 크기 지하수의 위치 토질의 종류', 'filename': '기초설계.pdf', 'page': 10, 'coordinates': (147, 286, 1258, 375), 'order': 2, 'data_type': 'text'}
+{'text': '2 기초의 지압파괴 :기초 하부의 지반이 이동하는 - 현상', 'filename': '기초설계.pdf', 'page': 10, 'coordinates': (147, 433, 966, 472), 'order': 3, 'data_type': 'text'}
+{'text': '3허용지내력', 'filename': '기초설계.pdf', 'page': 10, 'coordinates': (152, 533, 361, 569), 'order': 4, 'data_type': 'text'}
+{'text': '평판재하시험표준관입시험 등에 의해 결정 지질조사보고서에 명시 극한지내력 Qut:기초의 지압파괴시의 토압', 'filename': '기초설계.pdf', 'page': 10, 'coordinates': (236, 580, 1230, 680), 'order': 5, 'data_type': 'text'}
+{'text': 'Qult 허용지내력 Ia 101] - 안전율', 'filename': '기초설계.pdf', 'page': 10, 'coordinates': (230, 702, 1375, 788), 'order': 6, 'data_type': 'text'}
+{'text': '안전율FS: Factor Of safety 침하를 허용한계 이내로 유지하기 위한 계수 FS~25~ 30', 'filename': '기초설계.pdf', 'page': 10, 'coordinates': (388, 794, 1472, 886), 'order': 7, 'data_type': 'text'}
+{'text': '(a) 미끄러짐면 아래의 구조와 그 형태를 나타내며, (b) 침하에 대한 토압의 변화를 그래프로 나타내고 있다.', 'filename': '기초설계.pdf', 'page': 11, 'coordinates': {'points': (297, 261, 1161, 683)}, 'order': 1, 'data_type': 'image'}
+{'text': '지반조사 및 하중시험에 의하여정하는경우 허용지내력', 'filename': '기초설계.pdf', 'page': 12, 'coordinates': (158, 188, 1094, 227), 'order': 1, 'data_type': 'text'}
+{'text': '지반에는 경암반과 연암반이 있으며, 경암반은 화강암, 석록암, 편마암, 안산암 등의 화성이며, 연암반은 편암, 판암 등의 수성암입니다. 허용응력도는 경암반이 4,000 kN/m², 연암반이 2,000 kN/m²입니다. 또 지반에는 혈암, 토단반이 있으며, 이들의 허용응력도는 1,000 kN/m²입니다. 자갈에는 자갈과 모래의 혼합물이 있으며, 허용응력도는 300 kN/m²입니다. 모래적인 점토 또는 롯토는 200 kN/m²과 150 kN/m²이며, 모래적인 점토는 100 kN/m²입니다.', 'filename': '기초설계.pdf', 'page': 12, 'coordinates': {'points': (269, 347, 1383, 836)}, 'order': 2, 'data_type': 'table'}
+{'text': '2 기초의 크기 결정', 'filename': '기초설계.pdf', 'page': 13, 'coordinates': (152, 191, 447, 227), 'order': 1, 'data_type': 'text'}
+{'text': "원칙:단위면적'당하충 허용지내력", 'filename': '기초설계.pdf', 'page': 13, 'coordinates': (183, 244, 886, 283), 'order': 2, 'data_type': 'text'}
+{'text': '단하중 하중계수를 적용하지 않은 실제 하중 - 나허용응력도 설계법의 원리가 적용된다고 볼수 있다', 'filename': '기초설계.pdf', 'page': 13, 'coordinates': (311, 300, 1227, 386), 'order': 3, 'data_type': 'text'}
+{'text': '} 기초가 지지하는 하중', 'filename': '기초설계.pdf', 'page': 13, 'coordinates': (180, 397, 544, 436), 'order': 4, 'data_type': 'text'}
+{'text': '고정하중 D 적재하중 - L 풍하중 W또는 지진하중 E 기초의 자중 D기초위에 채워지는 [흙및흙위의 상재하중 D', 'filename': '기초설계.pdf', 'page': 13, 'coordinates': (283, 444, 1272, 544), 'order': 5, 'data_type': 'text'}
+{'text': '3 기초의 크기 102a와 식 102b 중큰값', 'filename': '기초설계.pdf', 'page': 13, 'coordinates': (180, 561, 858, 600), 'order': 6, 'data_type': 'text'}
+{'text': '4 유효허용지내력 D와D의영향을분리함', 'filename': '기초설계.pdf', 'page': 14, 'coordinates': (180, 194, 922, 236), 'order': 1, 'data_type': 'text'}
+{'text': "기초의 자중 [ 기초위에 채워지는'흙'및'흙위의상재하중 /", 'filename': '기초설계.pdf', 'page': 14, 'coordinates': (380, 258, 1330, 297), 'order': 2, 'data_type': 'text'}
+{'text': '\\( q_e = q_a - \\frac{D_b + D_s}{A} \\)\n\n기초의 크기 : \n\n\\( A \\geq \\frac{0.75\\{D + L + W(E)\\}}{q_e} \\)\n\n또는 \n\n\\( A \\geq \\frac{D + L}{q_e} \\)이다.', 'filename': '기초설계.pdf', 'page': 14, 'coordinates': {'points': (147, 388, 797, 777)}, 'order': 3, 'data_type': 'image'}
+{'text': '이미지에는 수직으로 향하는 힘 P와 각종 강도와 비율이 표시된 도식이 나타나 있습니다. 상단에 P가 표시된 부분에서 아래로 향하는 힘이 나타나고, 아랫부분에는 각 재료의 강도가 나타나는 다양한 비율이 기재되어 있습니다. 중간에 위치한 직사각형 공간은 두 개의 차원 (D₁/A 및 D₂/A)으로 나뉘고, 아래쪽에는 전체 비율 (D₁ + D₂)/A가 나타나 있으며, 그 아래에는 P/A라는 항목이 추가되어 있습니다. 화살표는 힘의 방향을 나타내고 있으며, 여러 방향으로 힘이 작용하는 모양이 그려져 있습니다.', 'filename': '기초설계.pdf', 'page': 14, 'coordinates': {'points': (897, 336, 1444, 786)}, 'order': 4, 'data_type': 'image'}
+{'text': "*기초설계용 토압'Iu: 기초판 계산용 외력 -", 'filename': '기초설계.pdf', 'page': 15, 'coordinates': (155, 263, 969, 311), 'order': 1, 'data_type': 'text'}
+{'text': 'cf Do I D에 1의한 토압은 서로 평형을 이루어 상쇄되며 기초의 모멘트나 전단에 영 향을 미치지 않기 때문에 고려되지 않음', 'filename': '기초설계.pdf', 'page': 15, 'coordinates': (219, 605, 1500, 694), 'order': 3, 'data_type': 'text'}
+{'text': "제목: 113 독립기초의설계, 내용: 기초형식' 지내력산정", 'filename': '기초설계.pdf', 'page': 16, 'coordinates': (166, 297, 658, 333), 'order': 1, 'data_type': 'text'}
+{'text': '독립기초의 최소 두께는 하단 철근으로부터 150mm 말뚝기초의 경우 300mm이 상으로 하고 피복두께는 8Omm이 |상으로 한다', 'filename': '기초설계.pdf', 'page': 16, 'coordinates': (227, 344, 1500, 430), 'order': 2, 'data_type': 'text'}
+{'text': "2기초판'형태및 크기 산정:축력N과휩모멘트 M이 작용하는 경우", 'filename': '기초설계.pdf', 'page': 16, 'coordinates': (163, 486, 1194, 525), 'order': 3, 'data_type': 'text'}
+{'text': 'N - Np + NL] M + ML M - 이고 D+Ds 일경우 Ie - Qa - 1V1 기초판 저면적I 1y산정하거나 또는 기초저면적11]을 먼저 가정후 - 12이 만족되는가를 검토', 'filename': '기초설계.pdf', 'page': 16, 'coordinates': (213, 533, 830, 961), 'order': 4, 'data_type': 'text'}
+{'text': 'σ₂와 σ₁의 힘이 작용하는 구조물의 단면을 나타내는 다이어그램. 상단에는 회전 방향을 나타내는 화살표가 있으며, 하단에는 σ₁을 향하는 화살표들이 일렬로 배열되어 있다.', 'filename': '기초설계.pdf', 'page': 16, 'coordinates': {'points': (986, 588, 1383, 944)}, 'order': 5, 'data_type': 'image'}
+{'text': "3설계용'기초판응력 '기초판의'전단력<휘모멘트<산정을'위한' 4", 'filename': '기초설계.pdf', 'page': 17, 'coordinates': (150, 194, 1305, 233), 'order': 1, 'data_type': 'text'}
+{'text': '1 수직압만 고려시 ;등분포가정', 'filename': '기초설계.pdf', 'page': 17, 'coordinates': (197, 291, 694, 333), 'order': 2, 'data_type': 'text'}
+{'text': 'U모멘트 고려시 사다리꼴 응력분포', 'filename': '기초설계.pdf', 'page': 17, 'coordinates': (197, 572, 783, 608), 'order': 4, 'data_type': 'text'}
+{'text': '* 기초판 설계시 과도한 휘모멘트가 적용되면 효과적인 설계가 어려우므로 가능하면 휘 모멘트는 지중보기초보에 부담시키고 기초에는 순 주직압만 걸리는 것으로 설계하는 것이 보통임', 'filename': '기초설계.pdf', 'page': 17, 'coordinates': (238, 805, 1500, 936), 'order': 6, 'data_type': 'text'}
+{'text': "4 기초판의'휘모멘트'", 'filename': '기초설계.pdf', 'page': 18, 'coordinates': (169, 191, 902, 227), 'order': 1, 'data_type': 'text'}
+{'text': '위험단면휘모멘트산정을위한', 'filename': '기초설계.pdf', 'page': 18, 'coordinates': (200, 283, 736, 322), 'order': 2, 'data_type': 'text'}
+{'text': "RC기둥 받침대 또는 내력벽을 지지하는 기초 경우 a 기둥'및벽체의 외주면", 'filename': '기초설계.pdf', 'page': 18, 'coordinates': (230, 375, 1000, 461), 'order': 3, 'data_type': 'text'}
+{'text': 'b 조적조 벽체를 지지하는 기초 경우 =벽체중심과 벽체면과의 중간', 'filename': '기초설계.pdf', 'page': 18, 'coordinates': (227, 513, 766, 605), 'order': 4, 'data_type': 'text'}
+{'text': '기둥밑판base plate을 갖는 기둥을 지지하는 기초 경우 C 크기둥면과 기둥밑판 단부와의 중앙', 'filename': '기초설계.pdf', 'page': 18, 'coordinates': (230, 661, 1069, 747), 'order': 5, 'data_type': 'text'}
+{'text': "계수'모멘트 Mu 및 철근량As } 철근 간격 s산정", 'filename': '기초설계.pdf', 'page': 19, 'coordinates': (197, 191, 941, 230), 'order': 1, 'data_type': 'text'}
+{'text': 'A-A 면에대한검토 a 장변방향배근', 'filename': '기초설계.pdf', 'page': 19, 'coordinates': (222, 288, 877, 327), 'order': 2, 'data_type': 'text'}
+{'text': '장변방향철근배근은전기초폭에 균등배근 함', 'filename': '기초설계.pdf', 'page': 19, 'coordinates': (152, 875, 894, 916), 'order': 4, 'data_type': 'text'}
+{'text': '위험단면이 표시된 도면이 있으며, 위쪽에는 화살표로 흐름을 나타내고 있습니다. 아래쪽에는 두 개의 수평선 B-B가 있으며, 경계선 A-A를 중심으로 직사각형 영역이 있습니다. 직사각형 내부에는 두 개의 치수 c1과 c2가 있는 사각형이 표시되어 있습니다. 전체 도면의 가로 길이는 l1, 세로 길이는 l2로 기재되어 있습니다.', 'filename': '기초설계.pdf', 'page': 19, 'coordinates': {'points': (983, 261, 1461, 836)}, 'order': 5, 'data_type': 'image'}
+{'text': '[독립확대기초<휘모멘트위험단면]', 'filename': '기초설계.pdf', 'page': 19, 'coordinates': (969, 855, 1466, 897), 'order': 6, 'data_type': 'text'}
+{'text': "b B-B 면에대한'검토 단변방향 배근", 'filename': '기초설계.pdf', 'page': 20, 'coordinates': (227, 191, 872, 227), 'order': 1, 'data_type': 'text'}
+{'text': '위험단면에 대한 도식이 포함된 이미지로, 상단에는 위협단면이 표시되어 있으며, 하단에는 A, B, C1, C2에 대한 치수가 기재되어 있는 사각형 형태의 도면이 있습니다. 길이 l1, l2, 그리고 너비 B도 나타나 있습니다.', 'filename': '기초설계.pdf', 'page': 20, 'coordinates': {'points': (927, 263, 1402, 841)}, 'order': 3, 'data_type': 'image'}
+{'text': '그림8독립확대기초 휘모멘트 위험단면', 'filename': '기초설계.pdf', 'page': 20, 'coordinates': (941, 858, 1380, 947), 'order': 4, 'data_type': 'text'}
+{'text': 'X 단변방향경우 철근 배근 방법', 'filename': '기초설계.pdf', 'page': 21, 'coordinates': (250, 191, 763, 227), 'order': 1, 'data_type': 'text'}
+{'text': "+1 폭 B에 배근되는 철근량 단변방향 전체철근량 As 잔여 철근량;'폭B 외측의 양부분에 씩 균등 배근 - 3:기초판의 단변에 대한 장변의비 _4", 'filename': '기초설계.pdf', 'page': 21, 'coordinates': (277, 238, 1261, 441), 'order': 2, 'data_type': 'text'}
+{'text': "3;기초판의 단변에 대한 장변의 '비'-", 'filename': '기초설계.pdf', 'page': 21, 'coordinates': (283, 397, 914, 461), 'order': 3, 'data_type': 'text'}
+{'text': '이미지에는 직사각형 형태의 구조가 나타나 있으며, 중앙에는 작은 사각형이 위치해 있습니다. 긴 변의 길이는 \\( l \\), 짧은 변의 길이는 \\( B \\)로 표시되어 있습니다. 좌우 중앙 부분에는 비어 있는 공간이 있고, 그 옆으로는 줄무늬가 그려져 있습니다. 줄무늬의 너비는 \\( \\frac{(l-B)}{2} \\)로 나타납니다. 전체적으로 대칭적으로 배치된 구조이며, 길이와 너비에 대한 비율을 이용한 도면 형식입니다.', 'filename': '기초설계.pdf', 'page': 21, 'coordinates': {'points': (525, 502, 1033, 883)}, 'order': 4, 'data_type': 'image'}
+{'text': '장방형기초의 단변방향에서의집중된철근위치]', 'filename': '기초설계.pdf', 'page': 21, 'coordinates': (433, 894, 1125, 930), 'order': 5, 'data_type': 'text'}
+{'text': "3 토압에의한'응력분포가 사다리꼴응력일경우", 'filename': '기초설계.pdf', 'page': 22, 'coordinates': (150, 188, 861, 230), 'order': 1, 'data_type': 'text'}
+{'text': 'Mu 재산정에 대해 설명하자면, 우선 Rn으로 변환되고, 이어서 ρ를 거쳐 As로, 최종적으로 s로 이어집니다. Mu의 구체적인 수식은 다음과 같습니다: \n\nMu = [q1 × l1²/2 + (q2 - q1) × l1²/3] × Iy.', 'filename': '기초설계.pdf', 'page': 22, 'coordinates': {'points': (194, 336, 836, 475)}, 'order': 2, 'data_type': 'image'}
+{'text': '이미지에는 두 개의 수직 구간이 있는 구조물이 나타나 있으며, 위쪽에는 길이 \\( l_1 \\)이 표시된 부분이 있습니다. 아래쪽에는 두 개의 하중 \\( q_1 \\)과 \\( q_2 \\)가 화살표로 나타나 있습니다. 이 두 하중은 각각 방향을 위로 향하고 있습니다.', 'filename': '기초설계.pdf', 'page': 22, 'coordinates': {'points': (930, 244, 1430, 536)}, 'order': 3, 'data_type': 'image'}
+{'text': '이미지에는 두 개의 직사각형이 있으며, 외부 직사각형의 너비는 \\(l_x\\)이고 높이는 \\(l_y\\)입니다. 내부에는 작은 직사각형이 자리 잡고 있으며, 최대한의 넓이로 그려진 외부 직사각형의 오른쪽 부분은 회색으로 채워져 있습니다.', 'filename': '기초설계.pdf', 'page': 22, 'coordinates': {'points': (933, 647, 1450, 961)}, 'order': 4, 'data_type': 'image'}
+{'text': '5기초판의 전단검토및춤높이의 산정', 'filename': '기초설계.pdf', 'page': 23, 'coordinates': (166, 191, 783, 227), 'order': 1, 'data_type': 'text'}
+{'text': '독립기초에 토압에 의하여 생기는 전단은1방향전단과 2방향전단의 두 가지가 있다', 'filename': '기초설계.pdf', 'page': 23, 'coordinates': (216, 238, 1436, 277), 'order': 2, 'data_type': 'text'}
+{'text': '1방향 전단과 2방향 전단을 나타내는 도면이 있다. 왼쪽 위에는 1방향 전단의 위험 단면이 표시되어 있으며, 중앙에 작은 정사각형이 위치해 있다. 아래에는 1방향 전단의 단면도가 있으며, 높이가 d인 돌출부가 있다. 오른쪽 위에는 2방향 전단의 위험 단면이 있고, 두 개의 c1 및 c2가 표시되어 있다. 또 하나의 작은 정사각형이 중앙에 위치하며, 아래에는 2방향 전단의 단면도가 보여진다. 이 단면도 역시 높이가 d인 돌출부가 포함되어 있다.', 'filename': '기초설계.pdf', 'page': 23, 'coordinates': {'points': (377, 319, 1197, 905)}, 'order': 3, 'data_type': 'image'}
+{'text': '[기초판의 전단에 대한분담면적과위험단면]', 'filename': '기초설계.pdf', 'page': 23, 'coordinates': (472, 933, 1116, 969), 'order': 4, 'data_type': 'text'}
+{'text': "1 1방향 전단검토 일반 보의 전단검토와 동일 *'위험단면 - ;기둥외주면에서 기초판의 유효춤d 만큼 떨어진 위치", 'filename': '기초설계.pdf', 'page': 24, 'coordinates': (197, 191, 1166, 280), 'order': 1, 'data_type': 'text'}
+{'text': 'V--증Vfabd * 콘크리트의 전단강도', 'filename': '기초설계.pdf', 'page': 24, 'coordinates': (213, 336, 772, 408), 'order': 2, 'data_type': 'text'}
+{'text': "전단검토식'및춤산정: - Vu 그는 < 수V", 'filename': '기초설계.pdf', 'page': 24, 'coordinates': (213, 466, 819, 508), 'order': 3, 'data_type': 'text'}
+{'text': 'V= a [+3-a]x1s p등 Vald 수=075 깊이d 산정식 유도 d에 대한 1차식', 'filename': '기초설계.pdf', 'page': 24, 'coordinates': (272, 505, 880, 741), 'order': 4, 'data_type': 'text'}
+{'text': '\\( l_1 \\)과 \\( l_2 \\)로 구분된 두 영역이 있으며, 영역 \\( c_1 \\)과 \\( c_2 \\)가 나타나 있다. 좌측에 있는 영역은 점선으로 나타나며, 그 옆에는 거리 \\( d \\)가 표시되어 있다. 아래쪽에는 "1방향 절단 위험 단면"이라는 설명이 포함되어 있다.', 'filename': '기초설계.pdf', 'page': 24, 'coordinates': {'points': (1014, 336, 1447, 794)}, 'order': 5, 'data_type': 'image'}
+{'text': "2방향전단검토펀칭'전단검토: Vu - 우V", 'filename': '기초설계.pdf', 'page': 25, 'coordinates': (200, 194, 964, 233), 'order': 1, 'data_type': 'text'}
+{'text': '이禮 위험 단면 기둥 외주면에서 만큼 떨어진 위치', 'filename': '기초설계.pdf', 'page': 25, 'coordinates': (250, 252, 1022, 319), 'order': 2, 'data_type': 'text'}
+{'text': '콘크리트 전단강도g=075 V - 층[1+층 /Fabd +-+$++1] Fad  중작은값 V --층Vfa bd bo ; -2C +d+2c +d C2 Pe;기둥단면의 단변에 대한 장변비 C1 As :내부 기둥 40 단부 기둥 30 모서리기둥 20', 'filename': '기초설계.pdf', 'page': 25, 'coordinates': (252, 336, 1039, 919), 'order': 3, 'data_type': 'text'}
+{'text': '2방향 절단 위협 단면. c1과 c2가 표시된 사각형 내부에 있으며, 각 변에는 d/2의 거리로 표시된 수직 화살표가 있다.', 'filename': '기초설계.pdf', 'page': 25, 'coordinates': {'points': (1075, 311, 1486, 738)}, 'order': 4, 'data_type': 'image'}
+{'text': '[1]2 C +dc +d]', 'filename': '기초설계.pdf', 'page': 25, 'coordinates': (255, 905, 694, 952), 'order': 5, 'data_type': 'text'}
+{'text': "제목: 기본개념, 내용: 기둥 하단부에서 부재력은 콘크리트의'지압2 기둥과 기초를 - 관통하는 장부철근 - dowel] 3 기둥철근 등에 의해 기초로 전달된다", 'filename': '기초설계.pdf', 'page': 26, 'coordinates': (216, 336, 1497, 425), 'order': 2, 'data_type': 'text'}
+{'text': '기둥과기초의 연결부에서힘의전달이 고려되어야 하는 이유', 'filename': '기초설계.pdf', 'page': 26, 'coordinates': (219, 483, 1136, 522), 'order': 3, 'data_type': 'text'}
+{'text': '기둥 콘크리트고강도 콘크리트 사용와 기초 콘크리트의 강도가 다를 수 있다 6 기둥 철근의 전량이 기초콘크리트로 연장되지 않고 일부가 기둥 밑면에서 절단될 수 있다', 'filename': '기초설계.pdf', 'page': 26, 'coordinates': (247, 530, 1494, 666), 'order': 4, 'data_type': 'text'}
+{'text': '9 시공과정상기초와기둥의콘크리트가 일체로타설되지 않는 경우가 대부분이다', 'filename': '기초설계.pdf', 'page': 26, 'coordinates': (247, 677, 1458, 719), 'order': 5, 'data_type': 'text'}
+{'text': '따라서 기초 위의 기둥으로부터 전달되는 하중은 기둥과 기초의 접촉면에서 지압으로 지지되어야 한다 이 때의 지압력은 콘크리트의 지압강도를 초과하지 않아야 함', 'filename': '기초설계.pdf', 'page': 26, 'coordinates': (247, 775, 1497, 863), 'order': 6, 'data_type': 'text'}
+{'text': '설계지압강도', 'filename': '기초설계.pdf', 'page': 27, 'coordinates': (200, 191, 450, 227), 'order': 1, 'data_type': 'text'}
+{'text': '* 지지부재기초판 콘크리트의 지압강도', 'filename': '기초설계.pdf', 'page': 27, 'coordinates': (202, 288, 797, 327), 'order': 2, 'data_type': 'text'}
+{'text': '도면에는 압력 P가 위쪽으로 작용하는 형태의 구조물이 나타나 있다. 구조물의 좌측에는 확산된 형태의 관이 있으며, 우측에는 삼각형 단면을 가진 부분이 위치해 있다. 구조물은 수평으로 길게 연장되어 있으며, 관의 크기와 형태가 명기되어 있다.', 'filename': '기초설계.pdf', 'page': 27, 'coordinates': {'points': (1152, 252, 1497, 447)}, 'order': 5, 'data_type': 'image'}
+{'text': '* 지압강도가 부족할 경우 장부철근을 배치하여 연결부에서 힘의 전달이 원활하도록 한다', 'filename': '기초설계.pdf', 'page': 27, 'coordinates': (202, 541, 1089, 627), 'order': 6, 'data_type': 'text'}
+{'text': '이미지에는 사각형 영역이 있고, 그 안에 또 다른 작은 사각형이 있다. 작은 사각형은 \\( A_1 \\)로 표시되어 있으며, 바깥쪽 사각형은 뚜렷한 선으로 둘러싸여 있다. 바깥쪽 사각형의 그라데이션 혹은 패턴은 대각선으로 배열되어 있다. 작은 사각형의 주위에는 \\( A_2 \\)로 표기된 또 다른 영역이 있다. 전체적인 구성은 수학적 또는 기하학적 성질을 설명하는 다이어그램으로 보인다.', 'filename': '기초설계.pdf', 'page': 27, 'coordinates': {'points': (1158, 480, 1494, 766)}, 'order': 7, 'data_type': 'image'}
+{'text': '* 장부철근최소량', 'filename': '기초설계.pdf', 'page': 27, 'coordinates': (202, 688, 480, 725), 'order': 8, 'data_type': 'text'}
+{'text': '현장타설 기둥경우 4 0005 4 4;기둥단면 적 min', 'filename': '기초설계.pdf', 'page': 27, 'coordinates': (247, 738, 1086, 780), 'order': 9, 'data_type': 'text'}
+{'text': '[기초의 지압면적]', 'filename': '기초설계.pdf', 'page': 27, 'coordinates': (1205, 786, 1444, 822), 'order': 10, 'data_type': 'text'}
+{'text': 'X 기초에 묻히는장부철근정착길이', 'filename': '기초설계.pdf', 'page': 27, 'coordinates': (200, 841, 725, 877), 'order': 11, 'data_type': 'text'}
+{'text': '압축철근정착길이규준적용 -_-', 'filename': '기초설계.pdf', 'page': 27, 'coordinates': (244, 891, 711, 927), 'order': 12, 'data_type': 'text'}
+{'text': '제목: 8 철근의 정착, 내용: 기둥면은 최대모멘트가 발생하는 위험단면이므로 기둥면에서 기초판 단부로 뻗어있는 철근 길이는 인장철근의 정착길이1 이상이 되어야 한다 그렇지 않은 경우 단부 철근을 표준갈고 리로 하여 정착의 적합성을 검토하여야 한다', 'filename': '기초설계.pdf', 'page': 28, 'coordinates': (155, 386, 1497, 533), 'order': 1, 'data_type': 'text'}
+{'text': '제목: 104 연속기초의 겨, 내용: 연속기초는 내력벽이나 조적벽 밑면에 설치되어 벽체로부터 전달되는 축하중이나 모멘트를 벽체 양쪽으로 연정된 판의 캔틸레버 작용으로 지반에 전달하는 역할을 한다 연속기초에서는 - 2방향 전단검토를 할 필요가 없으며 기초의 두께는 1방향 전단에 의하여 결정된다', 'filename': '기초설계.pdf', 'page': 29, 'coordinates': (152, 294, 1500, 436), 'order': 1, 'data_type': 'text'}
+{'text': '벽면을기준으로켄틸레버슬래브로설계단변방향만설계', 'filename': '기초설계.pdf', 'page': 29, 'coordinates': (183, 444, 1100, 480), 'order': 2, 'data_type': 'text'}
+{'text': "[1] 기초판'저면적Are 산정'및'설계용토압 산정 TeC -", 'filename': '기초설계.pdf', 'page': 30, 'coordinates': (166, 194, 997, 236), 'order': 1, 'data_type': 'text'}
+{'text': '저면적 단위길이 Im 이므로 기초폭 6가 구해짐 D+ L+ Dg+ D Areq a =16 > Ia 12D+ 16L b Qu - 1X6', 'filename': '기초설계.pdf', 'page': 30, 'coordinates': (216, 250, 969, 483), 'order': 2, 'data_type': 'text'}
+{'text': '2 전단검토위험단면 벽면에서 d 위치', 'filename': '기초설계.pdf', 'page': 30, 'coordinates': (169, 494, 769, 530), 'order': 3, 'data_type': 'text'}
+{'text': "1방향전단검토만'필요로함단변 방 향에 대한", 'filename': '기초설계.pdf', 'page': 30, 'coordinates': (227, 541, 997, 577), 'order': 4, 'data_type': 'text'}
+{'text': '3휘철근량', 'filename': '기초설계.pdf', 'page': 30, 'coordinates': (169, 588, 369, 627), 'order': 5, 'data_type': 'text'}
+{'text': '위험단면 RC내력벽은 벽체면 조적벽은 벽체중심과 벽체면과의 중앙 M;단위길이 Im에 대해 산정 Rn -p- As -  철근간격 S', 'filename': '기초설계.pdf', 'page': 30, 'coordinates': (219, 636, 1261, 797), 'order': 6, 'data_type': 'text'}
+{'text': '14 4 보의 최소철근비 고려; 단변방향 철근 P min', 'filename': '기초설계.pdf', 'page': 30, 'coordinates': (166, 813, 1002, 891), 'order': 7, 'data_type': 'text'}
+{'text': 'Cf 0002 장변길이방향철근온도변화및건조수축에대한 철근비 제한 P mir --', 'filename': '기초설계.pdf', 'page': 30, 'coordinates': (208, 908, 1433, 950), 'order': 8, 'data_type': 'text'}
+{'text': '105 복합기초의 설계', 'filename': '기초설계.pdf', 'page': 31, 'coordinates': (155, 191, 508, 233), 'order': 1, 'data_type': 'text'}
+{'text': '정의:2개 이상의 기둥이나 벽체를 하나의 기초판으로 지지하는 구조', 'filename': '기초설계.pdf', 'page': 31, 'coordinates': (158, 297, 1180, 336), 'order': 2, 'data_type': 'text'}
+{'text': '복합기초로설계하는 조건', 'filename': '기초설계.pdf', 'page': 31, 'coordinates': (163, 347, 572, 383), 'order': 3, 'data_type': 'text'}
+{'text': '두 기둥이 가까이 있어 독립기초로 하기 어려울 때 외부기둥이 대지 경계선에 가까이 있 어 독립기초로 균형유지가 불가능할 때', 'filename': '기초설계.pdf', 'page': 31, 'coordinates': (191, 380, 1311, 480), 'order': 4, 'data_type': 'text'}
+{'text': '두 개의 정사각형 모양이 대칭적으로 배치되어 있으며, 각 정사각형은 중간에 밝은 색의 음영이 들어간 세련된 디자인을 가지고 있습니다. 배경은 흰색이며, 전체적으로 단순하고 깔끔한 느낌을 전달합니다.', 'filename': '기초설계.pdf', 'page': 31, 'coordinates': {'points': (275, 622, 702, 866)}, 'order': 5, 'data_type': 'image'}
+{'text': '대지경계선', 'filename': '기초설계.pdf', 'page': 31, 'coordinates': {'points': (927, 536, 1364, 866)}, 'order': 6, 'data_type': 'image'}
+{'text': '직사각형기초', 'filename': '기초설계.pdf', 'page': 32, 'coordinates': (172, 191, 427, 225), 'order': 1, 'data_type': 'text'}
+{'text': '두기둥에작용하는 하중 합력의 작용점이 도심이 되도록 기초길이를 결정한다 지반 토압이 기초에 균등하게 작용한다', 'filename': '기초설계.pdf', 'page': 32, 'coordinates': (191, 288, 1336, 375), 'order': 2, 'data_type': 'text'}
+{'text': '기초판해석:기초판을거꾸로 하면 두기둥으로 지지되는 단순보로 가정된다', 'filename': '기초설계.pdf', 'page': 32, 'coordinates': (194, 433, 1330, 472), 'order': 3, 'data_type': 'text'}
+{'text': '철근 보강:휘모멘트에 의해 산정된 보강근을 길이방향으로 배근 횡방향 보강근 범위 - 횡방향 기둥치수 +유효춤d/2 *휘보강최소 철근량 또는 온도 및 건조수축 - 철근량을 사용', 'filename': '기초설계.pdf', 'page': 32, 'coordinates': (202, 533, 1255, 669), 'order': 4, 'data_type': 'text'}
+{'text': '전단 검토:1방향전단-기둥면에서 d만큼 떨어진 위험단면의 - 전단력으로 검토 2방향전단-기둥면에서 1/2만큼 떨어진 위험 단면에 대하여 검토 1방향전단으로 기초 두께가 결정되는 경우가 많다', 'filename': '기초설계.pdf', 'page': 32, 'coordinates': (197, 725, 1316, 866), 'order': 5, 'data_type': 'text'}
+{'text': '캔틸레버 -', 'filename': '기초설계.pdf', 'page': 33, 'coordinates': (169, 191, 425, 225), 'order': 1, 'data_type': 'text'}
+{'text': '인접내부 기둥이 상당히 떨어져 있을 때 직사각형으로 하면 과다한 모멘트가 발생하여 비경제적', 'filename': '기초설계.pdf', 'page': 33, 'coordinates': (191, 288, 1305, 375), 'order': 2, 'data_type': 'text'}
+{'text': '내부기둥과 외부기둥을 보지중보로 연결', 'filename': '기초설계.pdf', 'page': 33, 'coordinates': (230, 386, 869, 425), 'order': 3, 'data_type': 'text'}
+{'text': '(a) 평면  \n(b) 입면  \n(c) 모델  \n\\( P_1 \\)  \n\\( P_2 \\)  \n\\( P_3 \\)  \n\\( R_1 = P_1 + \\Delta R \\)  \n\\( R_2 \\)  \n\\( l \\)  \n\\( M_x = \\Delta R \\cdot x \\)  \n\\( x \\)  ', 'filename': '기초설계.pdf', 'page': 33, 'coordinates': {'points': (630, 444, 922, 933)}, 'order': 4, 'data_type': 'image'}
+{'text': '내부기둥에서 모멘트의 평형조건', 'filename': '기초설계.pdf', 'page': 34, 'coordinates': (244, 241, 711, 277), 'order': 2, 'data_type': 'text'}
+{'text': '내부기둥 실제 내부기둥의 반력 R-  Pa-스R이지만 안전측을 고려하여 P를 사 용하여 설계용 토압을 산정', 'filename': '기초설계.pdf', 'page': 34, 'coordinates': (200, 727, 1497, 852), 'order': 8, 'data_type': 'text'}
+{'text': '전단력 V- 스R에 대하여 안전하도록 설계보설계 방법 4', 'filename': '기초설계.pdf', 'page': 34, 'coordinates': (197, 858, 1216, 927), 'order': 9, 'data_type': 'text'}
+{'text': '106 말뚝기초의 겨', 'filename': '기초설계.pdf', 'page': 35, 'coordinates': (155, 191, 508, 230), 'order': 1, 'data_type': 'text'}
+{'text': '지반 상부층의 지내력은 약하지만 좀더깊은 층에 단단한 층이 있을경우 또는 말뚝의 마찰력에 의해 보다 큰 지내력을 확보하고자 하는 경우에 말뚝을 사용함으로써 기둥의 하중 을 지반으로 안전하게 전달시킬 수 있다', 'filename': '기초설계.pdf', 'page': 35, 'coordinates': (152, 294, 1500, 433), 'order': 2, 'data_type': 'text'}
+{'text': '말뚝의최소중심간격', 'filename': '기초설계.pdf', 'page': 35, 'coordinates': (183, 494, 516, 530), 'order': 3, 'data_type': 'text'}
+{'text': '1 기성콘크리트 말뚝 말뚝머리 지름의 25배 이상 또는 750mm 이상 2 제자리콘크리트 말뚝 말뚝머리 지름의 25배 이상 또는 900mm 이상 3 강재콘크리트 말뚝 말뚝머리 지름 및 폭의 25배 이상 또는 900mm 이상 :', 'filename': '기초설계.pdf', 'page': 35, 'coordinates': (150, 541, 1252, 677), 'order': 4, 'data_type': 'text'}
+{'text': '그이상 *기초판 단부에서 주변말뚝 중심까지 거리:최소 중심 간격의', 'filename': '기초설계.pdf', 'page': 35, 'coordinates': (155, 744, 1186, 805), 'order': 5, 'data_type': 'text'}
+{'text': '보통 450mm 이 상', 'filename': '기초설계.pdf', 'page': 35, 'coordinates': (241, 825, 555, 863), 'order': 6, 'data_type': 'text'}
+{'text': '말뚝의 허용지지력은 재하시험이나 지지력 산정식에서 얻은 극한 지지력을 안전율 3으로 나눈 값으로 한다', 'filename': '기초설계.pdf', 'page': 36, 'coordinates': (158, 188, 1500, 277), 'order': 1, 'data_type': 'text'}
+{'text': '[1] 말뚝개수 1 산정다음', 'filename': '기초설계.pdf', 'page': 36, 'coordinates': (166, 336, 794, 375), 'order': 2, 'data_type': 'text'}
+{'text': 'D+ L+D+Ds 11D+L a 1 - R R 075D+ L+ D + Dg + Wor b N - R R: 말뚝의 허용지지력', 'filename': '기초설계.pdf', 'page': 36, 'coordinates': (225, 383, 788, 636), 'order': 3, 'data_type': 'text'}
+{'text': "2 설계용'말뚝의 반력 다음'두식중큰값", 'filename': '기초설계.pdf', 'page': 36, 'coordinates': (166, 688, 836, 730), 'order': 4, 'data_type': 'text'}

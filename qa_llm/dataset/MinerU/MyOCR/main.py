@@ -31,6 +31,10 @@ def define_argparser():
         required=True,
     )
     p.add_argument(
+        '--output_path', 
+        required=True,
+    )
+    p.add_argument(
         '--seed', 
         default=42,
     )
@@ -110,6 +114,8 @@ def main(args):
     chunks = ""
     for page in json_data['pdf_info']:
         page_index = page['page_idx']
+        title = ""
+        n_titles = 0
 
         print(f"Processing page {page_index+1}...")
 
@@ -131,15 +137,28 @@ def main(args):
 
                 cropped_image = page_image[y_min:y_max, x_min:x_max]
 
-                save_dir = os.path.join(os.path.dirname(__file__), "results", args.json_file_path.split(os.sep)[-4], args.json_file_path.split(os.sep)[-3], data_type)
+                save_dir = os.path.join(args.output_path, args.json_file_path.split(os.sep)[-4], args.json_file_path.split(os.sep)[-3], data_type)
                 if not os.path.exists(save_dir):
                     os.makedirs(save_dir)
 
-                image_path = os.path.join(save_dir, f"{page_index+1}p_{i+1}.png")
+                image_path = os.path.join(save_dir, f"{page_index+1}p_{i+1-n_titles}.png")
                 cv2.imwrite(image_path, cv2.cvtColor(cropped_image, cv2.COLOR_RGB2BGR))
 
                 try:
-                    if data_type in ["title", "text"]:
+                    if data_type in ["title"]:
+                        # PaddleOCR
+                        ocr = PaddleOCR(lang="korean")
+                        result = ocr.ocr(image_path, cls=True)
+                        text = " ".join([line[-1][0] for line in result[0]])
+
+                        if not title:
+                            title = text
+                        else:
+                            title = f"{title} -> {text}"
+
+                        n_titles += 1
+                    
+                    elif data_type in ["text"]:
                         # PaddleOCR
                         ocr = PaddleOCR(lang="korean")
                         result = ocr.ocr(image_path, cls=True)
@@ -150,9 +169,14 @@ def main(args):
                             "filename": args.json_file_path.split(os.sep)[-1].split("_middle.json")[0] + ".pdf",
                             "page": page_index+1,
                             "coordinates": (x_min, y_min, x_max, y_max),
-                            "order": i+1,
+                            "order": i+1-n_titles,
                             "data_type": data_type
                         }
+
+                        # 이전 청크가 title이라면, 텍스트 앞에 title 추가
+                        if title: chunk['text'] = f"제목: {title}, 내용: {chunk['text']}"
+                        title = ""
+
                         chunks += f"{chunk}\n"
 
                         print("="*100)
@@ -168,7 +192,7 @@ def main(args):
                             "filename": args.json_file_path.split(os.sep)[-1].split("_middle.json")[0] + ".pdf",
                             "page": page_index+1,
                             "coordinates": {"points": (x_min, y_min, x_max, y_max)},
-                            "order": i+1,
+                            "order": i+1-n_titles,
                             "data_type": data_type
                         }
                         chunks += f"{chunk}\n"
@@ -177,9 +201,6 @@ def main(args):
                         print(chunk)
                         print("="*100)
                         print()
-
-                    else:
-                        pass
                 
                 except:
                     print("="*100)
@@ -189,7 +210,7 @@ def main(args):
                     print()
                     pass
 
-    chunks_save_path = os.path.join(os.path.dirname(__file__), "results", args.json_file_path.split(os.sep)[-4], args.json_file_path.split(os.sep)[-3], "chunks.txt")
+    chunks_save_path = os.path.join(args.output_path, args.json_file_path.split(os.sep)[-4], args.json_file_path.split(os.sep)[-3], "chunks.txt")
     with open(chunks_save_path, "w", encoding="utf-8") as file:
         file.write(chunks)
         print(f"청크 파일 저장완료 => '{chunks_save_path}'")

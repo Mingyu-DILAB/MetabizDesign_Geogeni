@@ -1,3 +1,4 @@
+import datetime
 import os, sys
 import streamlit as st
 import streamlit.components.v1 as components
@@ -83,7 +84,8 @@ def define_argparser():
     return args
 
 def load_chunks():
-    documents_path = os.path.join(os.path.dirname(__file__), "..", "qa_llm", "dataset", "MinerU", "MyOCR", "results", "mineru_output")
+    # documents_path = os.path.join(os.path.dirname(__file__), "..", "qa_llm", "dataset", "MinerU", "MyOCR", "results", "mineru_output")
+    documents_path = os.path.join(os.path.dirname(__file__), "..", "qa_llm", "dataset", "MinerU", "MyOCR", "results_2", "mineru_output")
 
     chunks = []
     for root, dirs, files in os.walk(documents_path):
@@ -122,6 +124,11 @@ def main():
             container = st.container(border=True, height=900)
             with container:
                 st.write(st.session_state.report)
+                
+                # timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+                # filename = f"report_result_{timestamp}.md"
+                # with open(filename, "w", encoding="utf-8") as f:
+                #     f.write(st.session_state.report)
 
         with col2:
             container = st.container(border=True, height=900)
